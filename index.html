@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASP Studio</title>
+    <script src="https://kit.fontawesome.com/41b6154676.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="shortcut icon" href="./assets/img/logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <span class="nav__title">ASP Studio</span>
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="#">Inicio</a></li>
+                <li class="nav__list-item"><a href="#trabajo">Nuestro trabajo</a></li>
+                <li class="nav__list-item"><a href="#portfolio">Nuestro portfolio</a></li>
+                <li class="nav__list-item"><a href="#servicios">Servicios</a></li>
+                <li class="nav__list-item"><a href="#contacto">Contacto</a></li>
+            </ul>
+            <i class="fa-solid fa-bars-staggered nav__bars"></i>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            
+            <!--Un slider de fotos-->
+            <div class="slider">
+
+                <div class="slider__container" id="slider__container">
+
+                    <div class="slider__section">
+                        <img src="./assets/img/casa-1.jpg" alt="Imagen ilustrativa hero" class="slider__img">
+                    </div>
+                    <div class="slider__section">
+                        <img src="./assets/img/casa-2.jpg" alt="Imagen ilustrativa hero" class="slider__img">
+                    </div>
+                    <div class="slider__section">
+                        <img src="./assets/img/casa-3.png" alt="Imagen ilustrativa hero" class="slider__img">
+                    </div>
+                    <div class="slider__section">
+                        <img src="./assets/img/dpto-1.jpg" alt="Imagen ilustrativa hero" class="slider__img">
+                    </div>
+                    <div class="slider__section">
+                        <img src="./assets/img/dpto-2.jpg" alt="Imagen ilustrativa hero" class="slider__img">
+                    </div>
+                    <div class="slider__section">
+                        <img src="./assets/img/dpto-3.jpg" alt="Imagen ilustrativa hero" class="slider__img">
+                    </div>
+                </div>
+
+                <div class="slider__button slider__button--left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="slider__button slider__button--right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+            </div>
+
+            <div class="hero__info">
+                <h1>Una nueva forma de arquitectura</h1>
+                <h2>Arquitecto Sebastián Policastro</h2>
+                <p>
+                    Somos un estudio de arquitectura basado en la personalización de proyectos. Somos arquitectos, urbanistas, constructores y artistas. Nuestra pauta es encontrar resoluciones diferentes y alternativas para los encargos de todas las escalas, ya sean de carácter público o privado.
+                </p>
+            </div>
+
+            
+        </section>
+
+        <section id="trabajo">
+            <h2>Nuestro trabajo</h2>
+            <p>
+                Nos especializamos en la creación de renders 3D de inmuebles para su posterior construcción.
+            </p>
+            <img src="" alt="Imagen descriptiva del trabajo">
+        </section>
+
+        <section id="portfolio">
+            <h2>Nuestro portfolio</h2>
+
+            <div class="proyect">
+                <img src="./assets/img/casa-1.jpg" alt="Imagen de proyecto" class="proyect__img">
+                <h3>Proyecto 1</h3>
+                <span>Ver el proyecto <i class="fa-solid fa-chevron-right"></i></span>
+            </div>
+            <div class="proyect">
+                <img src="./assets/img/casa-2.jpg" alt="Imagen de proyecto" class="proyect__img">
+                <h3>Proyecto 2</h3>
+                <span>Ver el proyecto </span>
+            </div>
+            <div class="proyect">
+                <img src="./assets/img/casa-3.png" alt="Imagen de proyecto" class="proyect__img">
+                <h3>Proyecto 3</h3>
+                <span>Ver el proyecto <i class="fa-solid fa-chevron-right"></i></span>
+            </div>
+            <div class="proyect">
+                <img src="./assets/img/dpto-1.jpg" alt="Imagen de proyecto" class="proyect__img">
+                <h3>Proyecto 4</h3>
+                <span>Ver el proyecto <i class="fa-solid fa-chevron-right"></i></span>
+            </div>
+            <div class="proyect">
+                <img src="./assets/img/dpto-2.jpg" alt="Imagen de proyecto" class="proyect__img">
+                <h3>Proyecto 5</h3>
+                <span>Ver el proyecto <i class="fa-solid fa-chevron-right"></i></span>
+            </div>
+            <div class="proyect">
+                <img src="./assets/img/dpto-3.jpg" alt="Imagen de proyecto" class="proyect__img">
+                <h3>Proyecto 6</h3>
+                <span>Ver el proyecto <i class="fa-solid fa-chevron-right"></i></span>
+            </div>
+        </section>
+
+        <section id="servicios">
+
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Contactaté con nosotros para pedir un presupuesto sin cargo.</p>
+            <form action="">
+                <label for="name">Nombre y apellido</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email" id="email">
+                <label for="message">Mensaje</label>
+                <textarea name="message" id="message"></textarea>
+                <button>Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 150,
+            duration: 700
+        });
+    </script>
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/nav.js"></script>
+</body>
+</html>
