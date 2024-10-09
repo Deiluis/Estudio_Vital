@@ -15,6 +15,22 @@
     scroll-behavior: smooth;
 }
 
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+/* section#servicios {
+    scroll-margin-top: 15vh;
+} */
+
+section#proyectos {
+    scroll-margin-top: 15vh;
+}
+
+section#contacto {
+    scroll-margin-top: 10vh;
+}
 
 .hero__img {
     display: block;
@@ -88,15 +104,7 @@
 }
 
 #contacto {
-    background-image: url("../img/estudio.jpg");
+    background: linear-gradient(#2228, #2228), url("../img/estudio.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.input-group input:focus~label,
-.input-group input:valid~label, 
-.input-group textarea:focus~label,
-.input-group textarea:valid~label {
-    top: 0;
-    font-size: 1.4rem;
 }
