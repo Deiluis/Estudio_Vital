@@ -19,15 +19,15 @@ const generateProjects = () => {
         `;
         
         const sideText = document.createElement('div');
-        sideText.className = "lg:w-1/4 lg:h-full lg:p-16 p-8 flex flex-col lg:gap-8 gap-3 items-center justify-center";
+        sideText.className = "lg:w-1/4 lg:h-full lg:p-16 p-4 flex flex-col lg:gap-8 gap-3 items-center justify-center";
 
         // Crear el título y la descripción dentro del enlace
         const h3 = document.createElement('h3');
-        h3.className = "lg:text-4xl text-3xl"
+        h3.className = "lg:text-4xl text-xl"
         h3.textContent = project.title;
         
         const p = document.createElement('p');
-        p.className = "leading-[1.5]";
+        p.className = "lg:text-[1.7rem] text-xl leading-[1.5]";
         p.textContent = project.description;
 
         const span = document.createElement('span');
