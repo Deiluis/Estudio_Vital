@@ -7,11 +7,15 @@ const fadeDuration = 1500;  // en ms → velocidad de fade in/out
 const visibleDuration = 5000; // en ms → cuanto tiempo visible ANTES del fadeout
 
 // Carga la imagenes en el html
-projects.forEach(project => {
+projects.forEach((project, i) => {
     const img = document.createElement("img");
-    img.className = `hero__img absolute top-0 left-0 w-full h-full object-cover transition-all duration-[${fadeDuration}ms]`;
+    img.className = `
+        hero__img absolute top-0 left-0 w-full h-full object-cover 
+        transition-all duration-[${fadeDuration}ms] opacity-0
+    `;
     img.src = project.img;
     img.alt = `Imagen del proyecto ${project.title}`;
+    img.loading = "lazy";
     hero.appendChild(img);
 });
 

@@ -19,11 +19,11 @@ const generateProjects = () => {
         `;
         
         const sideText = document.createElement('div');
-        sideText.className = "lg:w-1/4 lg:h-full lg:p-16 p-8 flex flex-col lg:gap-20 gap-8 items-center justify-center";
+        sideText.className = "lg:w-1/4 lg:h-full lg:p-16 p-8 flex flex-col lg:gap-8 gap-3 items-center justify-center";
 
         // Crear el título y la descripción dentro del enlace
         const h3 = document.createElement('h3');
-        h3.className = "text-4xl"
+        h3.className = "lg:text-4xl text-3xl"
         h3.textContent = project.title;
         
         const p = document.createElement('p');
@@ -31,7 +31,7 @@ const generateProjects = () => {
         p.textContent = project.description;
 
         const span = document.createElement('span');
-        span.className = "transition-color duration-300 text-[--light-gray]";
+        span.className = "transition-color duration-300 text-[--light-gray] hidden lg:inline";
         span.innerHTML = `Ver el proyecto <i class="fa-solid fa-chevron-right"></i>`;
         
         // Crear la imagen dentro del artículo
@@ -42,6 +42,7 @@ const generateProjects = () => {
         `;
         img.src = project.img;
         img.alt = `Imagen del proyecto ${project.title}`;
+        img.loading = "lazy";
         
         sideText.appendChild(h3);
         sideText.appendChild(p);
