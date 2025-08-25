@@ -7,46 +7,52 @@
     <script src="https://kit.fontawesome.com/41b6154676.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="shortcut icon" href="./assets/img/logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/icon.jpg" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-[--bg]">
-    <header class="w-full sticky top-0 z-[2000]">
-        <nav class="h-[10vh] lg:h-[7.5vh] flex justify-between items-center bg-white shadow-xl px-[5%]">
-            <h1 class="text-[3rem] text-[--black] break-keep">Estudio Vital</h1>
-            <ul class="list-none hidden md:flex">
-                <li class="border-b-2 border-transparent hover:border-[--black] ml-28">
-                    <a href="index.html" class="text-[2rem] text-[--black]">Inicio</a>
+<body class="bg-white">
+    <header id="header" class="w-full sticky top-0 z-[2000] bg-transparent backdrop-blur-lg shadow-xl transition-all duration-500">
+        <nav class="h-[10vh] lg:h-[7.5vh] flex justify-between items-center px-[5%]">
+            <h1 class="h-full md:min-w-80 flex items-center justify-center">
+                <a href="./" class="h-full">
+                    <img class="h-full object-scale-down" src="assets/img/logo.png" alt="Logo de Estudio Vital">
+                </a>
+            </h1>
+            <ul class="list-none hidden md:flex text-[--black]">
+                <li class="border-b-2 border-transparent ml-28">
+                    <a href="./" class="nav__link inline-block">Inicio</a>
+                </li>              
+                <li class="border-b-2 border-transparent ml-28">
+                    <a href="#proyectos" class="nav__link inline-block">Proyectos</a>
                 </li>
-                <li class="border-b-2 border-transparent hover:border-[--black] ml-28">
-                    <a href="#servicios" class="text-[2rem] text-[--black]">Servicios</a>
+                <li class="border-b-2 border-transparent ml-28">
+                    <a href="#servicios" class="nav__link inline-block">Servicios</a>
                 </li>
-                <li class="border-b-2 border-transparent hover:border-[--black] ml-28">
-                    <a href="#proyectos" class="text-[2rem] text-[--black]">Proyectos</a>
+                <li class="border-b-2 border-transparent ml-28">
+                    <a href="#nosotros" class="nav__link inline-block">Nosotros</a>
                 </li>
-                <li class="border-b-2 border-transparent hover:border-[--black] ml-28">
-                    <a href="#contacto" class="text-[2rem] text-[--black]">Contacto</a>
-                </li>
-            </ul>
-
-            <ul class="nav__list bg-white w-full list-none flex flex-col md:hidden absolute top-[10vh] left-0 transition-all duration-500 -ml-[100%]">
-                <li class="hover:bg-[#ddd] transition-colors m-4 rounded-2xl">
-                    <a href="index.html" class="text-[2rem] text-[--black] block p-7">Inicio</a>
-                </li>
-                <li class="hover:bg-[#ddd] transition-colors m-4 rounded-2xl">
-                    <a href="#servicios" class="text-[2rem] text-[--black] block p-7">Servicios</a>
-                </li>
-                <li class="hover:bg-[#ddd] transition-colors m-4 rounded-2xl">
-                    <a href="#proyectos" class="text-[2rem] text-[--black] block p-7">Proyectos</a>
-                </li>
-                <li class="hover:bg-[#ddd] transition-colors m-4 rounded-2xl">
-                    <a href="#contacto" class="text-[2rem] text-[--black] block p-7">Contacto</a>
+                <li class="border-b-2 border-transparent ml-28">
+                    <a href="#contacto" class="nav__link inline-block">Contacto</a>
                 </li>
             </ul>
-
             <i class="nav__bars fa-solid fa-bars-staggered text-[--black] text-[3.5rem] p-8 cursor-pointer md:hidden"></i>
         </nav>
     </header>
+
+    <ul class="nav__list w-full list-none flex flex-col md:hidden fixed z-[2000] top-[10vh] left-0 bg-transparent backdrop-blur-lg shadow-xl transition-all duration-500 -ml-[100%]">
+        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
+            <a href="./" class="text-[2rem] text-[--black] block p-7">Inicio</a>
+        </li>
+        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
+            <a href="#servicios" class="text-[2rem] text-[--black] block p-7">Servicios</a>
+        </li>
+        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
+            <a href="#proyectos" class="text-[2rem] text-[--black] block p-7">Proyectos</a>
+        </li>
+        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
+            <a href="#contacto" class="text-[2rem] text-[--black] block p-7">Contacto</a>
+        </li>
+    </ul>
 
     <main>
         <section class="fixed bottom-8 right-8 md:bottom-12 md:right-12 z-[2000]">
@@ -56,14 +62,6 @@
         </section>
 
         <section id="hero" class="w-full h-[90vh] lg:h-[92.5vh] flex flex-col select-none">
-
-            <img src="./assets/img/casa-1.jpg" alt="Imagen ilustrativa hero" class="hero__img">
-            <img src="./assets/img/casa-2.jpg" alt="Imagen ilustrativa hero" class="hero__img">
-            <img src="./assets/img/casa-3.png" alt="Imagen ilustrativa hero" class="hero__img">
-            <img src="./assets/img/dpto-1.jpg" alt="Imagen ilustrativa hero" class="hero__img">
-            <img src="./assets/img/dpto-2.jpg" alt="Imagen ilustrativa hero" class="hero__img">
-            <img src="./assets/img/dpto-3.jpg" alt="Imagen ilustrativa hero" class="hero__img">
-        
             <div class="hero__arrow-container">
                 <div class="bg-[--black] hover:bg-[#000] duration-500 flex items-center justify-center rounded-full text-5xl">
                     <a href="#proyectos" class="px-6 py-5 text-white">
@@ -74,9 +72,9 @@
 
         </section>
 
-        <section id="proyectos" class="lg:px-8 px-6 xl:px-40 py-40">
+        <section id="proyectos" class="lg:px-8 px-6 xl:px-12 py-40">
             <h2 class="text-6xl text-[--black] mb-20 text-center">Proyectos</h2>
-            <div class="proyectos__container flex flex-col lg:gap-48 gap-12"></div>
+            <div class="proyectos__container flex flex-col lg:gap-20 gap-12"></div>
         </section>
 
         <section id="servicios" class="bg-white px-8 xl:px-40 py-40 text-[1.7rem] scroll-mt-[10vh] overflow-x-hidden">
@@ -84,24 +82,36 @@
             <h2 class="text-6xl text-[--black] mb-20 text-center">Qué hacemos</h2>
 
             <div class="flex flex-wrap justify-center lg:gap-20 gap-12">
-                <article class="lg:w-1/4 w-[45rem] max-w-full flex flex-col text-[--black] bg-white" data-aos="fade-down">
-                    <img src="./assets/img/interiorismo.jpeg" alt="Imagen ilustrativa servicio" class="w-full h-96 object-cover">
+                <article class="lg:w-1/4 w-[45rem] max-w-full flex flex-col text-[--black] bg-white shadow-2xl shadow-[--black] rounded-xl" data-aos="fade-down">
+                    <img 
+                        src="./assets/img/interiorismo.jpeg" 
+                        alt="Imagen ilustrativa servicio" 
+                        class="w-full h-96 object-cover rounded-t-xl"
+                    >
                     <div class="flex flex-col lg:gap-12 gap-8 justify-center p-12">
                         <h3 class="text-4xl">Interiorismo al detalle</h3>
                         <p class="leading-[1.5]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem incidunt, accusamus consectetur aut culpa, corrupti possimus voluptatum facere eaque officia vitae? Laborum autem modi, repellat sit in pariatur dolor numquam?</p>
                     </div>
                 </article>
 
-                <article class="lg:w-1/4 w-[45rem] max-w-full flex flex-col text-[--black] bg-white" data-aos="fade-down">
-                    <img src="./assets/img/remodelaciones.jpg" alt="Imagen ilustrativa servicio" class="w-full h-96 object-cover">
+                <article class="lg:w-1/4 w-[45rem] max-w-full flex flex-col text-[--black] bg-white shadow-2xl shadow-[--black] rounded-xl" data-aos="fade-down" data-aos-delay="150">
+                    <img 
+                        src="./assets/img/remodelaciones.jpg" 
+                        alt="Imagen ilustrativa servicio" 
+                        class="w-full h-96 object-cover rounded-t-xl"
+                    >
                     <div class="flex flex-col lg:gap-12 gap-8 justify-center p-12">
                         <h3 class="text-4xl">Remodelaciones</h3>
                         <p class="leading-[1.5]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem incidunt, accusamus consectetur aut culpa, corrupti possimus voluptatum facere eaque officia vitae? Laborum autem modi, repellat sit in pariatur dolor numquam?</p>
                     </div>
                 </article>
 
-                <article class="lg:w-1/4 w-[45rem] max-w-full flex flex-col text-[--black] bg-white" data-aos="fade-down">
-                    <img src="./assets/img/arq-integral.jpg" alt="Imagen ilustrativa servicio" class="w-full h-96 object-cover">
+                <article class="lg:w-1/4 w-[45rem] max-w-full flex flex-col text-[--black] bg-white shadow-2xl shadow-[--black] rounded-xl" data-aos="fade-down" data-aos-delay="300">
+                    <img 
+                        src="./assets/img/arq-integral.jpg" 
+                        alt="Imagen ilustrativa servicio" 
+                        class="w-full h-96 object-cover rounded-t-xl"
+                    >
                     <div class="flex flex-col lg:gap-12 gap-8 justify-center p-12">
                         <h3 class="text-4xl">Arquitectura integral</h3>
                         <p class="leading-[1.5]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem incidunt, accusamus consectetur aut culpa, corrupti possimus voluptatum facere eaque officia vitae? Laborum autem modi, repellat sit in pariatur dolor numquam?</p>
@@ -111,31 +121,67 @@
 
         </section>
 
-        <section id="contacto" class="mt-32 px-8 py-24 xl:px-40 text-white">
+        <section id="nosotros" class="max-w-full w-[150rem] xl:px-40 px-8 py-40 mx-auto overflow-x-hidden">
+            <h2 class="text-6xl text-[--black] mb-20 text-center">Nosotros</h2>
+
+            <div class="flex flex-col sm:grid lg:gap-20 gap-12">
+                <p class="col-span-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vel porro nihil et possimus error accusamus quam voluptas nemo facere deleniti, doloremque laborum nesciunt labore assumenda repudiandae fugiat dolores ipsum fugit sed quisquam quae. Ipsa provident totam incidunt impedit fugit praesentium at neque ratione qui aut autem, repudiandae deserunt maiores.
+                </p>
+
+                <div>
+                    <h4 class="text-4xl text-[--black] mb-8">Arquitecto Agustín Vital</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quidem sit autem ea ut, quos nesciunt, explicabo maiores debitis voluptatem iste quaerat sed sint beatae soluta odit esse sunt impedit repellat temporibus. Nemo modi deserunt a, eum dolorum tempora maiores ducimus deleniti. Libero nisi, inventore fugit vitae mollitia dolores accusantium dolorum expedita! Quod esse accusantium consequuntur corporis alias. Aliquam ab in molestias dolorum rerum repudiandae, vero ea quasi, adipisci at nostrum recusandae vel, aspernatur quidem corrupti cumque atque veniam aperiam autem sequi fuga velit. Rerum, odit. Atque voluptatem expedita vitae fuga quisquam eaque impedit nihil blanditiis ea similique? Adipisci, voluptas.
+                    </p>
+                </div>
+                <img 
+                    class="h-[30rem] w-[20rem] object-cover self-center mb-8 sm:mb-0 shadow-2xl shadow-[--black] rounded-xl" 
+                    data-aos="fade-left"
+                    src="./assets/img/agustin.jpg" 
+                    alt="Foto de Agustín"
+                >
+
+                <div>
+                    <h4 class="text-4xl text-[--black] mb-8">Arquitecto Sebastián Policastro</h4>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic labore atque, voluptatibus quod sed impedit odio quas rerum vel exercitationem vero. Consequuntur expedita id, doloremque ut sint quos, eligendi, amet reprehenderit quas nihil consectetur! Ducimus quod asperiores rem earum excepturi officia ipsum. Voluptatum incidunt, modi sint quam expedita a perspiciatis aut dolorem? Ipsum beatae magnam adipisci tempora delectus quibusdam consequatur possimus est incidunt et, sequi perspiciatis maxime saepe placeat, accusantium neque odio voluptatibus qui soluta repellendus repudiandae nesciunt ipsam aliquam veritatis! Ducimus quas dolorem placeat iusto distinctio deleniti quisquam impedit eaque tempora. Itaque, reprehenderit? Quasi eos quam est accusantium tenetur.
+                    </p>
+                </div>
+                <img 
+                    class="h-[30rem] w-[20rem] object-cover self-center shadow-2xl shadow-[--black] rounded-xl"
+                    data-aos="fade-left"
+                    src="./assets/img/sebastian.jpg" 
+                    alt="Foto de Sebastián"
+                >
+            </div>
+        </section>
+
+        <section id="contacto" class="px-8 py-40 xl:px-40">
 
             <h2 class="text-7xl mb-20 text-center">Contactános</h2>
 
             <div class="w-full flex flex-wrap-reverse justify-center gap-24">
                 <article class="w-full md:w-1/2 lg:w-[40%] flex flex-col gap-12">
                     <div class="flex items-center gap-8">
-                        <i class="fa-solid fa-envelope row-span-2 text-7xl"></i>
+                        <i class="fa-solid fa-envelope row-span-2 text-5xl"></i>
                         <div class="flex flex-col">
-                            <h3 class="text-[3rem]">Correo electrónico</h3>
-                            <a class="text-[2.2rem]" href="mailto:contacto@asp-estudio.com.ar">contacto@asp-estudio.com.ar</a>
+                            <h3 class="text-4xl">Correo electrónico</h3>
+                            <a href="mailto:contacto@asp-estudio.com.ar">contacto@estudiovital.com.ar</a>
                         </div>
                     </div>
                     <div class="flex items-center gap-8">
-                        <i class="fa-brands fa-whatsapp row-span-2 text-7xl"></i>
+                        <i class="fa-brands fa-whatsapp row-span-2 text-5xl"></i>
                         <div class="flex flex-col">
-                            <h3 class="text-[3rem]">WhatsApp</h3>
-                            <a class="text-[2.2rem]" href="https://wa.me/+5491139431813">11 3943-1813</a>
+                            <h3 class="text-4xl">WhatsApp</h3>
+                            <a href="https://wa.me/+5491139431813">11 3943-1813</a>
                         </div>  
                     </div>
                     <div class="flex items-center gap-8">
-                        <i class="fa-brands fa-instagram row-span-2 text-7xl"></i>
+                        <i class="fa-brands fa-instagram row-span-2 text-5xl"></i>
                         <div class="flex flex-col">
-                            <h3 class="text-[3rem]">Instagram</h3>
-                            <a class="text-[2.2rem]" target="_blank" href="https://instagram.com/asp-estudio">@asp-estudio</a>
+                            <h3 class="text-4xl">Instagram</h3>
+                            <a target="_blank" href="https://instagram.com/estudiovital">@estudiovital</a>
                         </div>  
                     </div>
                     <iframe 
@@ -146,15 +192,10 @@
                 </article>
     
                 <article class="w-full md:w-1/2 lg:w-[40%]">
-                    <p class="text-4xl mb-16">Contactaté con nosotros para pedir un presupuesto sin cargo.</p>
-                    <form action="" class="flex flex-col gap-8 text-3xl">
+                    <p class="mb-16">Contactaté con nosotros para pedir un presupuesto sin cargo.</p>
+                    <form action="" class="flex flex-col gap-8">
                         <div class="w-full flex flex-col">
-                            <label 
-                                class="mb-2 text-[1.7rem]" 
-                                for="name"
-                            >
-                                Nombre y apellido
-                            </label>
+                            <label class="mb-2" for="name" >Nombre y apellido</label>
                             <input 
                                 class="border-[#ddd] border-2 p-4 w-full rounded-xl outline-none text-[--black]" 
                                 type="text" 
@@ -164,12 +205,7 @@
                             >
                         </div>
                         <div class="w-full flex flex-col">
-                            <label 
-                                class="mb-2 text-[1.7rem]"
-                                for="tel"
-                            >
-                                Teléfono
-                            </label>
+                            <label class="mb-2" for="tel">Teléfono</label>
                             <input 
                                 class="border-[#ddd] border-2 p-4 w-full rounded-xl outline-none text-[--black]" 
                                 type="tel" 
@@ -179,12 +215,7 @@
                             >
                         </div>
                         <div class="w-full flex flex-col">
-                            <label 
-                                class="mb-2 text-[1.7rem]"
-                                for="email"
-                            >
-                                Correo electrónico
-                            </label>
+                            <label class="mb-2" for="email">Correo electrónico</label>
                             <input 
                                 class="border-[#ddd] border-2 p-4 w-full rounded-xl outline-none text-[--black]" 
                                 type="email" 
@@ -194,12 +225,7 @@
                             >
                         </div>
                         <div class="w-full flex flex-col">
-                            <label 
-                                class="mb-2 text-[1.7rem]"
-                                for="location"
-                            >
-                                Ubicación
-                            </label>
+                            <label class="mb-2" for="location">Ubicación</label>
                             <input 
                                 class="border-[#ddd] border-2 p-4 w-full rounded-xl outline-none text-[--black]" 
                                 type="Ubicación" 
@@ -209,12 +235,7 @@
                             >
                         </div>
                         <div class="w-full flex flex-col">
-                            <label 
-                                class="mb-2 text-[1.7rem]"
-                                for="service"
-                            >
-                                Servicio a realizar
-                            </label>
+                            <label class="mb-2" for="service">Servicio a realizar</label>
                             <select
                                 class="border-[#ddd] border-2 p-4 w-full rounded-xl outline-none text-[--black]" 
                                 name="service" 
@@ -230,12 +251,7 @@
                             </select>
                         </div>
                         <div class="w-full flex flex-col">
-                            <label 
-                                class="mb-2 text-[1.7rem]"
-                                for="amount"
-                            >
-                                Monto estimado asignado (USD)
-                            </label>
+                            <label class="mb-2"for="amount">Monto estimado asignado (USD)</label>
                             <input 
                                 class="border-[#ddd] border-2 p-4 w-full rounded-xl outline-none text-[--black]" 
                                 type="number" 
@@ -245,20 +261,16 @@
                             >
                         </div>
                         <div class="w-full flex flex-col">
-                            <label 
-                                class="mb-2 text-[1.7rem]"
-                                for="message"
-                            >
-                                Consulta
-                            </label>
+                            <label class="mb-2"for="message">Consulta</label>
                             <textarea 
                                 class="border-[#ddd] border-2 p-4 w-full h-80 rounded-xl outline-none resize-none text-[--black]" 
                                 name="message" 
                                 id="message" 
+                                maxlength="3000"
                                 required
                             ></textarea>
                         </div>
-                        <button class="bg-[--black] hover:bg-[#000] duration-500 p-4 rounded">Enviar</button>
+                        <button class="bg-[--black] text-[1.7rem] text-white hover:bg-black duration-500 p-4 rounded">Enviar</button>
                     </form>
                 </article>
             </div>
@@ -267,7 +279,7 @@
     </main>
 
     <footer class="w-full h-[10vh] bg-[--black] flex items-center justify-center">
-        <span class="text-[1.8rem] text-[--bg]">© 2024 ASP Estudio</span>
+        <span class="text-[1.8rem] text-white">© 2025 Estudio Vital</span>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -279,5 +291,6 @@
     </script>
     <script src="./assets/js/nav.js"></script>
     <script type="module" src="./assets/js/display-resumed-projects.js"></script>
+    <script type="module" src="./assets/js/hero.js"></script>
 </body>
 </html>
