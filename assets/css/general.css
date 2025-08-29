@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg: #d2d2d2;
+    --white: #fff;
+    --black: #222;
+    --gray: #555;
+    --light-gray: #888;
+    --titles-f-family: 'Lato', sans-serif;
+    --texts-f-family: 'Raleway', sans-serif;
+    --texts-f-size: 1.7rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--titles-f-family);
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 9rem;
+  height: 1px;
+  margin: 2rem auto 0; /* arriba 2rem, horizontal auto, abajo 0 */
+  background: var(--black);
+}
+
+p, a, span, label, input, textarea, select, li {
+    font-family: var(--texts-f-family);
+    font-size: var(--texts-f-size);
+}
+
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+.nav__link {
+    position: relative;
+}
+
+.nav__link::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--black);
+  transition: all 0.5s ease;
+}
+
+.nav__link:hover::before {
+  width: 100%;
+}
+
+.project:hover span {
+    color: var(--black);
+}
+
+.hero__arrow-container {
+    position: absolute;
+    bottom: 70px;
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero__arrow-container div {
+    animation: go-up-down 1s alternate infinite;
+}
+
+@keyframes go-up-down {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

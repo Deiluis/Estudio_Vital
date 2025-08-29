@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/41b6154676.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/general.css">
     <link rel="shortcut icon" href="./assets/img/icon.jpg" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -66,62 +67,14 @@
                     </a>
                 </div>
             </div>
-
         </section>
 
-        <section id="proyectos" class="lg:px-8 px-6 xl:px-12 py-40">
+        <section id="proyectos" class="lg:px-8 px-6 xl:px-12 lg:py-40 py-32">
             <h2 class="text-6xl text-[--black] mb-20 text-center">Proyectos</h2>
             <div class="proyectos__container flex flex-col lg:gap-20 gap-6"></div>
         </section>
 
-        <!-- <section id="servicios" class="bg-white px-8 xl:px-40 py-40 text-[1.7rem] scroll-mt-[10vh] overflow-x-hidden">
-
-            <h2 class="text-6xl text-[--black] mb-20 text-center">Qué hacemos</h2>
-
-            <div class="flex flex-wrap justify-center lg:gap-20 gap-12">
-                <article class="lg:w-1/4 w-[45rem] max-w-full flex flex-col text-[--black] bg-white shadow-2xl shadow-[--black] rounded-xl" data-aos="fade-down">
-                    <img 
-                        src="./assets/img/interiorismo.jpeg" 
-                        alt="Imagen ilustrativa servicio" 
-                        class="w-full h-96 object-cover rounded-t-xl"
-                        loading="lazy"
-                    >
-                    <div class="flex flex-col lg:gap-12 gap-8 justify-center p-12">
-                        <h3 class="text-4xl">Interiorismo al detalle</h3>
-                        <p class="leading-[1.5]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem incidunt, accusamus consectetur aut culpa, corrupti possimus voluptatum facere eaque officia vitae? Laborum autem modi, repellat sit in pariatur dolor numquam?</p>
-                    </div>
-                </article>
-
-                <article class="lg:w-1/4 w-[45rem] max-w-full flex flex-col text-[--black] bg-white shadow-2xl shadow-[--black] rounded-xl" data-aos="fade-down" data-aos-delay="150">
-                    <img 
-                        src="./assets/img/remodelaciones.jpg" 
-                        alt="Imagen ilustrativa servicio" 
-                        class="w-full h-96 object-cover rounded-t-xl"
-                        loading="lazy"
-                    >
-                    <div class="flex flex-col lg:gap-12 gap-8 justify-center p-12">
-                        <h3 class="text-4xl">Remodelaciones</h3>
-                        <p class="leading-[1.5]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem incidunt, accusamus consectetur aut culpa, corrupti possimus voluptatum facere eaque officia vitae? Laborum autem modi, repellat sit in pariatur dolor numquam?</p>
-                    </div>
-                </article>
-
-                <article class="lg:w-1/4 w-[45rem] max-w-full flex flex-col text-[--black] bg-white shadow-2xl shadow-[--black] rounded-xl" data-aos="fade-down" data-aos-delay="300">
-                    <img 
-                        src="./assets/img/arq-integral.jpg" 
-                        alt="Imagen ilustrativa servicio" 
-                        class="w-full h-96 object-cover rounded-t-xl"
-                        loading="lazy"
-                    >
-                    <div class="flex flex-col lg:gap-12 gap-8 justify-center p-12">
-                        <h3 class="text-4xl">Arquitectura integral</h3>
-                        <p class="leading-[1.5]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem incidunt, accusamus consectetur aut culpa, corrupti possimus voluptatum facere eaque officia vitae? Laborum autem modi, repellat sit in pariatur dolor numquam?</p>
-                    </div>
-                </article>
-            </div>
-
-        </section> -->
-
-        <section id="estudio" class="max-w-full w-[150rem] xl:px-40 px-8 py-40 mx-auto overflow-x-hidden">
+        <section id="estudio" class="max-w-full w-[150rem] xl:px-40 px-8 lg:py-40 py-32 mx-auto overflow-x-hidden">
             <h2 class="text-6xl text-[--black] mb-20 text-center">Estudio</h2>
 
             <div class="flex flex-col sm:grid lg:gap-20 gap-12">
@@ -159,7 +112,7 @@
             </div>
         </section>
 
-        <section id="contacto" class="px-8 py-40 xl:px-40">
+        <section id="contacto" class="px-8 lg:py-40 py-32 xl:px-40">
 
             <h2 class="text-7xl mb-20 text-center">Contactános</h2>
 
@@ -223,42 +176,6 @@
                                 type="email" 
                                 name="email" 
                                 id="email" 
-                                required
-                            >
-                        </div>
-                        <div class="w-full flex flex-col">
-                            <label class="mb-2" for="location">Ubicación</label>
-                            <input 
-                                class="border-[#ddd] border-2 p-4 w-full rounded-xl outline-none text-[--black]" 
-                                type="Ubicación" 
-                                name="location" 
-                                id="location" 
-                                required
-                            >
-                        </div>
-                        <div class="w-full flex flex-col">
-                            <label class="mb-2" for="service">Servicio a realizar</label>
-                            <select
-                                class="border-[#ddd] border-2 p-4 w-full rounded-xl outline-none text-[--black]" 
-                                name="service" 
-                                id="service" 
-                                selected=""
-                                required
-                            >
-                                <option selected hidden></option>
-                                <option>Interiorismo al detalle</option>
-                                <option>Remodelaciones</option>
-                                <option>Arquitectura integral</option>
-                                <option>Otras consultas</option>
-                            </select>
-                        </div>
-                        <div class="w-full flex flex-col">
-                            <label class="mb-2"for="amount">Monto estimado asignado (USD)</label>
-                            <input 
-                                class="border-[#ddd] border-2 p-4 w-full rounded-xl outline-none text-[--black]" 
-                                type="number" 
-                                name="amount" 
-                                id="amount" 
                                 required
                             >
                         </div>
