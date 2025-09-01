@@ -123,51 +123,101 @@
                     class="lg:h-[85vh] object-contain"
                 >
             </div>
-
         </section>
 
-        <!-- <section id="carrusel-fotos" class="">
-            
-            <div>
-
-            </div>
-            
-        </section>
-
-        <section id="carrusel-planos" class="flex items-center xl:px-40 lg:py-40 py-32 select-none">
-            <div class="bg-[--black] hover:bg-[#000] flex items-center justify-center rounded-full text-3xl px-5 py-4 text-white absolute">
+        <section id="carrusel" class="flex items-center xl:mx-40 lg:py-40 py-32 select-none">
+            <!-- Botón izquierdo -->
+            <div class="carrusel__button--left bg-[--black] hover:bg-[#000] transition-colors flex items-center justify-center rounded-full text-3xl px-5 py-4 mx-2 lg:mx-6 text-white cursor-pointer absolute left-0 lg:static z-10 opacity-90 lg:opacity-100">
                 <i class="fas fa-chevron-left"></i>
             </div>
-            <img 
-                src="./assets/img/proyectos/sarmiento/1.webp" 
-                alt="Foto de la obra" 
-                class="h-96 object-cover rounded-xl"
-            >
-            <img 
-                src="./assets/img/proyectos/sarmiento/1.webp" 
-                alt="Foto de la obra" 
-                class="h-96 object-cover rounded-xl"
-            >
-            <img 
-                src="./assets/img/proyectos/sarmiento/1.webp" 
-                alt="Foto de la obra" 
-                class="h-96 object-cover rounded-xl"
-            >
-            <img 
-                src="./assets/img/proyectos/sarmiento/1.webp" 
-                alt="Foto de la obra" 
-                class="h-96 object-cover rounded-xl"
-            >
-            <div class="bg-[--black] hover:bg-[#000] duration-500 flex items-center justify-center rounded-full text-3xl px-5 py-4 text-white absolute">
+
+            <div class="carrusel__container overflow-x-hidden">
+                <!-- Carrusel -->
+                <div class="carrusel__images flex gap-12 transition-transform duration-500">
+                    <article class="relative rounded-xl">
+                        <div class="slider__show-button bg-[--black] opacity-0 hover:opacity-70 transition-opacity duration-500 absolute bottom-0 left-0 z-[1000] w-full h-full flex flex-col items-center justify-center cursor-pointer rounded-xl">
+                            <i class="slider__show-icon fas fa-magnifying-glass-plus text-5xl"></i>
+                        </div>
+                        <img src="./assets/img/proyectos/sarmiento/1.webp" alt="Foto y planos de la obra" class="w-full h-full object-cover rounded-xl" />
+                    </article>
+
+                    <article class="relative rounded-xl">
+                        <div class="slider__show-button bg-[--black] opacity-0 hover:opacity-70 transition-opacity duration-500 absolute bottom-0 left-0 z-[1000] w-full h-full flex flex-col items-center justify-center cursor-pointer rounded-xl">
+                            <i class="slider__show-icon fas fa-magnifying-glass-plus text-5xl"></i>
+                        </div>
+                        <img src="./assets/img/proyectos/casa-jufre/1.webp" alt="Foto y planos de la obra" class="w-full h-full object-cover rounded-xl" />
+                    </article>
+
+                    <article class="relative rounded-xl">
+                        <div class="slider__show-button bg-[--black] opacity-0 hover:opacity-70 transition-opacity duration-500 absolute bottom-0 left-0 z-[1000] w-full h-full flex flex-col items-center justify-center cursor-pointer rounded-xl">
+                            <i class="slider__show-icon fas fa-magnifying-glass-plus text-5xl"></i>
+                        </div>
+                        <img src="./assets/img/proyectos/estudio-jufre/1.webp" alt="Foto y planos de la obra" class="w-full h-full object-cover rounded-xl" />
+                    </article>
+
+                    <article class="relative rounded-xl">
+                        <div class="slider__show-button bg-[--black] opacity-0 hover:opacity-70 transition-opacity duration-500 absolute bottom-0 left-0 z-[1000] w-full h-full flex flex-col items-center justify-center cursor-pointer rounded-xl">
+                            <i class="slider__show-icon fas fa-magnifying-glass-plus text-5xl"></i>
+                        </div>
+                        <img src="./assets/img/proyectos/honduras/1.webp" alt="Foto y planos de la obra" class="w-full h-full object-cover rounded-xl" />
+                    </article>
+
+                    <article class="relative rounded-xl">
+                        <div class="slider__show-button bg-[--black] opacity-0 hover:opacity-70 transition-opacity duration-500 absolute bottom-0 left-0 z-[1000] w-full h-full flex flex-col items-center justify-center cursor-pointer rounded-xl">
+                            <i class="slider__show-icon fas fa-magnifying-glass-plus text-5xl"></i>
+                        </div>
+                        <img src="./assets/img/proyectos/lambare/1.webp" alt="Foto y planos de la obra" class="w-full h-full object-cover rounded-xl" />
+                    </article>
+
+                    <article class="relative rounded-xl">
+                        <div class="slider__show-button bg-[--black] opacity-0 hover:opacity-70 transition-opacity duration-500 absolute bottom-0 left-0 z-[1000] w-full h-full flex flex-col items-center justify-center cursor-pointer rounded-xl">
+                            <i class="slider__show-icon fas fa-magnifying-glass-plus text-5xl"></i>
+                        </div>
+                        <img src="./assets/img/proyectos/libertador/1.webp" alt="Foto y planos de la obra" class="w-full h-full object-cover rounded-xl" />
+                    </article>
+
+                    <article class="relative rounded-xl">
+                        <div class="slider__show-button bg-[--black] opacity-0 hover:opacity-70 transition-opacity duration-500 absolute bottom-0 left-0 z-[1000] w-full h-full flex flex-col items-center justify-center cursor-pointer rounded-xl">
+                            <i class="slider__show-icon fas fa-magnifying-glass-plus text-5xl"></i>
+                        </div>
+                        <img src="./assets/img/proyectos/sarmiento/PB.jpg" alt="Foto y planos de la obra" class="w-full h-full object-cover rounded-xl" />
+                    </article>
+                </div>
+            </div>
+            
+            <!-- Botón derecho -->
+            <div class="carrusel__button--right bg-[--black] hover:bg-[#000] transition-colors flex items-center justify-center rounded-full text-3xl px-5 py-4 mx-2 lg:mx-6 text-white cursor-pointer absolute right-0 lg:static z-10 opacity-90 lg:opacity-100">
                 <i class="fas fa-chevron-right"></i>
             </div>
-        </section> -->
+        </section>
+
+        <section class="modal-slider" id="modal-slider">
+            <div class="modal-slider__background"></div>
+            <div class="modal-slider__container w-full h-[30vh] sm:h-[45vh] md:h-[60vh] lg:h-[80vh]">
+                <div class="slider__button slider__button--left left-[-7rem]">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="w-[80%] h-full relative">
+                    <i class="modal-slider__button fas fa-xmark"></i>
+                    <img 
+                        src="" 
+                        class="modal-slider__img"
+                        alt="Imagen de una novedad retratada en el modal"
+                    >
+                </div>
+                <div class="slider__button slider__button--right right-[-7rem]">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="w-full h-[10vh] bg-[--black] flex items-center justify-center">
         <span class="text-[1.8rem] text-white">© 2025 Estudio Vital</span>
     </footer>
 
+    <script src="./assets/js/carrusel.js" type="module"></script>
+    <script src="./assets/js/modal-slider.js" type="module"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({

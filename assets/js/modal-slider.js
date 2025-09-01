@@ -7,7 +7,7 @@ const modalCloseButton = document.querySelector(".modal-slider__button");
 const prevButton = document.querySelector(".slider__button--left");
 const nextButton = document.querySelector(".slider__button--right");
 
-const images = document.querySelectorAll(".gallery__img")
+const images = document.querySelectorAll(".carrusel__images img")
 const showButtons = document.querySelectorAll(".slider__show-button");
 let currentIndex = 0;
 

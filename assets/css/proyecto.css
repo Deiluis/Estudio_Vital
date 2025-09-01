@@ -1,5 +1,5 @@
 
-/* .modal-slider {
+.modal-slider {
     display: flex;
 
     position: fixed;
@@ -107,4 +107,4 @@
     z-index: 1000;
 
     transition: transform 0.5s;
-} */
+}
