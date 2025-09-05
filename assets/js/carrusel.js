@@ -1,131 +1,152 @@
-const carousel = document.querySelector(".carrusel__images");
-const carouselContainer = document.querySelector(".carrusel__container");
-const imgs = document.querySelectorAll(".carrusel__images article");
-const prevBtn = document.querySelector(".carrusel__button--left");
-const nextBtn = document.querySelector(".carrusel__button--right");
+class Carousel extends HTMLElement {
+    constructor() {
+        super();
+        this.currentIndex = 0;
+        this.visibleSlides = 1;
+        this.slideWidth = 0;
+        this.gap = 0;
 
-let currentIndex = 0;
-let visibleSlides = 1;
-let slideWidth = 0;
-let gap = 0;
+        // swipe/mouse vars
+        this.mouseDown = false;
+        this.startX = 0;
+        this.isDragging = false;
+        this.currentTranslate = 0;
+        this.prevTranslate = 0;
+        this.SWIPE_THRESHOLD = 20; // px para considerar swipe
+    }
 
-// Mouse vars
-let mouseDown = false;
+    connectedCallback() {
+        // Buscar elementos dentro del carrusel
+        this.carousel = this.querySelector(".carrusel__images");
+        this.carouselContainer = this.querySelector(".carrusel__container") || this;
+        this.imgs = this.querySelectorAll(".carrusel__images article");
+        this.prevBtn = this.querySelector(".carrusel__button--left");
+        this.nextBtn = this.querySelector(".carrusel__button--right");
 
-// Swipe vars
-let startX = 0;
-let isDragging = false;
-let currentTranslate = 0;
-let prevTranslate = 0;
+        // Inicializar
+        this.updateVisibleSlides();
+        window.addEventListener("resize", this.updateVisibleSlides.bind(this));
 
-// Calcular cuántos slides mostrar según pantalla
-function updateVisibleSlides() {
-	const width = window.innerWidth;
+        // Botones
+        this.nextBtn?.addEventListener("click", () => {
+            if (this.currentIndex < this.imgs.length - this.visibleSlides) {
+                this.currentIndex++;
+                this.moveToSlide(this.currentIndex);
+            }
+        });
 
-	if (width < 640)
-		visibleSlides = 1; // móviles
-	else if (width < 1024)
-		visibleSlides = 3; // tablets
-	else
-		visibleSlides = 4; // desktops
+        this.prevBtn?.addEventListener("click", () => {
+            if (this.currentIndex > 0) {
+                this.currentIndex--;
+                this.moveToSlide(this.currentIndex);
+            }
+        });
 
-	// Calcular gap (12 = 3rem por Tailwind → 48px en la mayoría de navegadores)
-	gap = parseInt(getComputedStyle(carousel).gap) || 0;
+        // Eventos touch/mouse
+        this.carouselContainer.addEventListener("touchstart", this.touchStart.bind(this));
+        this.carouselContainer.addEventListener("touchmove", this.touchMove.bind(this));
+        this.carouselContainer.addEventListener("touchend", this.touchEnd.bind(this));
 
-	// Ancho de cada slide
-	slideWidth = carousel.clientWidth / visibleSlides - (gap * (visibleSlides - 1)) / visibleSlides;
+        this.carouselContainer.addEventListener("mousedown", this.touchStart.bind(this));
+        this.carouselContainer.addEventListener("mousemove", this.touchMove.bind(this));
+        this.carouselContainer.addEventListener("mouseup", this.touchEnd.bind(this));
+        this.carouselContainer.addEventListener("mouseleave", this.touchEnd.bind(this));
+    }
 
-	// Aplicar ancho fijo a cada imagen
-	imgs.forEach(img => {
-		img.style.minWidth = `${slideWidth}px`;
-	});
+    // Calcular slides visibles
+    updateVisibleSlides() {
+        const width = window.innerWidth;
 
-	const maxIndex = Math.max(0, imgs.length - visibleSlides);
-	if (currentIndex > maxIndex) {
-		currentIndex = maxIndex;
-	}
+        if (width < 640) this.visibleSlides = 1;
+        else if (width < 1024) this.visibleSlides = 3;
+        else this.visibleSlides = 4;
 
-	moveToSlide(currentIndex);
-}
+        this.gap = parseInt(getComputedStyle(this.carousel).gap) || 0;
+        this.slideWidth =
+            this.carousel.clientWidth / this.visibleSlides -
+            (this.gap * (this.visibleSlides - 1)) / this.visibleSlides;
 
-// Mover carrusel
-function moveToSlide(index) {
-	const offset = -(index * (slideWidth + gap));
-	carousel.style.transition = "transform 0.3s ease";
-	carousel.style.transform = `translateX(${offset}px)`;
-	prevTranslate = offset;
-}
+        this.imgs.forEach((img) => {
+            img.style.minWidth = `${this.slideWidth}px`;
+        });
 
-// Botones
-nextBtn.addEventListener("click", () => {
-	if (currentIndex < imgs.length - visibleSlides) {
-		currentIndex++;
-		moveToSlide(currentIndex);
-	}
-});
+        const maxIndex = Math.max(0, this.imgs.length - this.visibleSlides);
+        if (this.currentIndex > maxIndex) this.currentIndex = maxIndex;
 
-prevBtn.addEventListener("click", () => {
-	if (currentIndex > 0) {
-		currentIndex--;
-		moveToSlide(currentIndex);
-	}
-});
+        this.moveToSlide(this.currentIndex);
+    }
 
-// ---- SWIPE ----
-function touchStart(e) {
-	startX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
-	isDragging = false; // por ahora no estamos arrastrando
-	mouseDown = e.type.includes("mouse");
-	carousel.style.transition = "none";
-}
+    // Mover carrusel
+    moveToSlide(index) {
+        const offset = -(index * (this.slideWidth + this.gap));
+        this.carousel.style.transition = "transform 0.3s ease";
+        this.carousel.style.transform = `translateX(${offset}px)`;
+        this.prevTranslate = offset;
 
-function touchMove(e) {
-    const currentX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
-    const diff = currentX - startX;
+        // 🔥 Actualizar estado de los botones
+        const maxIndex = this.imgs.length - this.visibleSlides;
 
-    if (e.type.includes("mouse") && !mouseDown) return; // si no está presionado, no arrastramos
+        if (this.prevBtn) {
+            this.prevBtn.style.opacity = index <= 0 ? "0.3" : "1";
+            this.prevBtn.style.pointerEvents = index <= 0 ? "none" : "auto";
+        }
 
-    if (Math.abs(diff) > 5) {
-        isDragging = true;
-        currentTranslate = prevTranslate + diff;
-        carousel.style.transform = `translateX(${currentTranslate}px)`;
+        if (this.nextBtn) {
+            this.nextBtn.style.opacity = index >= maxIndex ? "0.3" : "1";
+            this.nextBtn.style.pointerEvents = index >= maxIndex ? "none" : "auto";
+        }
+    }
+
+    // Swipe handlers
+    touchStart(e) {
+        this.startX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+        this.isDragging = false;
+        this.mouseDown = e.type.includes("mouse");
+        this.carousel.style.transition = "none";
+    }
+
+    touchMove(e) {
+        const currentX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+        const diff = currentX - this.startX;
+
+        if (e.type.includes("mouse") && !this.mouseDown) return;
+
+        if (Math.abs(diff) > 5) {
+            this.isDragging = true;
+            this.currentTranslate = this.prevTranslate + diff;
+            this.carousel.style.transform = `translateX(${this.currentTranslate}px)`;
+        }
+    }
+
+    touchEnd() {
+        if (!this.isDragging) {
+            this.mouseDown = false;
+            return;
+        }
+
+        const movedBy = this.currentTranslate - this.prevTranslate;
+
+        if (Math.abs(movedBy) < this.SWIPE_THRESHOLD) {
+            this.moveToSlide(this.currentIndex);
+            this.isDragging = false;
+            this.mouseDown = false;
+            return;
+        }
+
+        const totalSlideWidth = this.slideWidth + this.gap;
+        let rawIndex = -this.currentTranslate / totalSlideWidth;
+        this.currentIndex = Math.round(rawIndex);
+
+        if (this.currentIndex < 0) this.currentIndex = 0;
+        if (this.currentIndex > this.imgs.length - this.visibleSlides)
+            this.currentIndex = this.imgs.length - this.visibleSlides;
+
+        this.moveToSlide(this.currentIndex);
+
+        this.isDragging = false;
+        this.mouseDown = false;
     }
 }
 
-function touchEnd() {
-    if (!isDragging) {
-        mouseDown = false;
-        return; // solo clic, no arrastrar
-    }
-
-    // Calcular índice más cercano según desplazamiento
-    const totalSlideWidth = slideWidth + gap;
-    let rawIndex = -currentTranslate / totalSlideWidth;
-    currentIndex = Math.round(rawIndex); // redondear al índice más cercano
-
-    // Limitar índice
-    if (currentIndex < 0) 
-		currentIndex = 0;
-
-    if (currentIndex > imgs.length - visibleSlides) 
-		currentIndex = imgs.length - visibleSlides;
-
-    moveToSlide(currentIndex);
-	
-    isDragging = false;
-    mouseDown = false;
-}
-
-// Eventos touch y mouse
-carouselContainer.addEventListener("touchstart", touchStart);
-carouselContainer.addEventListener("touchmove", touchMove);
-carouselContainer.addEventListener("touchend", touchEnd);
-
-carouselContainer.addEventListener("mousedown", touchStart);
-carouselContainer.addEventListener("mousemove", touchMove);
-carouselContainer.addEventListener("mouseup", touchEnd);
-carouselContainer.addEventListener("mouseleave", touchEnd); // por si se sale del carrusel
-
-// Inicializar
-window.addEventListener("resize", updateVisibleSlides);
-updateVisibleSlides();
+// Registrar el custom element
+customElements.define("custom-carousel", Carousel);
