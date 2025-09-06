@@ -26,14 +26,16 @@ const getDetailedProject = async (projectName) => {
 };
 
 const renderProject = (project) => {
-    banner.src = project.banner;
-    blueprint.src = project.blueprint;
+    banner.src = `/assets/img/proyectos/${project.name}/${project.banner}`;
+    blueprint.src = `/assets/img/proyectos/${project.name}/${project.blueprint}`;
     title.innerHTML = project.title;
     subtitle.innerHTML = project.subtitle;
     
-    const surface = document.createElement("li");
-    surface.innerHTML = project?.surface;
-    credits.appendChild(surface);
+    if (project?.surface) {
+        const surface = document.createElement("li");
+        surface.innerHTML = project.surface;
+        credits.appendChild(surface);
+    }
 
     project.credits.forEach(credit => {
         const item = document.createElement("li");
@@ -49,7 +51,7 @@ const renderProject = (project) => {
 
     project.gallery.forEach((src, i) => {
         const img = document.createElement("img");
-        img.src = src;
+        img.src = `/assets/img/proyectos/${project.name}/${src}`;
         img.alt = "Foto de la obra";
         img.classList = "lg:h-[85vh] object-contain";
         img.loading = "lazy";
@@ -60,8 +62,8 @@ const renderProject = (project) => {
         gallery.appendChild(img);
     });              
 
-    project.carousel1.forEach(src => addSlide(src, carousel1));
-    project.carousel2.forEach(src => addSlide(src, carousel2));
+    project.carousel1.forEach(src => addSlide(project.name, src, carousel1));
+    project.carousel2.forEach(src => addSlide(project.name, src, carousel2));
 
     // Espera a que se hayan cargado los elementos para calcular el tamaño de los slides.
     Promise
@@ -80,7 +82,7 @@ const renderProject = (project) => {
     .then(() => carousel2Container.updateVisibleSlides());
 };
 
-const addSlide = (src, container) => {
+const addSlide = (name, src, container) => {
     const article = document.createElement("article");
     article.classList = "relative rounded-xl";
 
@@ -93,7 +95,7 @@ const addSlide = (src, container) => {
     overlay.innerHTML = `<i class="text-white fas fa-magnifying-glass-plus text-5xl"></i>`;
 
     const img = document.createElement("img");
-    img.src = src;
+    img.src = `/assets/img/proyectos/${name}/${src}`;
     img.alt = "Foto de la obra";
     img.classList = "w-full h-full object-cover rounded-xl";
     img.loading = "lazy";

@@ -3,90 +3,90 @@
 		"name": "ombu",
 		"title": "CASA EL OMBÚ",
 		"description": "Ezeiza. Vivienda unifamiliar. 200 m²",
-		"img": "/assets/img/proyectos/ombu/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "newbery",
 		"title": "CASA NEWBERY",
 		"description": "Colegiales. Vivienda unifamiliar. 280 m²",
-		"img": "/assets/img/proyectos/newbery/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "kru-esports",
 		"title": "KRÜ ESPORTS",
 		"description": "Palermo. Gaming Center. 680 m²",
-		"img": "/assets/img/proyectos/newbery/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "sarmiento",
 		"title": "PH SARMIENTO",
 		"description": "Almagro. Reforma integral. 125 m²",
-		"img": "/assets/img/proyectos/sarmiento/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "exaltacion-cruz",
 		"title": "CASA EXALTACIÓN DE LA CRUZ",
 		"description": "Vivienda unifamiliar. 160 m²",
-		"img": "/assets/img/proyectos/sarmiento/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "libertador",
 		"title": "PISO LIBERTADOR",
 		"description": "Belgrano. Reforma integral. 196 m²",
-		"img": "/assets/img/proyectos/libertador/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "casa-jufre",
 		"title": "CASA JUFRÉ",
 		"description": "Villa Crespo. Vivienda unifamiliar. 340 m²",
-		"img": "/assets/img/proyectos/casa-jufre/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "estudios-jufre",
 		"title": "ESTUDIOS JUFRÉ",
 		"description": "Villa Crespo. Reforma integral. 430 m²",
-		"img": "/assets/img/proyectos/estudios-jufre/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "honduras",
 		"title": "PH HONDURAS Y GASCÓN",
 		"description": "Palermo. Reforma integral. 160 m²",
-		"img": "/assets/img/proyectos/honduras/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "san-lorenzo",
 		"title": "SEDE CLUB SAN LORENZO",
 		"description": "Boedo. Reforma integral. 800 m²",
-		"img": "/assets/img/proyectos/honduras/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "lambare",
 		"title": "PH LAMBARÉ",
 		"description": "Almagro. Reforma integral. 90 m²",
-		"img": "/assets/img/proyectos/lambare/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "cocomarola",
 		"title": "ANTIFEATRO COCOMAROLA",
 		"description": "Corrientes. Tercer Premio Concurso Nacional",
-		"img": "/assets/img/proyectos/lambare/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "montaneses",
 		"title": "PISO MONTAÑESES",
 		"description": "Belgrano. 150 m²",
-		"img": "/assets/img/proyectos/montaneses/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "dorrego",
 		"title": "PH DORREGO",
 		"description": " Palermo. Reforma integral. 160 m²",
-		"img": "/assets/img/proyectos/montaneses/1.webp"
+		"img": "1.webp"
 	},
 	{
 		"name": "roseti",
 		"title": "CASA ROSETI",
 		"description": "Chacarita. Vivienda unifamiliar. 260 m²",
-		"img": "/assets/img/proyectos/montaneses/1.webp"
+		"img": "1.webp"
 	}
 ]

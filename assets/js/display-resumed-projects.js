@@ -41,7 +41,7 @@ const generateProjects = async () => {
             lg:w-3/4 lg:h-full w-full h-96 object-cover rounded-t-xl
             ${i % 2 == 0 ? 'lg:rounded-r-xl lg:rounded-tl-none' : 'lg:rounded-l-xl lg:rounded-tr-none'}
         `;
-        img.src = project.img;
+        img.src = `/assets/img/proyectos/${project.name}/${project.img}`;
         img.alt = `Imagen del proyecto ${project.title}`;
         img.loading = "lazy";
         
