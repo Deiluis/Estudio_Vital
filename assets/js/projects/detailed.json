@@ -1,13 +1,149 @@
 [
     {
+        "name": "ombu",
+        "banner": "/assets/img/proyectos/ombu/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "CASA EL OMBÚ",
+        "subtitle": "Ezeiza, Provincia de Buenos Aires. 2007-2008. Vivienda unifamiliar.",
+        "surface": "200 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital.",
+            "Equipo de proyecto: Claudio Costanzo, Daniel Bascoy, Carlos Oneto.",
+            "Construcción: Galemar.",
+            "Estructura metálica: Añuri."
+        ],
+        "description": [
+            "El proyecto comienza con la selección del lote dentro de un barrio privado de 110 hectáreas con una cancha de golf en el centro, priorizando que las vistas sean profundas y despejadas.",
+            "Esta casa de fin de semana se concibe al modo de las case study californianas: un techo flotante, liviano y continuo, con una única y suave pendiente que va aumentando su altura a medida que se avanza en el terreno. Las fachadas se cierran o abren al máximo según su orientación y posibilidad de expansión y transparencia. La planta en forma de hache dispone al frente un bloque con los servicios y habitaciones y, separada por dos patios, desplaza al medio del terreno, al área social, protagonista de la vista hacia el parque central del golf.",
+            "El volumen apaisado logra integrarse en el paisaje y no resultar agresivo con el entorno. La estructura metálica de la cubierta con sus apoyos esbeltos, se separa de los muros y carpinterías, generando una ventana perimetral continua. Dentro de esta franja se genera continuidad de vistas y cielo, permitiendo a la luz natural entrar y acompañar a sus habitantes, durante el día y las noches de luna."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp",
+            "/assets/img/proyectos/ombu/1.webp"
+        ]
+	},
+    {
+        "name": "newbery",
+        "banner": "/assets/img/proyectos/newbery/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "CASA NEWBERY Y FREIRE",
+        "subtitle": "Colegiales, Buenos Aires. 2019-2021. Vivienda unifamiliar.",
+        "surface": "280 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital.",
+            "Equipo de proyecto: Mijal Carbajal, Sebastián Policastro, Juan Bustos Berrondo.",
+            "Hormigón, albañilería y sanitarias: Caino construcciones.",
+            "Electricidad: Julio Branda, Guillermo Inhouds."
+        ],
+        "description": [
+            "En un barrio central de Buenos Aires de baja altura, se desarrolla esta vivienda familiar en tres plantas. El terreno es acotado pero alcanza justo para tener un fondo o jardín. Se busca la permeabilidad por la continuidad visual y material, logrando una transparencia pasante desde entre frente y contrafrente. En cada nivel y en ambos sentidos, se agrupan funciones únicas o de mínimas divisiones para todo el ancho del lote.",
+            "La planta baja es de 3 metros de altura y se percibe ligera por la losa sin vigas que apoya solamente en las medianeras. En sus extremos está reforzada por los canteros invertidos, y en el centro se sostiene colgada de las vigas del segundo nivel. Estas columnas, que en realidad son tensores, se encuentran ocultas en las particiones de las habitaciones del primer piso. En el último nivel y con la mitad de superficie se ubica un estar-estudio, entre un balcón al frente y la terraza hacia el contrafrente.",
+            "La estructura, losa y tabiques fueron realizados en hormigón visto y junto a los pisos de madera, definen los planos de prácticamente toda la casa. Las persianas metálicas microperforadas permiten un filtro a la transparencia con el ancho máximo propuesto."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp",
+            "/assets/img/proyectos/newbery/1.webp"
+        ]
+	},
+    {
+        "name": "kru-esports",
+        "banner": "/assets/img/proyectos/kru-esports/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "KRÜ ESPORTS",
+        "subtitle": "Palermo, Buenos Aires. 2021. Primer premio concurso privado. Gaming Center y Oficinas.",
+        "surface": "680 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital, Planta Alta Productora.",
+            "Equipo de proyecto: Mijal Carbajal, Sebastián Policastro, Juan Bustos Berrondo.",
+            "Construcción: Intro arquitectura."
+        ],
+        "description": [
+            "Krü Esports es una empresa dedicada al gaming, los deportes electrónicos, videojuegos y nuevos medios digitales fundada por Sergio “Kun” Agüero, quien buscó incorporar su experiencia en el fútbol al ámbito de los deportes electrónicos.",
+            "Nos convocaron a un concurso con el objetivo de construir el Club en Buenos Aires. Nuestra propuesta plantea un espacio y mobiliario de carácter futurista con estética de nave espacial.",
+            "El motor del proyecto se encuentra en el primer piso y son las salas de entrenamiento para cinco equipos, además de una sala de reuniones principal y un área de esparcimiento.",
+            "La disposición de los volúmenes de las salas se presenta con una dualidad: sobrio, estricto, funcional en el perímetro externo y curvo, fluido, lúdico en el perímetro interno para las circulaciones. Por un lado, permite ubicar racionalmente los puestos de juego y por el otro, genera un recorrido expectante y de cierta introspección antes de salir a la cancha (entrar a la sala).",
+            "En la planta baja se instaló el microcine para eventos, con capacidad para 10 jugadores y espectadores. Se encuentra también un bar y un estudio de grabación. Luego, en el entrepiso se ubican la recepción, la sala de streaming y las oficinas del staff."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp",
+            "/assets/img/proyectos/kru-esports/1.webp"
+        ]
+	},
+    {
         "name": "sarmiento",
         "banner": "/assets/img/proyectos/sarmiento/1.webp",
         "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
-        "title": "PH SARMIENTO y YATAY",
+        "title": "PH SARMIENTO Y YATAY",
         "subtitle": "Almagro, Buenos Aires. 2017-2020. Reforma integral.",
         "surface": "125 m²",
         "credits": [
-            "Proyecto y Dirección: Agustín Vital.",
+            "Proyecto y dirección: Agustín Vital.",
             "Equipo de proyecto: Sebastián Policastro, Pablo Gómez Casela, Juan Bustos Berrondo, Mijal Carbajal.",
             "Albañilería y hormigón: Silvino Martínez, Horacio Solís Villalba.",
             "Sanitarias: Luis Amarilla.",
@@ -47,6 +183,511 @@
             "/assets/img/proyectos/sarmiento/1.webp",
             "/assets/img/proyectos/sarmiento/1.webp",
             "/assets/img/proyectos/sarmiento/1.webp"
+        ]
+	},
+    {
+        "name": "exaltacion-cruz",
+        "banner": "/assets/img/proyectos/sarmiento/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "CASA EXALTACIÓN DE LA CRUZ",
+        "subtitle": "Provincia de Buenos Aires. 2024. Vivienda unifamiliar.",
+        "surface": "160 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital, Sebastián Policastro, Iñaki Echeverría.",
+            "Construcción: Caino construcciones.",
+            "Estructura de madera: Rodolfo Mansilla.",
+            "Pisos de madera: Miguel Benitez Rotela.",
+            "Energía solar: Ariel Mesch."
+        ],
+        "description": [
+            "En un terreno rural de 15 hectáreas se construye esta casa de madera, como primer paso dentro de un proyecto de casas sustentables, biofábrica, vivero y huerta orgánica. El propósito del conjunto es entrar en contacto con los conceptos de permacultura y economía circular.",
+            "Se plantea una estructura de madera de una sola pendiente para la cubierta, independiente del cerramiento. Incluye dos habitaciones, un living, un núcleo sanitario central y una galería en L orientada al norte-este, que tiene la misma superficie semicubierta que el resto de la casa.",
+            "La envolvente se trata como un sistema pasivo, priorizando la eficiencia energética y confort ambiental. El techo y el piso son doble capa con cámara de aire en el medio y ventilación, los muros están aislados con celulosa proyectada y revestidos con listones de madera biosintética. Las aberturas de aluminio tienen ruptura de puente térmico y doble vidriado hermético. La energía eléctrica es proporcionada por paneles solares ubicados en la cubierta."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp"
+        ]
+	},
+    {
+        "name": "libertador",
+        "banner": "/assets/img/proyectos/libertador/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "PISO LIBERTADOR Y VIRREY DEL PINO",
+        "subtitle": "Belgrano, Buenos Aires. 2024. Reforma integral Piso 12.",
+        "surface": "196 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital, Sebastián Policastro.",
+            "Equipo de proyecto: Camila Bevaqua, Camila Orgambide.",
+            "Construcción: Daniel Aquino Cáceres.",
+            "Electricidad: Jorge Vergara.",
+            "Herrería y vidrios: Enrique Ramos, Beatriz Lema.",
+            "Carpinterías de madera: Enrique Albornoz, Pedro Vanrell, Norberto Martínez.",
+            "Cerramientos de pvc: Abertec.",
+            "Mesadas de mármol: United Stone.",
+            "Aire Acondicionado: Matías Saintesteben.",
+            "Calefacción: Eduardo Solon."
+        ],
+        "description": [
+            "Se trata de una remodelación integral a fondo de todo un piso sobre la Avenida Libertador. Se lleva adelante la renovación total de todos los revestimientos, pisos, cielorrasos, instalaciones, iluminación, aberturas y mobiliarios. En la nueva distribución, la cocina gana espacio hacia el comedor y se integra completamente al living mediante una puerta corrediza de vidrio repartido. Para las habitaciones en contrafrente se logra mayor espacio incorporando los balcones y se ubica un nuevo baño completo, permitiendo hacer en suite la habitación principal. El sector lavadero y servicio se reconfigura permitiendo la doble circulación hacia la cocina."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/libertador/1.webp"
+        ]
+	},
+    {
+        "name": "casa-jufre",
+        "banner": "/assets/img/proyectos/casa-jufre/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "CASA JUFRÉ Y THAMES",
+        "subtitle": "Villa Crespo, Buenos Aires. 2007-2008. Reforma integral.",
+        "surface": "340 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital.",
+            "Equipo de proyecto: Paula Mariasch.",
+            "Construcción: Gealco."
+        ],
+        "description": [
+            "La “finca” Jufré fue el punto de partida para una gran amistad con sus habitantes. El propósito de la reforma consistía en reformular una antigua casa de una planta dentro de un terreno de 10 por 40 metros. Para la ampliación, por un lado, se refuerza la estructura existente, generando aberturas y un patio de mayor tamaño. Por otro lado, un gran techo liviano en doble altura apoyado solamente en las medianeras envuelve la cáscara original, conforma un nuevo piso de habitaciones y cubre el patio lateral dando lugar a la escalera y la circulación principal. Se produce un volumen más compacto, de carácter industrial y que da lugar a un jardín de fondo de grandes dimensiones."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ]
+	},
+    {
+        "name": "estudios-jufre",
+        "banner": "/assets/img/proyectos/estudios-jufre/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "ESTUDIOS JUFRÉ Y URIARTE",
+        "subtitle": "Villa Crespo, Buenos Aires. 2010-2011. Reforma integral.",
+        "surface": "430 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital.",
+            "Equipo de proyecto: Alberto Mesa, Daniel Mesa.",
+            "Construcción: Oscar Honeker.",
+            "Carpinterías de madera: Daniel Delgado.",
+            "Herrería y vidrios: Juan Carlos Czuplak."
+        ],
+        "description": [
+            "El cartel de venta decía Terreno de 10x40 metros desestimando la presencia de una antigua casa chorizo, y su posible restauración y puesta en valor. Esto fue lo que hicimos cuando la compran los vecinos y amigos de la Casa Jufre, para que no hagan un edificio al lado.",
+            "Unificamos en una gran casa las tres unidades que había, comunicando pasillos, patios y terrazas, y conformando 12 estudios profesionales tipo coworking con servicios, sala de reuniones y espacios exteriores en común. Para mejorar las condiciones, se incorporó a cada espacio una fuente de iluminación natural adicional, ya sea por ventanas o claraboyas, según lo permitiera la ampliación sobre el primer piso.",
+            "Se restauraron las fachadas, bovedillas, aberturas y postigos de cedro, así como los pisos de pinotea y mosaico. Para la ampliación se siguió la misma línea: se construyeron nuevas bovedillas y muros con ladrillos reciclados de demolición, aberturas de madera de cedro boliviano, pisos nuevos de pinotea recuperada y carpinterías de hierro."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ]
+	},
+    {
+        "name": "honduras",
+        "banner": "/assets/img/proyectos/honduras/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "PH HONDURAS y GASCÓN",
+        "subtitle": "Palermo, Buenos Aires. 2022. Reforma integral.",
+        "surface": "160 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital.",
+            "Equipo de proyecto: Sebastián Policastro, Mijal Carbajal.",
+            "Albañilería, Sanitarias: Silvino Martínez, Horacio Solís Villalba.",
+            "Carpinterías de madera: Pedro Vanrell, Norberto Martínez.",
+            "Electricidad: Adrián Policastro.",
+            "Herrería y vidrios: Sergio Mendoza, Beatriz Lema.",
+            "Cerramientos de aluminio: Abertec.",
+            "Cielorrasos de yeso: Gabriel Veliz.",
+            "Aire Acondicionado: Matías Saintesteben."
+        ],
+        "description": [
+            "El desafío en nuestra intervención consistía en reformular la pequeña casa que tenían los propietarios de solteros y convertirla en una casa familiar para cinco integrantes, dentro de un particular conjunto de veinte-seis pe-haches de 80 metros cuadrados de terreno y su espacio aéreo.",
+            "Se aprovechó el desarrollo en vertical, duplicando el patio en planta alta; mediante bandejas de chapa perforada que se pueden pisar y que permiten iluminar y ventilar a los dormitorios de la planta baja. En segundo nivel, se cierra este mismo patio con un techo de vidrio corredizo que permite abrir unos dos tercios de su superficie. El living comedor en la planta alta se completa con una terraza accesible en un tercer nivel, integrada al mismo sistema de patios, circulaciones verticales, servicios y aire y luz.",
+            "Las aberturas de madera para la ampliación se consiguieron de demolición, en combinación con las existentes, adaptándolas y restaurándolas."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ]
+	},
+    {
+        "name": "san-lorenzo",
+        "banner": "/assets/img/proyectos/san-lorenzo/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "SEDE CLUB SAN LORENZO",
+        "subtitle": "Boedo, Buenos Aires. 2015. Reforma integral.",
+        "surface": "800 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital.",
+            "Equipo de proyecto: Luciana Pellegrino, Matias Moret, Gustavo Carreira, Juan Pastor Merlo."
+        ],
+        "description": [
+            "La vuelta a Boedo y la recuperación de los terrenos donde estaba la cancha original de San Lorenzo es un objetivo fundamental en los planes del Club. Como parte de la estrategia y dentro de ese mismo predio, se proyecta la nueva sede administrativa, reutilizando y adaptando la antigua casa en esquina existente al lado de la sede social.",
+            "El programa incluye una planta baja comercial, y en primer piso las oficinas y sala de reuniones para la comisión directiva. Se deja previsto un futuro crecimiento en altura para más oficinas y un auditorio."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ]
+	},
+    {
+        "name": "lambare",
+        "banner": "/assets/img/proyectos/lambare/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "PH LAMBARÉ Y CORRIENTES",
+        "subtitle": "Almagro, Buenos Aires. 2021. Reforma integral.",
+        "surface": "90 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital.",
+            "Equipo de proyecto: Sebastián Policastro, Pablo Gómez Casela, Juan Bustos Berrondo, Mijal Carbajal.",
+            "Albañilería y Sanitarias: Silvino Martínez, Horacio Solís Villalba, Daniel Aquino Cáceres.",
+            "Carpinterías de madera: Norberto Martínez.",
+            "Electricidad: Julio Branda, Pablo Branda.",
+            "Herrería y vidrios: Enrique Ramos, Beatriz Lema.",
+            "Aire acondicionado: Matías Saintesteben."
+        ],
+        "description": [
+            "El objetivo principal de la remodelación de este ph tipo casa consiste en aumentar la superficie cubierta en un 50%, ganando el patio como expansión de la cocina y como espacio utilizable todo el año, pero sin perder su capacidad de dar luz y ventilación al resto de la casa. Por otro lado, las dos habitaciones de la planta baja se unifican para tener un living comedor de buenas dimensiones generando una gran abertura central en el techo que permite la entrada de luz cenital y vistas hacia el cielo. Además, con la ampliación del entrepiso  se logra sumar un segundo baño y el acceso a la terraza que antes no era posible.",
+            "Para el cerramiento del patio se diseña un sistema de paños vidriados corredizos para el techo, y de vidrios pivotantes o proyectantes para los verticales. Se mantienen y acondicionan las aberturas, postigos de madera y pisos de pinotea, así como los pisos de mosaico calcáreo y herrerías."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ]
+	},
+    {
+        "name": "cocomarola",
+        "banner": "/assets/img/proyectos/lambare/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "ANTIFEATRO COCOMAROLA",
+        "subtitle": "Corrientes. Tercer Premio Concurso Nacional.",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital, Tomás Lier.",
+            "Equipo de proyecto: Ana Busch, José Norberto Galay, Matias Moret, Daiana Wirth, Adrian Lifschitz.",
+            "Video: Planta Alta Productora."
+        ],
+        "description": [
+            "El proyecto para la refacción y ampliación del Anfiteatro Cocomarola busca revalorizar este espacio cultural símbolo de la ciudad, aportando una visión integral que respete su diversidad de usos y su significado urbano.",
+            "La propuesta reorganiza el conjunto en torno a dos frentes principales: uno público, que aprovecha el boulevard para facilitar el acceso y la circulación, y otro escénico, de carácter más institucional, ubicado en la esquina opuesta para eventos de menor escala.",
+            "Desde el punto de vista arquitectónico, el conjunto se compone de tres piezas principales: un edificio-escenario para funciones técnicas, una platea semienterrada y una tribuna sobreelevada que optimizan la visión del escenario y la experiencia del público. La estructura incorpora accesos diferenciados para artistas, técnicos y público. Con una disposición de tabiques variables, se maximiza el uso del espacio y se respetan las líneas urbanas, garantizando vistas óptimas y confort visual durante todo el día. Bajo esta tribuna se desarrolla un espacio de acceso y transición con el espacio público, donde se concentran todos los usos comunes a los espectadores.", 
+            "Socialmente, se prioriza la creación de un espacio público de alta calidad que, además de mitigar el impacto del edificio, ofrezca nuevas áreas recreativas y culturales para el entorno, transformándolo en un verdadero polo de atracción y participación comunitaria. En conjunto, la propuesta busca combinar funcionalidad, integración urbana y protagonismo cultural, en un diseño que respeta la escala y el carácter del entorno."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ]
+	},
+    {
+        "name": "montaneses",
+        "banner": "/assets/img/proyectos/montaneses/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "PISO MONTAÑESES Y SUCRE",
+        "subtitle": "Belgrano, Buenos Aires. 2023. Reforma integral.",
+        "surface": "150 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital, Sebastián Policastro.",
+            "Construcción: Daniel Aquino Cáceres.",
+            "Carpinterías de madera: Daniel Delgado, Carlos Peralta.",
+            "Pisos de madera: Miguel Benitez Rotela."
+        ],
+        "description": [
+            "Cuando nos consultaron si convenía comprar un departamento del Edificio Montañeses, de los arquitectos SEPRA, construido en el año 1947 y que es una joya del patrimonio moderno de la ciudad, no lo dudamos ni un instante.",
+            "En este caso, se trataba de dos departamentos contiguos que habían sido unidos, por lo que ya se había convertido en un espacio de doble frente pasante hacia la calle y hacia el pulmón interno. Se mantuvo la distribución original de los ambientes, restaurando los pisos de madera de lapacho y las aberturas de madera de cedro tipo guillotina con contrapeso. Los baños se renovaron por completo, al igual que la cocina que se convirtió en uno de los ambientes más acogedores, con la incorporación de una isla de madera de petiribí y el reemplazo de las ventanas de aluminio por una de madera de cedro, acorde con el resto de las aberturas de la casa."
+        ],
+        "gallery": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ]
+	},
+    {
+        "name": "dorrego",
+        "banner": "/assets/img/proyectos/montaneses/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "PH DORREGO Y EL SALVADOR",
+        "subtitle": "Palermo, Buenos Aires. 2013. Reforma integral.",
+        "surface": "160 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital.",
+            "Construcción: Oscar Honeker, Juan Olmedo."
+        ],
+        "description": [
+            "En construcción"
+        ],
+        "gallery": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ]
+	},
+    {
+        "name": "roseti",
+        "banner": "/assets/img/proyectos/montaneses/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "CASA ROSETI Y SANTOS DUMONT",
+        "subtitle": "Chacarita, Buenos Aires. 2016-2017. Vivienda unifamiliar.",
+        "surface": "260 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital, Juan Bustos Berrondo.",
+            "Construcción: Daniel Benítez.",
+            "Carpinterías de madera: Pedro Vanrell, Alejandro, Norberto Martínez.",
+            "Cerramientos de aluminio: Abertec."
+        ],
+        "description": [
+            "En construcción"
+        ],
+        "gallery": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
+        ],
+        "carousel1": [
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp"
         ]
 	}
 ]

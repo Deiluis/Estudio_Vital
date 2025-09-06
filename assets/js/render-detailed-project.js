@@ -32,7 +32,7 @@ const renderProject = (project) => {
     subtitle.innerHTML = project.subtitle;
     
     const surface = document.createElement("li");
-    surface.innerHTML = project.surface;
+    surface.innerHTML = project?.surface;
     credits.appendChild(surface);
 
     project.credits.forEach(credit => {
@@ -107,10 +107,11 @@ const init = async () => {
     const pathParts = window.location.pathname.split("/");
     const projectName = pathParts[2]; // undefined si es solo /proyecto
 
-    if (projectName) {
-        const project = await getDetailedProject(projectName);
+    const project = await getDetailedProject(projectName);
+
+    if (project)
         renderProject(project);
-    } else
+    else
         window.location.href = "/proyectos"
 };
 
