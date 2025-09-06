@@ -7,9 +7,9 @@ const modalCloseButton = document.querySelector(".modal-slider__button");
 const prevButton = document.querySelector(".slider__button--left");
 const nextButton = document.querySelector(".slider__button--right");
 
-const images = document.querySelectorAll(".carrusel__images img")
-const showButtons = document.querySelectorAll(".slider__show-button");
+const carouselImages = document.querySelectorAll(".carrusel__images");
 
+let images;
 let currentIndex = 0;
 
 const toggleView = () => {
@@ -19,13 +19,23 @@ const toggleView = () => {
     modalContainer.classList.toggle("opacity-0");
 }
 
-showButtons.forEach((button, index) => {
-    button.addEventListener("click", () => {
+carouselImages.forEach(carousel => {
+    carousel.addEventListener("click", e => {
+        const button = e.target.closest(".slider__show-button");
+        if (!button) return; // no es botón, ignoro
+
+        // Asignar las imagenes correpondientes
+        images = carousel.querySelectorAll("img");
+
+        // Determinar el índice del artículo donde está el botón
+        const articles = Array.from(carousel.querySelectorAll("article"));
+        const index = articles.findIndex(article => article.contains(button));
+
         currentIndex = index;
         modalImg.src = images[currentIndex].src;
         toggleView();
     });
-})
+});
 
 prevButton.addEventListener("click", () => {
     currentIndex--;

@@ -1,0 +1,52 @@
+[
+    {
+        "name": "sarmiento",
+        "banner": "./assets/img/proyectos/sarmiento/1.webp",
+        "blueprint": "./assets/img/proyectos/sarmiento/PB.jpg",
+        "title": "PH SARMIENTO y YATAY",
+        "subtitle": "Almagro, Buenos Aires. 2017-2020. Reforma integral.",
+        "surface": "125 m²",
+        "credits": [
+            "Proyecto y Dirección: Agustín Vital.",
+            "Equipo de proyecto: Sebastián Policastro, Pablo Gómez Casela, Juan Bustos Berrondo, Mijal Carbajal.",
+            "Albañilería y hormigón: Silvino Martínez, Horacio Solís Villalba.",
+            "Sanitarias: Luis Amarilla.",
+            "Carpinterías de madera: Pedro Vanrell, Enrique Albornoz.",
+            "Electricidad: Julio Branda, Pablo Branda.",
+            "Herrería y vidrios: Enrique Ramos, Tío Vitoy.",
+            "Cielorrasos de yeso: Juan Lencina.",
+            "Calefacción y energía solar: Ariel Mesch."
+        ],
+        "description": [
+            "En la renovación de esta vivienda unipersonal, donde ya existía y se cultivaba un oasis vegetal urbano y salvaje, se busca integrar el exterior y el interior de forma lo más fluida y adaptada posible. Con transparencia y liviandad hacia el fondo; con moderación y articulación hacia el frente y los espacios más privados. En la planta alta, se encuentra un estudio, un pequeño vivero y una terraza-mirador.",
+            "Todos los pisos y aberturas de madera, los cielorrasos y parte de los muebles, fueron hechos y adaptados a partir de carpinterías y tirantes de madera recuperados, así como parte de los vidrios y estructuras metálicas."
+        ],
+        "gallery": [
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp"
+        ],
+        "carousel1": [
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/honduras/1.webp",
+            "./assets/img/proyectos/casa-jufre/1.webp",
+            "./assets/img/proyectos/montaneses/1.webp",
+            "./assets/img/proyectos/libertador/1.webp",
+            "./assets/img/proyectos/estudio-jufre/1.webp"
+        ],
+        "carousel2": [
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp",
+            "./assets/img/proyectos/sarmiento/1.webp"
+        ]
+	}
+]

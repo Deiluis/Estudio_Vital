@@ -6,54 +6,49 @@ class Carousel extends HTMLElement {
         this.slideWidth = 0;
         this.gap = 0;
 
-        // swipe/mouse vars
+        // Swipe / mouse
         this.mouseDown = false;
         this.startX = 0;
         this.isDragging = false;
         this.currentTranslate = 0;
         this.prevTranslate = 0;
-        this.SWIPE_THRESHOLD = 20; // px para considerar swipe
+        this.SWIPE_THRESHOLD = 20;
     }
 
     connectedCallback() {
-        // Buscar elementos dentro del carrusel
         this.carousel = this.querySelector(".carrusel__images");
         this.carouselContainer = this.querySelector(".carrusel__container") || this;
-        this.imgs = this.querySelectorAll(".carrusel__images article");
         this.prevBtn = this.querySelector(".carrusel__button--left");
         this.nextBtn = this.querySelector(".carrusel__button--right");
 
-        // Inicializar
-        this.updateVisibleSlides();
-        window.addEventListener("resize", this.updateVisibleSlides.bind(this));
-
         // Botones
-        this.nextBtn?.addEventListener("click", () => {
-            if (this.currentIndex < this.imgs.length - this.visibleSlides) {
-                this.currentIndex++;
-                this.moveToSlide(this.currentIndex);
-            }
-        });
+        this.prevBtn?.addEventListener("click", () => this.prevSlide());
+        this.nextBtn?.addEventListener("click", () => this.nextSlide());
 
-        this.prevBtn?.addEventListener("click", () => {
-            if (this.currentIndex > 0) {
-                this.currentIndex--;
-                this.moveToSlide(this.currentIndex);
-            }
-        });
-
-        // Eventos touch/mouse
-        this.carouselContainer.addEventListener("touchstart", this.touchStart.bind(this));
-        this.carouselContainer.addEventListener("touchmove", this.touchMove.bind(this));
+        // Swipe / mouse
+        this.carouselContainer.addEventListener("touchstart", this.touchStart.bind(this), { passive: true });
+        this.carouselContainer.addEventListener("touchmove", this.touchMove.bind(this), { passive: true });
         this.carouselContainer.addEventListener("touchend", this.touchEnd.bind(this));
-
         this.carouselContainer.addEventListener("mousedown", this.touchStart.bind(this));
         this.carouselContainer.addEventListener("mousemove", this.touchMove.bind(this));
         this.carouselContainer.addEventListener("mouseup", this.touchEnd.bind(this));
         this.carouselContainer.addEventListener("mouseleave", this.touchEnd.bind(this));
+
+        window.addEventListener("resize", this.updateVisibleSlides.bind(this));
+
+        // Observador para slides dinámicos
+        this.observer = new MutationObserver(() => this.updateVisibleSlides());
+        this.observer.observe(this.carousel, { childList: true });
+
+        // Inicializar
+        this.updateVisibleSlides();
     }
 
-    // Calcular slides visibles
+    // Getter dinámico para siempre obtener los slides actuales
+    get imgs() {
+        return Array.from(this.carousel.querySelectorAll("article"));
+    }
+
     updateVisibleSlides() {
         const width = window.innerWidth;
 
@@ -66,34 +61,50 @@ class Carousel extends HTMLElement {
             this.carousel.clientWidth / this.visibleSlides -
             (this.gap * (this.visibleSlides - 1)) / this.visibleSlides;
 
-        this.imgs.forEach((img) => {
-            img.style.minWidth = `${this.slideWidth}px`;
-        });
+        // Asignar ancho a cada slide
+        this.imgs.forEach(img => img.style.minWidth = `${this.slideWidth}px`);
 
+        // Ajustar posición si es necesario
         const maxIndex = Math.max(0, this.imgs.length - this.visibleSlides);
         if (this.currentIndex > maxIndex) this.currentIndex = maxIndex;
 
         this.moveToSlide(this.currentIndex);
     }
 
-    // Mover carrusel
     moveToSlide(index) {
         const offset = -(index * (this.slideWidth + this.gap));
         this.carousel.style.transition = "transform 0.3s ease";
         this.carousel.style.transform = `translateX(${offset}px)`;
         this.prevTranslate = offset;
 
-        // 🔥 Actualizar estado de los botones
+        this.updateButtons();
+    }
+
+    updateButtons() {
         const maxIndex = this.imgs.length - this.visibleSlides;
 
         if (this.prevBtn) {
-            this.prevBtn.style.opacity = index <= 0 ? "0.3" : "1";
-            this.prevBtn.style.pointerEvents = index <= 0 ? "none" : "auto";
+            this.prevBtn.style.opacity = this.currentIndex <= 0 ? "0.3" : "1";
+            this.prevBtn.style.pointerEvents = this.currentIndex <= 0 ? "none" : "auto";
         }
 
         if (this.nextBtn) {
-            this.nextBtn.style.opacity = index >= maxIndex ? "0.3" : "1";
-            this.nextBtn.style.pointerEvents = index >= maxIndex ? "none" : "auto";
+            this.nextBtn.style.opacity = this.currentIndex >= maxIndex ? "0.3" : "1";
+            this.nextBtn.style.pointerEvents = this.currentIndex >= maxIndex ? "none" : "auto";
+        }
+    }
+
+    prevSlide() {
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.moveToSlide(this.currentIndex);
+        }
+    }
+
+    nextSlide() {
+        if (this.currentIndex < this.imgs.length - this.visibleSlides) {
+            this.currentIndex++;
+            this.moveToSlide(this.currentIndex);
         }
     }
 
@@ -124,15 +135,6 @@ class Carousel extends HTMLElement {
             return;
         }
 
-        const movedBy = this.currentTranslate - this.prevTranslate;
-
-        if (Math.abs(movedBy) < this.SWIPE_THRESHOLD) {
-            this.moveToSlide(this.currentIndex);
-            this.isDragging = false;
-            this.mouseDown = false;
-            return;
-        }
-
         const totalSlideWidth = this.slideWidth + this.gap;
         let rawIndex = -this.currentTranslate / totalSlideWidth;
         this.currentIndex = Math.round(rawIndex);
@@ -148,5 +150,5 @@ class Carousel extends HTMLElement {
     }
 }
 
-// Registrar el custom element
+// Registrar custom element
 customElements.define("custom-carousel", Carousel);

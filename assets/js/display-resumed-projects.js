@@ -1,7 +1,8 @@
-import { resumed } from "./projects.js";
-
-const generateProjects = () => {
+const generateProjects = async () => {
     const projectsContainer = document.querySelector(".proyectos__container");
+
+    const res = await fetch("/assets/js/projects/resumed.json");
+    const resumed = await res.json();
 
     resumed.forEach((project, i) => {
 
@@ -12,7 +13,7 @@ const generateProjects = () => {
 
         // Crear el enlace dentro del artículo
         const a = document.createElement('a');
-        a.href = project.link;
+        a.href = `proyecto/${project.name}`;
         a.className = `
             project__link w-full h-full flex flex-col-reverse items-center
             ${i % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}
@@ -53,7 +54,6 @@ const generateProjects = () => {
         
         // Agregar el enlace con todo al articulo.
         article.appendChild(a);
-        
         
         // Agregar el artículo a la sección
         projectsContainer.appendChild(article);
