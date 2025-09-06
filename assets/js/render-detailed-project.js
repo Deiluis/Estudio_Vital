@@ -26,6 +26,9 @@ const getDetailedProject = async (projectName) => {
 };
 
 const renderProject = (project) => {
+
+    let imgCounter = 0;
+
     banner.src = `/assets/img/proyectos/${project.name}/${project.banner}`;
     blueprint.src = `/assets/img/proyectos/${project.name}/${project.blueprint}`;
     title.innerHTML = project.title;
@@ -53,13 +56,22 @@ const renderProject = (project) => {
         const img = document.createElement("img");
         img.src = `/assets/img/proyectos/${project.name}/${src}`;
         img.alt = "Foto de la obra";
-        img.classList = "lg:h-[85vh] object-contain";
+        img.classList = "object-contain";
         img.loading = "lazy";
 
-        if ((i + 1) % 2 == 0)
-            img.classList.add((i + 1) % 4 == 0 ? "self-end" : "self-start");
+        imgCounter++;
 
+        if (imgCounter == 1)
+            img.classList.add("w-full"); 
+        else if (imgCounter == 2)
+            img.classList.add("self-start");
+        else {
+            img.classList.add("self-end");
+            imgCounter = 0;
+        }
+            
         gallery.appendChild(img);
+        
     });              
 
     project.carousel1.forEach(src => addSlide(project.name, src, carousel1));

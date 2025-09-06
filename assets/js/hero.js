@@ -14,7 +14,7 @@ const init = async () => {
       hero__img absolute top-0 left-0 w-full h-full object-cover
       transition-all duration-[${fadeDuration}ms] opacity-0
     `;
-        img.src = project.img;
+        img.src = `/assets/img/proyectos/${project.name}/${project.img}`;
         img.alt = `Imagen del proyecto ${project.title}`;
         img.loading = "lazy";
         hero.appendChild(img);

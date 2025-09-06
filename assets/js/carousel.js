@@ -12,7 +12,11 @@ class Carousel extends HTMLElement {
         this.isDragging = false;
         this.currentTranslate = 0;
         this.prevTranslate = 0;
-        this.SWIPE_THRESHOLD = 20;
+
+        this.SLIDES_MOBILE = 1;
+        this.SLIDES_TABLET = 3;
+        this.SLIDES_LAPTOP = 4;
+        this.SLIDES_DESKTOP = 5;
     }
 
     connectedCallback() {
@@ -52,9 +56,22 @@ class Carousel extends HTMLElement {
     updateVisibleSlides() {
         const width = window.innerWidth;
 
-        if (width < 640) this.visibleSlides = 1;
-        else if (width < 1024) this.visibleSlides = 3;
-        else this.visibleSlides = 4;
+        // Leer atributos del HTML (con fallback por si no están definidos)
+        const slidesMobile = parseInt(this.getAttribute("data-slides-mobile")) || this.SLIDES_MOBILE;
+        const slidesTablet = parseInt(this.getAttribute("data-slides-tablet")) || this.SLIDES_TABLET;
+        const slidesLaptop = parseInt(this.getAttribute("data-slides-laptop")) || this.SLIDES_LAPTOP;
+        const slidesDesktop = parseInt(this.getAttribute("data-slides-desktop")) || this.SLIDES_DESKTOP;
+
+        if (slidesMobile == slidesTablet == slidesLaptop == slidesDesktop)
+            this.visibleSlides = slidesMobile;
+        else if (width < 640) 
+            this.visibleSlides = slidesMobile;
+        else if (width < 1024) 
+            this.visibleSlides = slidesTablet;
+        else if (width < 1440) 
+            this.visibleSlides = slidesLaptop;
+        else 
+            this.visibleSlides = slidesDesktop;
 
         this.gap = parseInt(getComputedStyle(this.carousel).gap) || 0;
         this.slideWidth =
@@ -92,6 +109,9 @@ class Carousel extends HTMLElement {
             this.nextBtn.style.opacity = this.currentIndex >= maxIndex ? "0.3" : "1";
             this.nextBtn.style.pointerEvents = this.currentIndex >= maxIndex ? "none" : "auto";
         }
+
+        // Si no hay suficiente contenido para deslizar, se desactiva el swipe.
+        this.disableDragging = this.imgs.length <= this.visibleSlides;
     }
 
     prevSlide() {
@@ -110,6 +130,7 @@ class Carousel extends HTMLElement {
 
     // Swipe handlers
     touchStart(e) {
+        if (this.disableDragging) return; // 🚫 No arranca drag
         this.startX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
         this.isDragging = false;
         this.mouseDown = e.type.includes("mouse");
@@ -117,6 +138,7 @@ class Carousel extends HTMLElement {
     }
 
     touchMove(e) {
+        if (this.disableDragging) return; // 🚫 No hace drag
         const currentX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
         const diff = currentX - this.startX;
 
@@ -130,6 +152,7 @@ class Carousel extends HTMLElement {
     }
 
     touchEnd() {
+        if (this.disableDragging) return; // 🚫 Ignorar si está desactivado
         if (!this.isDragging) {
             this.mouseDown = false;
             return;
