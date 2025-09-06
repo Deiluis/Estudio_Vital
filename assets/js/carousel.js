@@ -50,7 +50,7 @@ class Carousel extends HTMLElement {
 
     // Getter dinámico para siempre obtener los slides actuales
     get imgs() {
-        return Array.from(this.carousel.querySelectorAll("article"));
+        return Array.from(this.carousel.children);
     }
 
     updateVisibleSlides() {

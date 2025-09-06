@@ -56,13 +56,13 @@ const renderProject = (project) => {
         const img = document.createElement("img");
         img.src = `/assets/img/proyectos/${project.name}/${src}`;
         img.alt = "Foto de la obra";
-        img.classList = "object-contain";
+        img.classList = "object-contain w-full lg:w-3/4";
         img.loading = "lazy";
 
         imgCounter++;
 
         if (imgCounter == 1)
-            img.classList.add("w-full"); 
+            img.classList.add("lg:w-full"); 
         else if (imgCounter == 2)
             img.classList.add("self-start");
         else {
@@ -119,7 +119,8 @@ const addSlide = (name, src, container) => {
 
 const init = async () => {
     const pathParts = window.location.pathname.split("/");
-    const projectName = pathParts[2]; // undefined si es solo /proyecto
+    //const projectName = pathParts[2]; // undefined si es solo /proyecto
+    const projectName = "ombu";
 
     const project = await getDetailedProject(projectName);
 

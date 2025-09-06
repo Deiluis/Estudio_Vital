@@ -3,90 +3,165 @@
 		"name": "ombu",
 		"title": "CASA EL OMBÚ",
 		"description": "Ezeiza. Vivienda unifamiliar. 200 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "newbery",
 		"title": "CASA NEWBERY",
 		"description": "Colegiales. Vivienda unifamiliar. 280 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "kru-esports",
 		"title": "KRÜ ESPORTS",
 		"description": "Palermo. Gaming Center. 680 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "sarmiento",
 		"title": "PH SARMIENTO",
 		"description": "Almagro. Reforma integral. 125 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "exaltacion-cruz",
 		"title": "CASA EXALTACIÓN DE LA CRUZ",
 		"description": "Vivienda unifamiliar. 160 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "libertador",
 		"title": "PISO LIBERTADOR",
 		"description": "Belgrano. Reforma integral. 196 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "casa-jufre",
 		"title": "CASA JUFRÉ",
 		"description": "Villa Crespo. Vivienda unifamiliar. 340 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "estudios-jufre",
 		"title": "ESTUDIOS JUFRÉ",
 		"description": "Villa Crespo. Reforma integral. 430 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "honduras",
 		"title": "PH HONDURAS Y GASCÓN",
 		"description": "Palermo. Reforma integral. 160 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "san-lorenzo",
 		"title": "SEDE CLUB SAN LORENZO",
 		"description": "Boedo. Reforma integral. 800 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "lambare",
 		"title": "PH LAMBARÉ",
 		"description": "Almagro. Reforma integral. 90 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "cocomarola",
 		"title": "ANTIFEATRO COCOMAROLA",
 		"description": "Corrientes. Tercer Premio Concurso Nacional",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "montaneses",
 		"title": "PISO MONTAÑESES",
 		"description": "Belgrano. 150 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "dorrego",
 		"title": "PH DORREGO",
 		"description": " Palermo. Reforma integral. 160 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	},
 	{
 		"name": "roseti",
 		"title": "CASA ROSETI",
 		"description": "Chacarita. Vivienda unifamiliar. 260 m²",
-		"img": "1.webp"
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		]
 	}
 ]
