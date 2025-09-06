@@ -3,54 +3,54 @@
 		"name": "ombu",
 		"title": "CASA EN EL OMBÚ",
 		"description": "Ezeiza. Vivienda unifamiliar. 200 m²",
-		"img": "./assets/img/proyectos/ombu/1.webp"
+		"img": "/assets/img/proyectos/ombu/1.webp"
 	},
 	{
 		"name": "newbery",
 		"title": "CASA NEWBERY Y FREIRE",
 		"description": "Colegiales. 280 m²",
-		"img": "./assets/img/proyectos/newbery/1.webp"
+		"img": "/assets/img/proyectos/newbery/1.webp"
 	},
 	{
 		"name": "honduras",
 		"title": "PH HONDURAS Y GASCÓN",
 		"description": "Palermo. 160 m²",
-		"img": "./assets/img/proyectos/honduras/1.webp"
+		"img": "/assets/img/proyectos/honduras/1.webp"
 	},
 	{
 		"name": "sarmiento",
 		"title": "PH SARMIENTO y YATAY",
 		"description": "Almagro. Reforma integral. 125 m²",
-		"img": "./assets/img/proyectos/sarmiento/1.webp"
+		"img": "/assets/img/proyectos/sarmiento/1.webp"
 	},
 	{
 		"name": "libertador",
 		"title": "LIBERTADOR",
 		"description": "Barrio. Tipo de obra. sup m²",
-		"img": "./assets/img/proyectos/libertador/1.webp"
+		"img": "/assets/img/proyectos/libertador/1.webp"
 	},
 	{
 		"name": "lambare",
 		"title": "PH LAMBARÉ",
 		"description": "Barrio. Tipo de obra. sup m²",
-		"img": "./assets/img/proyectos/lambare/1.webp"
+		"img": "/assets/img/proyectos/lambare/1.webp"
 	},
 	{
 		"name": "casa-jufre",
 		"title": "CASA JUFRÉ",
 		"description": "Barrio. Tipo de obra. sup m²",
-		"img": "./assets/img/proyectos/casa-jufre/1.webp"
+		"img": "/assets/img/proyectos/casa-jufre/1.webp"
 	},
 	{
 		"name": "estudio-jufre",
 		"title": "ESTUDIO JUFRÉ",
 		"description": "Barrio. Tipo de obra. sup m²",
-		"img": "./assets/img/proyectos/estudio-jufre/1.webp"
+		"img": "/assets/img/proyectos/estudio-jufre/1.webp"
 	},
 	{
 		"name": "montaneses",
 		"title": "MONTAÑESES",
 		"description": "Barrio. Tipo de obra. sup m²",
-		"img": "./assets/img/proyectos/montaneses/1.webp"
+		"img": "/assets/img/proyectos/montaneses/1.webp"
 	}
 ]

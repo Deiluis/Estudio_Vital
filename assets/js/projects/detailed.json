@@ -1,8 +1,8 @@
 [
     {
         "name": "sarmiento",
-        "banner": "./assets/img/proyectos/sarmiento/1.webp",
-        "blueprint": "./assets/img/proyectos/sarmiento/PB.jpg",
+        "banner": "/assets/img/proyectos/sarmiento/1.webp",
+        "blueprint": "/assets/img/proyectos/sarmiento/PB.jpg",
         "title": "PH SARMIENTO y YATAY",
         "subtitle": "Almagro, Buenos Aires. 2017-2020. Reforma integral.",
         "surface": "125 m²",
@@ -22,31 +22,31 @@
             "Todos los pisos y aberturas de madera, los cielorrasos y parte de los muebles, fueron hechos y adaptados a partir de carpinterías y tirantes de madera recuperados, así como parte de los vidrios y estructuras metálicas."
         ],
         "gallery": [
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp"
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp"
         ],
         "carousel1": [
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/honduras/1.webp",
-            "./assets/img/proyectos/casa-jufre/1.webp",
-            "./assets/img/proyectos/montaneses/1.webp",
-            "./assets/img/proyectos/libertador/1.webp",
-            "./assets/img/proyectos/estudio-jufre/1.webp"
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/honduras/1.webp",
+            "/assets/img/proyectos/casa-jufre/1.webp",
+            "/assets/img/proyectos/montaneses/1.webp",
+            "/assets/img/proyectos/libertador/1.webp",
+            "/assets/img/proyectos/estudio-jufre/1.webp"
         ],
         "carousel2": [
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp",
-            "./assets/img/proyectos/sarmiento/1.webp"
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp",
+            "/assets/img/proyectos/sarmiento/1.webp"
         ]
 	}
 ]
