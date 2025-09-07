@@ -15,7 +15,7 @@ const init = async () => {
 
         const link = document.createElement("a");
         link.className = `
-            hero__link w-full h-full
+            hero__link w-full h-full absolute top-0 left-0
             transition-all duration-[${fadeDuration}ms] opacity-0
         `;
         link.href = `proyecto/${project.name}`;
@@ -27,10 +27,10 @@ const init = async () => {
         img.loading = "lazy";
 
         const titleContainer = document.createElement("div");
-        titleContainer.className = "flex flex-col gap-8 absolute bottom-7 left-7 lg:bottom-24 lg:left-24 z-[100] text-white";
+        titleContainer.className = "flex flex-col w-full h-full justify-end bg-[#0004] gap-8 absolute bottom-0 p-7 pb-48 lg:p-24 z-[100] text-white";
 
         const title = document.createElement("h3");
-        title.className = "text-7xl";
+        title.className = "text-5xl";
         title.innerHTML = project.title;
 
         const span = document.createElement("span");

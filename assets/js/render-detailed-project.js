@@ -132,8 +132,7 @@ const addSlide = (name, src, container) => {
 
 const init = async () => {
     const pathParts = window.location.pathname.split("/");
-    //const projectName = pathParts[2]; // undefined si es solo /proyecto
-    const projectName = "montaneses";
+    const projectName = pathParts[2]; // undefined si es solo /proyecto
 
     const project = await getDetailedProject(projectName);
 
