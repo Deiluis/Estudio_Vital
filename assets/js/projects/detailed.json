@@ -570,9 +570,6 @@
             "7.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
         ],
         "carousel2": [
             "8.webp",
@@ -583,12 +580,9 @@
             "13.webp",
             "14.webp",
             "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp"
+            "16.webp"
         ],
-        "show": false
+        "show": true
 	},
     {
         "name": "dorrego",

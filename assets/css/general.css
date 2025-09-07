@@ -70,16 +70,7 @@ img {
     color: var(--black);
 }
 
-.hero__arrow-container {
-    position: absolute;
-    bottom: 70px;
-    z-index: 500;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.hero__arrow-container div {
+.hero__arrow {
     animation: go-up-down 1s alternate infinite;
 }
 

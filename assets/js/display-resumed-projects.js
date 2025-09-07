@@ -8,8 +8,7 @@ const generateProjects = async () => {
 
         // Crear el artículo
         const article = document.createElement('article');
-        article.className = "project w-full lg:h-[85vh] bg-white transition-shadow duration-300 shadow-2xl shadow-[--black] rounded-xl select-none";
-        article.setAttribute("data-aos", `fade-${i % 2 == 0 ? "right" : "left"}`);
+        article.className = "project w-full lg:h-[85vh] bg-white transition-shadow duration-300 shadow-2xl shadow-[--black] select-none";
 
         // Crear el enlace dentro del artículo
         const a = document.createElement('a');

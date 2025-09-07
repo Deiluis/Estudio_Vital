@@ -12,19 +12,34 @@ const init = async () => {
 
     // Cargar imágenes en el DOM
     resumed.filter(project => project.show).forEach(project => {
-        const img = document.createElement("img");
-        img.className = `
-            hero__img w-full h-full object-cover
+
+        const link = document.createElement("a");
+        link.className = `
+            hero__link w-full h-full
             transition-all duration-[${fadeDuration}ms] opacity-0
         `;
+        link.href = `proyecto/${project.name}`;
+
+        const img = document.createElement("img");
+        img.className = "hero__img absolute top-0 left-0 w-full h-full object-cover";
         img.src = `/assets/img/proyectos/${project.name}/${project.carousel[0]}`;
         img.alt = `Imagen del proyecto ${project.title}`;
         img.loading = "lazy";
 
-        const link = document.createElement("a");
-        link.className = "hero__link absolute top-0 left-0 w-full h-full";
-        link.href = `proyecto/${project.name}`;
+        const titleContainer = document.createElement("div");
+        titleContainer.className = "flex flex-col gap-8 absolute bottom-7 left-7 lg:bottom-24 lg:left-24 z-[100] text-white";
 
+        const title = document.createElement("h3");
+        title.className = "text-7xl";
+        title.innerHTML = project.title;
+
+        const span = document.createElement("span");
+        span.className = "ml-2";
+        span.innerHTML = `Ver el proyecto <i class="fa-solid fa-chevron-right"></i>`;
+
+        titleContainer.appendChild(title);
+        titleContainer.appendChild(span);
+        link.appendChild(titleContainer);
         link.appendChild(img);
         hero.appendChild(link);
     });
@@ -34,18 +49,16 @@ const init = async () => {
 
     const showImage = (index) => {
         links.forEach((link, i) => {
-            const img = link.children[0];
-
             if (i === index) {
                 // mostrar link activo
                 link.classList.add("z-10", "pointer-events-auto");
                 link.classList.remove("pointer-events-none");
-                img.classList.remove("opacity-0");
+                link.classList.remove("opacity-0");
             } else {
                 // ocultar links inactivos
                 link.classList.remove("z-10");
                 link.classList.add("pointer-events-none");
-                img.classList.add("opacity-0");
+                link.classList.add("opacity-0");
             }
         });
     }

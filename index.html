@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/general.css">
     <link rel="shortcut icon" href="/assets/img/icon.jpg" type="image/x-icon">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-white">
     <header id="header" class="w-full sticky top-0 z-[2000] bg-transparent backdrop-blur-lg shadow-xl transition-all duration-500">
@@ -60,8 +59,8 @@
         </section>
 
         <section id="hero" class="w-full h-[92.5vh] flex flex-col select-none">
-            <div class="hero__arrow-container">
-                <div class="bg-[--black] hover:bg-[--black] duration-500 flex items-center justify-center rounded-full text-5xl">
+            <div class="flex w-full justify-center">
+                <div class="hero__arrow bg-[--black] hover:bg-black duration-500 flex items-center justify-center rounded-full text-5xl absolute bottom-[7rem] z-[500]">
                     <a href="#proyectos" class="px-6 py-5 text-white">
                         <i class="fa-solid fa-angle-down"></i>
                     </a>
@@ -77,57 +76,27 @@
         <section id="estudio" class="max-w-full w-[150rem] xl:px-40 px-8 lg:py-40 py-32 mx-auto overflow-x-hidden">
             <h2 class="text-6xl text-[--black] mb-20 text-center">Estudio</h2>
 
-            <div class="flex flex-col sm:grid lg:gap-20 gap-12">
-                <div class="col-span-2 flex flex-col gap-12">
-                    <p>
-                        Estudio Vital es un estudio de arquitectura fundado en el año 2006, ubicado en la ciudad de Buenos Aires, liderado por los arquitectos Agustín Vital y Sebastián Policastro. Se dedica al diseño y transformación de espacios, desarrollando soluciones técnicas y materiales acordes a cada escala y tipo de proyecto; en todas sus etapas y con un trato personalizado. 
-                    </p>
-                    <p>
-                        El diseño a medida es un proceso artesanal donde se crea una arquitectura única para un cliente específico. Partiendo de ciertas condiciones iniciales, considerando las necesidades, gustos y visión del cliente, se seleccionan cuidadosamente los conceptos y las estrategias que producen un “efecto de verdad” para la realización del Proyecto. El resultado es una pieza exclusiva, que refleja un alto nivel de detalle y calidad. 
-                    </p>
-                    <div>
-                        <h4 class="text-[1.7rem] text-[--black] mb-6">¿Cuáles son las etapas del proceso?</h4>
-
-                        <ol class="list-decimal list-inside">
-                            <li><strong class="text-[--black]">Consulta inicial:</strong> Se conversa con el cliente sobre sus necesidades, gustos y visión.</li>
-                            <li><strong class="text-[--black]">Diseño preliminar:</strong> Se plantea un esquema conceptual y primeros lineamientos.</li>
-                            <li><strong class="text-[--black]">Anteproyecto:</strong> Se desarrolla la propuesta integrando y diseñando los aspectos técnicos y materiales.</li>
-                            <li><strong class="text-[--black]">Proyecto: </strong> Se resuelven y detallan todos los componentes que hacen a la obra.</li>
-                            <li><strong class="text-[--black]">Dirección de obra:</strong> Se coordina, controla y supervisa la evolución de las tareas necesarias para llevar a cabo la obra, de acuerdo al Proyecto, plazos y costos. </li>
-                            <li><strong class="text-[--black]">Dirección ejecutiva:</strong> Se componen y coordinan los recursos necesarios para la construcción de la obra por contratos separados. </li>
-                            <li><strong class="text-[--black]">Entrega:</strong> Una vez finalizada y probada, la obra se entrega al cliente. </li>
-                        </ol>
-                    </div>
-                </div>
-
+            <div class="flex flex-col lg:gap-12 gap-6">
+                <p>
+                    Estudio Vital es un estudio de arquitectura fundado en el año 2006, ubicado en la ciudad de Buenos Aires, liderado por los arquitectos Agustín Vital y Sebastián Policastro. Se dedica al diseño y transformación de espacios, desarrollando soluciones técnicas y materiales acordes a cada escala y tipo de proyecto; en todas sus etapas y con un trato personalizado. 
+                </p>
+                <p>
+                    El diseño a medida es un proceso artesanal donde se crea una arquitectura única para un cliente específico. Partiendo de ciertas condiciones iniciales, considerando las necesidades, gustos y visión del cliente, se seleccionan cuidadosamente los conceptos y las estrategias que producen un “efecto de verdad” para la realización del Proyecto. El resultado es una pieza exclusiva, que refleja un alto nivel de detalle y calidad. 
+                </p>
                 <div>
-                    <h4 class="text-4xl text-[--black] mb-8">Arquitecto Agustín Vital</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quidem sit autem ea ut, quos nesciunt, explicabo maiores debitis voluptatem iste quaerat sed sint beatae soluta odit esse sunt impedit repellat temporibus. Nemo modi deserunt a, eum dolorum tempora maiores ducimus deleniti. Libero nisi, inventore fugit vitae mollitia dolores accusantium dolorum expedita! Quod esse accusantium consequuntur corporis alias. Aliquam ab in molestias dolorum rerum repudiandae, vero ea quasi, adipisci at nostrum recusandae vel, aspernatur quidem corrupti cumque atque veniam aperiam autem sequi fuga velit. Rerum, odit. Atque voluptatem expedita vitae fuga quisquam eaque impedit nihil blanditiis ea similique? Adipisci, voluptas.
-                    </p>
-                </div>
-                <img 
-                    class="h-[30rem] w-[20rem] object-cover self-center mb-8 sm:mb-0 shadow-2xl shadow-[--black] rounded-xl" 
-                    data-aos="fade-left"
-                    src="/assets/img/agustin.jpg" 
-                    alt="Foto de Agustín"
-                    loading="lazy"
-                >
+                    <h4 class="text-[1.7rem] text-[--black] mb-6">¿Cuáles son las etapas del proceso?</h4>
 
-                <div>
-                    <h4 class="text-4xl text-[--black] mb-8">Arquitecto Sebastián Policastro</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic labore atque, voluptatibus quod sed impedit odio quas rerum vel exercitationem vero. Consequuntur expedita id, doloremque ut sint quos, eligendi, amet reprehenderit quas nihil consectetur! Ducimus quod asperiores rem earum excepturi officia ipsum. Voluptatum incidunt, modi sint quam expedita a perspiciatis aut dolorem? Ipsum beatae magnam adipisci tempora delectus quibusdam consequatur possimus est incidunt et, sequi perspiciatis maxime saepe placeat, accusantium neque odio voluptatibus qui soluta repellendus repudiandae nesciunt ipsam aliquam veritatis! Ducimus quas dolorem placeat iusto distinctio deleniti quisquam impedit eaque tempora. Itaque, reprehenderit? Quasi eos quam est accusantium tenetur.
-                    </p>
+                    <ol class="list-decimal list-inside">
+                        <li><strong class="text-[--black]">Consulta inicial:</strong> Se conversa con el cliente sobre sus necesidades, gustos y visión.</li>
+                        <li><strong class="text-[--black]">Diseño preliminar:</strong> Se plantea un esquema conceptual y primeros lineamientos.</li>
+                        <li><strong class="text-[--black]">Anteproyecto:</strong> Se desarrolla la propuesta integrando y diseñando los aspectos técnicos y materiales.</li>
+                        <li><strong class="text-[--black]">Proyecto: </strong> Se resuelven y detallan todos los componentes que hacen a la obra.</li>
+                        <li><strong class="text-[--black]">Dirección de obra:</strong> Se coordina, controla y supervisa la evolución de las tareas necesarias para llevar a cabo la obra, de acuerdo al Proyecto, plazos y costos. </li>
+                        <li><strong class="text-[--black]">Dirección ejecutiva:</strong> Se componen y coordinan los recursos necesarios para la construcción de la obra por contratos separados. </li>
+                        <li><strong class="text-[--black]">Entrega:</strong> Una vez finalizada y probada, la obra se entrega al cliente. </li>
+                    </ol>
                 </div>
-                <img 
-                    class="h-[30rem] w-[20rem] object-cover self-center shadow-2xl shadow-[--black] rounded-xl"
-                    data-aos="fade-left"
-                    src="/assets/img/sebastian.jpg" 
-                    alt="Foto de Sebastián"
-                    loading="lazy"
-                >
-            </div>
+            </div>   
         </section>
 
         <section id="contacto" class="px-8 lg:py-40 py-32 xl:px-40">
@@ -219,16 +188,9 @@
         <span class="text-[1.8rem] text-white">© 2025 Estudio Vital</span>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 200,
-            duration: 800
-        });
-    </script>
     <script src="/assets/js/nav.js"></script>
     <script src="/assets/js/carousel.js"></script>
-    <script type="module" src="/assets/js/display-resumed-projects.js"></script>
-    <script type="module" src="/assets/js/hero.js"></script>
+    <script src="/assets/js/display-resumed-projects.js"></script>
+    <script src="/assets/js/hero.js"></script>
 </body>
 </html>
