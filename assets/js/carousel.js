@@ -102,12 +102,12 @@ class Carousel extends HTMLElement {
 
         if (this.prevBtn) {
             this.prevBtn.style.opacity = this.currentIndex <= 0 ? "0.3" : "1";
-            this.prevBtn.style.pointerEvents = this.currentIndex <= 0 ? "none" : "auto";
+            //this.prevBtn.style.pointerEvents = this.currentIndex <= 0 ? "none" : "auto";
         }
 
         if (this.nextBtn) {
             this.nextBtn.style.opacity = this.currentIndex >= maxIndex ? "0.3" : "1";
-            this.nextBtn.style.pointerEvents = this.currentIndex >= maxIndex ? "none" : "auto";
+            //this.nextBtn.style.pointerEvents = this.currentIndex >= maxIndex ? "none" : "auto";
         }
 
         // Si no hay suficiente contenido para deslizar, se desactiva el swipe.

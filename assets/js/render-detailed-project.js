@@ -5,6 +5,8 @@ const subtitle = document.querySelector("#principal h3");
 const credits = document.querySelector("#principal ul");
 const description = document.querySelector("#descripcion");
 const gallery = document.querySelector("#galeria div");
+const mainContainer = document.querySelector("main");
+const carouselsSection = document.querySelector("#carruseles");
 const carousel1Container = document.querySelector("#carrusel-imagenes");
 const carousel2Container = document.querySelector("#carrusel-planos");
 const carousel1 = document.querySelector("#carrusel-imagenes .carrusel__images");
@@ -17,7 +19,7 @@ const getDetailedProject = async (projectName) => {
     try {
         const res = await fetch("/assets/js/projects/detailed.json");
         const projects = await res.json();
-        detailedProject = projects.find(p => p.name == projectName);
+        detailedProject = projects.filter(project => project.show).find(p => p.name == projectName);
     } catch (err) {
         console.error("Error al cargar projects/resumed.json:", err);
     }
@@ -71,27 +73,38 @@ const renderProject = (project) => {
         }
             
         gallery.appendChild(img);
-        
     });              
 
-    project.carousel1.forEach(src => addSlide(project.name, src, carousel1));
-    project.carousel2.forEach(src => addSlide(project.name, src, carousel2));
+    if (project.carousel1.length == 0)
+        carouselsSection.removeChild(carousel1Container);
+    else {
+        project.carousel1.forEach(src => addSlide(project.name, src, carousel1));
 
-    // Espera a que se hayan cargado los elementos para calcular el tamaño de los slides.
-    Promise
-    .all(
-        Array.from(carousel1.querySelectorAll("img")).map(img =>
-            img.complete ? Promise.resolve() : new Promise(res => img.onload = res)
+        // Espera a que se hayan cargado los elementos para calcular el tamaño de los slides.
+        Promise
+        .all(
+            Array.from(carousel1.querySelectorAll("img")).map(img =>
+                img.complete ? Promise.resolve() : new Promise(res => img.onload = res)
+            )
         )
-    )
-    .then(() => carousel1Container.updateVisibleSlides());
+        .then(() => carousel1Container.updateVisibleSlides());
+    }
+        
+    if (project.carousel2.length == 0)
+        carouselsSection.removeChild(carousel2Container);
+    else {
+        project.carousel2.forEach(src => addSlide(project.name, src, carousel2));
 
-    Promise.all(
-        Array.from(carousel2.querySelectorAll("img")).map(img =>
-            img.complete ? Promise.resolve() : new Promise(res => img.onload = res)
+        Promise.all(
+            Array.from(carousel2.querySelectorAll("img")).map(img =>
+                img.complete ? Promise.resolve() : new Promise(res => img.onload = res)
+            )
         )
-    )
-    .then(() => carousel2Container.updateVisibleSlides());
+        .then(() => carousel2Container.updateVisibleSlides());
+    }
+
+    if (carouselsSection.children.length == 0)
+        mainContainer.removeChild(carouselsSection);
 };
 
 const addSlide = (name, src, container) => {
@@ -119,9 +132,8 @@ const addSlide = (name, src, container) => {
 
 const init = async () => {
     const pathParts = window.location.pathname.split("/");
-    //const projectName = pathParts[2]; // undefined si es solo /proyecto
-    const projectName = "ombu";
-
+    const projectName = pathParts[2]; // undefined si es solo /proyecto
+    
     const project = await getDetailedProject(projectName);
 
     if (project)

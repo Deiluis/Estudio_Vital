@@ -4,9 +4,7 @@ const generateProjects = async () => {
     const res = await fetch("/assets/js/projects/resumed.json");
     const resumed = await res.json();
 
-    console.log(resumed);
-
-    resumed.forEach((project, i) => {
+    resumed.filter(project => project.show).forEach((project, i) => {
 
         // Crear el artículo
         const article = document.createElement('article');
@@ -61,11 +59,11 @@ const addCarousel = (projectName, projectTitle, imagesSrc, link) => {
     carousel.setAttribute("data-slides-desktop", "1");
 
     const prevBtn = document.createElement("div");
-    prevBtn.classList = "carrusel__button--left bg-[--black] hover:bg-[#000] transition-colors flex items-center justify-center rounded-full text-3xl px-5 py-4 mx-2 lg:mx-6 text-white cursor-pointer absolute left-0 translate-y-[5%] z-10 opacity-90 lg:opacity-100";
+    prevBtn.classList = "carrusel__button--left bg-[#2229] hover:bg-black transition-colors flex items-center justify-center rounded-full text-3xl px-5 py-4 mx-2 lg:mx-6 text-white cursor-pointer absolute left-0 translate-y-[5%] z-10 opacity-90 lg:opacity-100";
     prevBtn.innerHTML = `<i class="fas fa-chevron-left"></i>`;
 
     const nextBtn = document.createElement("div");
-    nextBtn.classList = "carrusel__button--right bg-[--black] hover:bg-[#000] transition-colors flex items-center justify-center rounded-full text-3xl px-5 py-4 mx-2 lg:mx-6 text-white cursor-pointer absolute right-0 translate-y-[5%] z-10 opacity-90 lg:opacity-100";
+    nextBtn.classList = "carrusel__button--right bg-[#2229] hover:bg-black transition-colors flex items-center justify-center rounded-full text-3xl px-5 py-4 mx-2 lg:mx-6 text-white cursor-pointer absolute right-0 translate-y-[5%] z-10 opacity-90 lg:opacity-100";
     nextBtn.innerHTML = `<i class="fas fa-chevron-right"></i>`;
 
     prevBtn.addEventListener("click", (e) => {
@@ -79,7 +77,7 @@ const addCarousel = (projectName, projectTitle, imagesSrc, link) => {
     });
 
     const container = document.createElement("div");
-    container.classList = "carrusel__container overflow-x-hidden w-full h-[85vh]";
+    container.classList = "carrusel__container overflow-x-hidden w-full h-[35vh] lg:h-[85vh]";
 
     const images = document.createElement("div");
     images.classList = "carrusel__images flex transition-transform duration-500 w-full h-full";

@@ -2,7 +2,7 @@
     {
         "name": "ombu",
         "banner": "1.webp",
-        "blueprint": "cortes.webp",
+        "blueprint": "P1.webp",
         "title": "CASA EL OMBÚ",
         "subtitle": "Ezeiza, Provincia de Buenos Aires. 2007-2008. Vivienda unifamiliar.",
         "surface": "200 m²",
@@ -27,9 +27,9 @@
             "7.webp"
         ],
         "carousel1": [
-            "cortes.webp",
             "P1.webp",
-            "P2.webp"
+            "P2.webp",
+            "cortes.webp"
         ],
         "carousel2": [
             "8.webp",
@@ -43,12 +43,13 @@
             "16.webp",
             "17.webp",
             "18.webp"
-        ]
+        ],
+        "show": true
 	},
     {
         "name": "newbery",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.webp",
         "title": "CASA NEWBERY Y FREIRE",
         "subtitle": "Colegiales, Buenos Aires. 2019-2021. Vivienda unifamiliar.",
         "surface": "280 m²",
@@ -73,9 +74,6 @@
             "7.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
         ],
         "carousel2": [
             "8.webp",
@@ -89,8 +87,10 @@
             "16.webp",
             "17.webp",
             "18.webp",
-            "19.webp"
-        ]
+            "19.webp",
+            "20.webp"
+        ],
+        "show": true
 	},
     {
         "name": "kru-esports",
@@ -138,12 +138,13 @@
             "17.webp",
             "18.webp",
             "19.webp"
-        ]
+        ],
+        "show": false
 	},
     {
         "name": "sarmiento",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.webp",
         "title": "PH SARMIENTO Y YATAY",
         "subtitle": "Almagro, Buenos Aires. 2017-2020. Reforma integral.",
         "surface": "125 m²",
@@ -172,9 +173,6 @@
             "7.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
         ],
         "carousel2": [
             "8.webp",
@@ -186,10 +184,9 @@
             "14.webp",
             "15.webp",
             "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp"
-        ]
+            "17.webp"
+        ],
+        "show": true
 	},
     {
         "name": "exaltacion-cruz",
@@ -237,12 +234,13 @@
             "17.webp",
             "18.webp",
             "19.webp"
-        ]
+        ],
+        "show": false
 	},
     {
         "name": "libertador",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.webp",
         "title": "PISO LIBERTADOR Y VIRREY DEL PINO",
         "subtitle": "Belgrano, Buenos Aires. 2024. Reforma integral Piso 12.",
         "surface": "196 m²",
@@ -271,9 +269,6 @@
             "7.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
         ],
         "carousel2": [
             "8.webp",
@@ -286,14 +281,14 @@
             "15.webp",
             "16.webp",
             "17.webp",
-            "18.webp",
-            "19.webp"
-        ]
+            "18.webp"
+        ],
+        "show": true
 	},
     {
         "name": "casa-jufre",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.webp",
         "title": "CASA JUFRÉ Y THAMES",
         "subtitle": "Villa Crespo, Buenos Aires. 2007-2008. Reforma integral.",
         "surface": "340 m²",
@@ -315,29 +310,19 @@
             "7.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
         ],
         "carousel2": [
             "8.webp",
             "9.webp",
             "10.webp",
-            "11.webp",
-            "12.webp",
-            "13.webp",
-            "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp"
-        ]
+            "11.webp"
+        ],
+        "show": true
 	},
     {
         "name": "estudios-jufre",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.webp",
         "title": "ESTUDIOS JUFRÉ Y URIARTE",
         "subtitle": "Villa Crespo, Buenos Aires. 2010-2011. Reforma integral.",
         "surface": "430 m²",
@@ -363,29 +348,19 @@
             "7.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
         ],
         "carousel2": [
             "8.webp",
             "9.webp",
             "10.webp",
-            "11.webp",
-            "12.webp",
-            "13.webp",
-            "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp"
-        ]
+            "11.webp"
+        ],
+        "show": true
 	},
     {
         "name": "honduras",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.webp",
         "title": "PH HONDURAS y GASCÓN",
         "subtitle": "Palermo, Buenos Aires. 2022. Reforma integral.",
         "surface": "160 m²",
@@ -415,9 +390,6 @@
             "7.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
         ],
         "carousel2": [
             "8.webp",
@@ -431,8 +403,13 @@
             "16.webp",
             "17.webp",
             "18.webp",
-            "19.webp"
-        ]
+            "19.webp",
+            "20.webp",
+            "21.webp",
+            "22.webp",
+            "23.webp"
+        ],
+        "show": true
 	},
     {
         "name": "san-lorenzo",
@@ -476,12 +453,13 @@
             "17.webp",
             "18.webp",
             "19.webp"
-        ]
+        ],
+        "show": false
 	},
     {
         "name": "lambare",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.webp",
         "title": "PH LAMBARÉ Y CORRIENTES",
         "subtitle": "Almagro, Buenos Aires. 2021. Reforma integral.",
         "surface": "90 m²",
@@ -508,24 +486,15 @@
             "7.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
         ],
         "carousel2": [
             "8.webp",
             "9.webp",
             "10.webp",
             "11.webp",
-            "12.webp",
-            "13.webp",
-            "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp"
-        ]
+            "12.webp"
+        ],
+        "show": true
 	},
     {
         "name": "cocomarola",
@@ -571,7 +540,8 @@
             "17.webp",
             "18.webp",
             "19.webp"
-        ]
+        ],
+        "show": false
 	},
     {
         "name": "montaneses",
@@ -617,12 +587,13 @@
             "17.webp",
             "18.webp",
             "19.webp"
-        ]
+        ],
+        "show": false
 	},
     {
         "name": "dorrego",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.webp",
         "title": "PH DORREGO Y EL SALVADOR",
         "subtitle": "Palermo, Buenos Aires. 2013. Reforma integral.",
         "surface": "160 m²",
@@ -639,28 +610,13 @@
             "3.webp",
             "4.webp",
             "5.webp",
-            "6.webp",
-            "7.webp"
+            "6.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
-            "10.webp",
-            "11.webp",
-            "12.webp",
-            "13.webp",
-            "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp"
-        ]
+        ],
+        "show": true
 	},
     {
         "name": "roseti",
@@ -705,6 +661,7 @@
             "17.webp",
             "18.webp",
             "19.webp"
-        ]
+        ],
+        "show": false
 	}
 ]

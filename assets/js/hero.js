@@ -8,7 +8,7 @@ const init = async () => {
     const resumed = await res.json();
 
     // Cargar imágenes en el DOM
-    resumed.forEach(project => {
+    resumed.filter(project => project.show).forEach(project => {
         const img = document.createElement("img");
         img.className = `
       hero__img absolute top-0 left-0 w-full h-full object-cover
