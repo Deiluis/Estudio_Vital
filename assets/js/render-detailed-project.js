@@ -1,16 +1,5 @@
-const banner = document.querySelector("#hero img");
-const blueprint = document.querySelector("#principal img");
-const title = document.querySelector("#principal h2");
-const subtitle = document.querySelector("#principal h3");
-const credits = document.querySelector("#principal ul");
-const description = document.querySelector("#descripcion");
-const gallery = document.querySelector("#galeria div");
-const mainContainer = document.querySelector("main");
-const carouselsSection = document.querySelector("#carruseles");
-const carousel1Container = document.querySelector("#carrusel-imagenes");
-const carousel2Container = document.querySelector("#carrusel-planos");
-const carousel1 = document.querySelector("#carrusel-imagenes .carrusel__images");
-const carousel2 = document.querySelector("#carrusel-planos .carrusel__images");
+const desktopCreditsContainer = document.querySelector("#principal div");
+const mobileCreditsContainer = document.querySelector("#creditos");
 
 const getDetailedProject = async (projectName) => {
 
@@ -27,26 +16,43 @@ const getDetailedProject = async (projectName) => {
     return detailedProject;
 };
 
-const renderProject = (project) => {
+const renderProject = (project, creditsList) => {
+    
+    const banner = document.querySelector("#hero img");
+    const blueprint = document.querySelector("#principal img");
+    const title = document.querySelector("#principal h2");
+    const subtitle = document.querySelector("#principal h3");
+    const surfaceContainer = document.querySelector("#principal span");
+    const description = document.querySelector("#descripcion");
+    const gallery = document.querySelector("#galeria div");
+    const mainContainer = document.querySelector("main");
+    const carouselsSection = document.querySelector("#carruseles");
+    const carousel1Container = document.querySelector("#carrusel-imagenes");
+    const carousel2Container = document.querySelector("#carrusel-planos");
+    const carousel1 = document.querySelector("#carrusel-imagenes .carrusel__images");
+    const carousel2 = document.querySelector("#carrusel-planos .carrusel__images");
 
     let imgCounter = 0;
+    creditsList.className = "flex flex-col gap-4";
 
     banner.src = `/assets/img/proyectos/${project.name}/${project.banner}`;
     blueprint.src = `/assets/img/proyectos/${project.name}/${project.blueprint}`;
     title.innerHTML = project.title;
     subtitle.innerHTML = project.subtitle;
-    
-    if (project?.surface) {
-        const surface = document.createElement("li");
-        surface.innerHTML = project.surface;
-        credits.appendChild(surface);
-    }
+
+    if (project?.surface)
+        surfaceContainer.innerHTML = project.surface;
 
     project.credits.forEach(credit => {
         const item = document.createElement("li");
         item.innerHTML = credit;
-        credits.appendChild(item);
+        creditsList.appendChild(item);
     });
+
+    if (window.innerWidth < 640)
+        mobileCreditsContainer.appendChild(creditsList);
+    else
+        desktopCreditsContainer.appendChild(creditsList);
 
     project.description.forEach(desc => {
         const p = document.createElement("p");
@@ -75,9 +81,7 @@ const renderProject = (project) => {
         gallery.appendChild(img);
     });              
 
-    if (project.carousel1.length == 0)
-        carouselsSection.removeChild(carousel1Container);
-    else {
+    if (project.carousel1.length > 0) {
         project.carousel1.forEach(src => addSlide(project.name, src, carousel1));
 
         // Espera a que se hayan cargado los elementos para calcular el tamaño de los slides.
@@ -88,11 +92,10 @@ const renderProject = (project) => {
             )
         )
         .then(() => carousel1Container.updateVisibleSlides());
-    }
+    } else
+        carouselsSection.removeChild(carousel1Container);
         
-    if (project.carousel2.length == 0)
-        carouselsSection.removeChild(carousel2Container);
-    else {
+    if (project.carousel2.length > 0) {
         project.carousel2.forEach(src => addSlide(project.name, src, carousel2));
 
         Promise.all(
@@ -101,7 +104,8 @@ const renderProject = (project) => {
             )
         )
         .then(() => carousel2Container.updateVisibleSlides());
-    }
+    } else
+        carouselsSection.removeChild(carousel2Container);
 
     if (carouselsSection.children.length == 0)
         mainContainer.removeChild(carouselsSection);
@@ -132,14 +136,26 @@ const addSlide = (name, src, container) => {
 
 const init = async () => {
     const pathParts = window.location.pathname.split("/");
-    const projectName = pathParts[2]; // undefined si es solo /proyecto
+    const projectName = pathParts[2];
 
     const project = await getDetailedProject(projectName);
 
-    if (project)
-        renderProject(project);
+    if (project) {
+        const creditsList = document.createElement("ul");
+        renderProject(project, creditsList);
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth < 640)
+                mobileCreditsContainer.appendChild(creditsList);
+            else
+                desktopCreditsContainer.appendChild(creditsList);
+        })
+    }
+        
     else
         window.location.href = "/"
 };
 
 init();
+
+

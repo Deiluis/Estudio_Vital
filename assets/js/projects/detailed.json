@@ -93,6 +93,101 @@
         "show": true
 	},
     {
+        "name": "sarmiento",
+        "banner": "1.webp",
+        "blueprint": "P1.webp",
+        "title": "PH SARMIENTO Y YATAY",
+        "subtitle": "Almagro, Buenos Aires. 2017-2020. Reforma integral.",
+        "surface": "125 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital.",
+            "Equipo de proyecto: Sebastián Policastro, Pablo Gómez Casela, Juan Bustos Berrondo, Mijal Carbajal.",
+            "Albañilería y hormigón: Silvino Martínez, Horacio Solís Villalba.",
+            "Sanitarias: Luis Amarilla.",
+            "Carpinterías de madera: Pedro Vanrell, Enrique Albornoz.",
+            "Electricidad: Julio Branda, Pablo Branda.",
+            "Herrería y vidrios: Enrique Ramos, Tío Vitoy.",
+            "Cielorrasos de yeso: Juan Lencina.",
+            "Calefacción y energía solar: Ariel Mesch."
+        ],
+        "description": [
+            "En la renovación de esta vivienda unipersonal, donde ya existía y se cultivaba un oasis vegetal urbano y salvaje, se busca integrar el exterior y el interior de forma lo más fluida y adaptada posible. Con transparencia y liviandad hacia el fondo; con moderación y articulación hacia el frente y los espacios más privados. En la planta alta, se encuentra un estudio, un pequeño vivero y una terraza-mirador.",
+            "Todos los pisos y aberturas de madera, los cielorrasos y parte de los muebles, fueron hechos y adaptados a partir de carpinterías y tirantes de madera recuperados, así como parte de los vidrios y estructuras metálicas."
+        ],
+        "gallery": [
+            "1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp",
+            "5.webp",
+            "6.webp",
+            "7.webp"
+        ],
+        "carousel1": [
+        ],
+        "carousel2": [
+            "8.webp",
+            "9.webp",
+            "10.webp",
+            "11.webp",
+            "12.webp",
+            "13.webp",
+            "14.webp",
+            "15.webp",
+            "16.webp",
+            "17.webp"
+        ],
+        "show": true
+	},
+    {
+        "name": "libertador",
+        "banner": "1.webp",
+        "blueprint": "P1.webp",
+        "title": "PISO LIBERTADOR Y VIRREY DEL PINO",
+        "subtitle": "Belgrano, Buenos Aires. 2024. Reforma integral Piso 12.",
+        "surface": "196 m²",
+        "credits": [
+            "Proyecto y dirección: Agustín Vital, Sebastián Policastro.",
+            "Equipo de proyecto: Camila Bevaqua, Camila Orgambide.",
+            "Construcción: Daniel Aquino Cáceres, Marcos Aquino Cáceres, Juan Rodriguez Insfran.",
+            "Electricidad: Jorge Vergara.",
+            "Herrería y vidrios: Enrique Ramos, Beatriz Lema.",
+            "Carpinterías de madera: Enrique Albornoz, Pedro Vanrell, Norberto Martínez.",
+            "Cerramientos de pvc: Abertec.",
+            "Mesadas de mármol: United Stone.",
+            "Aire Acondicionado: Matías Saintesteben.",
+            "Calefacción: Eduardo Solon."
+        ],
+        "description": [
+            "Se trata de una remodelación integral a fondo de todo un piso sobre la Avenida Libertador. Se lleva adelante la renovación total de todos los revestimientos, pisos, cielorrasos, instalaciones, iluminación, aberturas y mobiliarios. En la nueva distribución, la cocina gana espacio hacia el comedor y se integra completamente al living mediante una puerta corrediza de vidrio repartido. Para las habitaciones en contrafrente se logra mayor espacio incorporando los balcones y se ubica un nuevo baño completo, permitiendo hacer en suite la habitación principal. El sector lavadero y servicio se reconfigura permitiendo la doble circulación hacia la cocina."
+        ],
+        "gallery": [
+            "1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp",
+            "5.webp",
+            "6.webp",
+            "7.webp"
+        ],
+        "carousel1": [
+        ],
+        "carousel2": [
+            "8.webp",
+            "9.webp",
+            "10.webp",
+            "11.webp",
+            "12.webp",
+            "13.webp",
+            "14.webp",
+            "15.webp",
+            "16.webp",
+            "17.webp",
+            "18.webp"
+        ],
+        "show": true
+	},
+    {
         "name": "kru-esports",
         "banner": "1.webp",
         "blueprint": "PB.jpg",
@@ -140,53 +235,6 @@
             "19.webp"
         ],
         "show": false
-	},
-    {
-        "name": "sarmiento",
-        "banner": "1.webp",
-        "blueprint": "P1.webp",
-        "title": "PH SARMIENTO Y YATAY",
-        "subtitle": "Almagro, Buenos Aires. 2017-2020. Reforma integral.",
-        "surface": "125 m²",
-        "credits": [
-            "Proyecto y dirección: Agustín Vital.",
-            "Equipo de proyecto: Sebastián Policastro, Pablo Gómez Casela, Juan Bustos Berrondo, Mijal Carbajal.",
-            "Albañilería y hormigón: Silvino Martínez, Horacio Solís Villalba.",
-            "Sanitarias: Luis Amarilla.",
-            "Carpinterías de madera: Pedro Vanrell, Enrique Albornoz.",
-            "Electricidad: Julio Branda, Pablo Branda.",
-            "Herrería y vidrios: Enrique Ramos, Tío Vitoy.",
-            "Cielorrasos de yeso: Juan Lencina.",
-            "Calefacción y energía solar: Ariel Mesch."
-        ],
-        "description": [
-            "En la renovación de esta vivienda unipersonal, donde ya existía y se cultivaba un oasis vegetal urbano y salvaje, se busca integrar el exterior y el interior de forma lo más fluida y adaptada posible. Con transparencia y liviandad hacia el fondo; con moderación y articulación hacia el frente y los espacios más privados. En la planta alta, se encuentra un estudio, un pequeño vivero y una terraza-mirador.",
-            "Todos los pisos y aberturas de madera, los cielorrasos y parte de los muebles, fueron hechos y adaptados a partir de carpinterías y tirantes de madera recuperados, así como parte de los vidrios y estructuras metálicas."
-        ],
-        "gallery": [
-            "1.webp",
-            "2.webp",
-            "3.webp",
-            "4.webp",
-            "5.webp",
-            "6.webp",
-            "7.webp"
-        ],
-        "carousel1": [
-        ],
-        "carousel2": [
-            "8.webp",
-            "9.webp",
-            "10.webp",
-            "11.webp",
-            "12.webp",
-            "13.webp",
-            "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp"
-        ],
-        "show": true
 	},
     {
         "name": "exaltacion-cruz",
@@ -237,54 +285,7 @@
         ],
         "show": false
 	},
-    {
-        "name": "libertador",
-        "banner": "1.webp",
-        "blueprint": "P1.webp",
-        "title": "PISO LIBERTADOR Y VIRREY DEL PINO",
-        "subtitle": "Belgrano, Buenos Aires. 2024. Reforma integral Piso 12.",
-        "surface": "196 m²",
-        "credits": [
-            "Proyecto y dirección: Agustín Vital, Sebastián Policastro.",
-            "Equipo de proyecto: Camila Bevaqua, Camila Orgambide.",
-            "Construcción: Daniel Aquino Cáceres.",
-            "Electricidad: Jorge Vergara.",
-            "Herrería y vidrios: Enrique Ramos, Beatriz Lema.",
-            "Carpinterías de madera: Enrique Albornoz, Pedro Vanrell, Norberto Martínez.",
-            "Cerramientos de pvc: Abertec.",
-            "Mesadas de mármol: United Stone.",
-            "Aire Acondicionado: Matías Saintesteben.",
-            "Calefacción: Eduardo Solon."
-        ],
-        "description": [
-            "Se trata de una remodelación integral a fondo de todo un piso sobre la Avenida Libertador. Se lleva adelante la renovación total de todos los revestimientos, pisos, cielorrasos, instalaciones, iluminación, aberturas y mobiliarios. En la nueva distribución, la cocina gana espacio hacia el comedor y se integra completamente al living mediante una puerta corrediza de vidrio repartido. Para las habitaciones en contrafrente se logra mayor espacio incorporando los balcones y se ubica un nuevo baño completo, permitiendo hacer en suite la habitación principal. El sector lavadero y servicio se reconfigura permitiendo la doble circulación hacia la cocina."
-        ],
-        "gallery": [
-            "1.webp",
-            "2.webp",
-            "3.webp",
-            "4.webp",
-            "5.webp",
-            "6.webp",
-            "7.webp"
-        ],
-        "carousel1": [
-        ],
-        "carousel2": [
-            "8.webp",
-            "9.webp",
-            "10.webp",
-            "11.webp",
-            "12.webp",
-            "13.webp",
-            "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp"
-        ],
-        "show": true
-	},
+    
     {
         "name": "casa-jufre",
         "banner": "1.webp",

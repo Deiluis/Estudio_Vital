@@ -24,18 +24,6 @@
         "show": true
 	},
 	{
-		"name": "kru-esports",
-		"title": "KRÜ ESPORTS",
-		"description": "Palermo. Gaming Center. 680 m²",
-		"carousel": [
-			"1.webp",
-            "2.webp",
-            "3.webp",
-            "4.webp"
-		],
-        "show": false
-	},
-	{
 		"name": "sarmiento",
 		"title": "PH SARMIENTO",
 		"description": "Almagro. Reforma integral. 125 m²",
@@ -48,18 +36,6 @@
         "show": true
 	},
 	{
-		"name": "exaltacion-cruz",
-		"title": "CASA EXALTACIÓN DE LA CRUZ",
-		"description": "Vivienda unifamiliar. 160 m²",
-		"carousel": [
-			"1.webp",
-            "2.webp",
-            "3.webp",
-            "4.webp"
-		],
-        "show": false
-	},
-	{
 		"name": "libertador",
 		"title": "PISO LIBERTADOR",
 		"description": "Belgrano. Reforma integral. 196 m²",
@@ -70,6 +46,30 @@
             "4.webp"
 		],
         "show": true
+	},
+	{
+		"name": "kru-esports",
+		"title": "KRÜ ESPORTS",
+		"description": "Palermo. Gaming Center. 680 m²",
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		],
+        "show": false
+	},
+	{
+		"name": "exaltacion-cruz",
+		"title": "CASA EXALTACIÓN DE LA CRUZ",
+		"description": "Vivienda unifamiliar. 160 m²",
+		"carousel": [
+			"1.webp",
+            "2.webp",
+            "3.webp",
+            "4.webp"
+		],
+        "show": false
 	},
 	{
 		"name": "casa-jufre",
