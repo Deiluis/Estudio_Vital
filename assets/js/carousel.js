@@ -17,6 +17,8 @@ class Carousel extends HTMLElement {
         this.SLIDES_TABLET = 3;
         this.SLIDES_LAPTOP = 4;
         this.SLIDES_DESKTOP = 5;
+
+        this.SWIPE_MARGIN = 0.35;
     }
 
     connectedCallback() {
@@ -38,6 +40,9 @@ class Carousel extends HTMLElement {
         this.carouselContainer.addEventListener("mouseup", this.touchEnd.bind(this));
         this.carouselContainer.addEventListener("mouseleave", this.touchEnd.bind(this));
 
+        // No le deseo esto ni a mi peor enemigo.
+        this.canMouseDrag = (this.getAttribute("mouse-draggable") ?? "true") == "true";
+        
         window.addEventListener("resize", this.updateVisibleSlides.bind(this));
 
         // Observador para slides dinámicos
@@ -130,7 +135,13 @@ class Carousel extends HTMLElement {
 
     // Swipe handlers
     touchStart(e) {
-        if (this.disableDragging) return; // 🚫 No arranca drag
+        // No arranca drag
+        if (this.disableDragging) 
+            return; 
+
+        if (e.type.includes("mouse") && !this.canMouseDrag)
+            return; 
+
         this.startX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
         this.isDragging = false;
         this.mouseDown = e.type.includes("mouse");
@@ -138,7 +149,13 @@ class Carousel extends HTMLElement {
     }
 
     touchMove(e) {
-        if (this.disableDragging) return; // 🚫 No hace drag
+        // No hace drag
+        if (this.disableDragging) 
+            return; 
+
+        if (e.type.includes("mouse") && !this.canMouseDrag)
+            return; 
+
         const currentX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
         const diff = currentX - this.startX;
 
@@ -151,8 +168,14 @@ class Carousel extends HTMLElement {
         }
     }
 
-    touchEnd() {
-        if (this.disableDragging) return; // 🚫 Ignorar si está desactivado
+    touchEnd(e) {
+        // Ignorar si está desactivado
+        if (this.disableDragging) 
+            return;
+
+        if (e.type.includes("mouse") && !this.canMouseDrag)
+            return; 
+
         if (!this.isDragging) {
             this.mouseDown = false;
             return;
@@ -160,6 +183,12 @@ class Carousel extends HTMLElement {
 
         const totalSlideWidth = this.slideWidth + this.gap;
         let rawIndex = -this.currentTranslate / totalSlideWidth;
+
+        // Le agrega un margen para hacer swipe y ayuda a que el deslizamiento realizado sea menor.
+        rawIndex += this.currentIndex > Math.abs(rawIndex) 
+        ? -this.SWIPE_MARGIN 
+        : this.SWIPE_MARGIN;
+
         this.currentIndex = Math.round(rawIndex);
 
         if (this.currentIndex < 0) this.currentIndex = 0;

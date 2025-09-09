@@ -56,6 +56,7 @@ const addCarousel = (projectName, projectTitle, imagesSrc, link) => {
     carousel.setAttribute("data-slides-tablet", "1");
     carousel.setAttribute("data-slides-laptop", "1");
     carousel.setAttribute("data-slides-desktop", "1");
+    carousel.setAttribute("mouse-draggable", "false");
 
     const prevBtn = document.createElement("div");
     prevBtn.classList = "carrusel__button--left bg-[#2229] hover:bg-black transition-colors flex items-center justify-center rounded-full text-3xl px-5 py-4 mx-2 lg:mx-6 text-white cursor-pointer absolute left-0 translate-y-[5%] z-10 opacity-90 lg:opacity-100";
