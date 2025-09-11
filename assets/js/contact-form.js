@@ -9,7 +9,7 @@ const constraints = {
 
 // Sanitizar entrada
 const sanitizeInput = (value) => {
-    if (typeof value !== "string") 
+    if (typeof value !== "string")
         return value;
     return value.trim().replace(/\s+/g, " ")
 };
@@ -92,9 +92,23 @@ form.querySelectorAll("input, textarea").forEach(input => {
     input.addEventListener("input", handleChange);
 });
 
+// Mostrar indicador general
+const showIndicator = (message, success = true) => {
+    let indicator = document.querySelector("#form-indicator");
+    if (!indicator) {
+        indicator = document.createElement("div");
+        indicator.id = "form-indicator";
+        indicator.className = "mt-2 text-sm font-semibold";
+        form.insertAdjacentElement("afterend", indicator);
+    }
+    indicator.textContent = message;
+    indicator.style.color = success ? "green" : "red";
+};
+
 // Enviar formulario
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    showIndicator(""); // limpiar indicador
 
     const formData = new FormData(form);
     const rawData = Object.fromEntries(formData.entries());
@@ -120,7 +134,22 @@ form.addEventListener("submit", async (e) => {
 
         const json = await res.json();
         console.log("Respuesta backend:", json);
+
+        if (!res.ok) {
+
+            // Aplicar errores recibidos del backend
+            if (json.errors)
+                showErrors(json.errors);
+
+            return;
+        }
+
+        // Éxito
+        showIndicator(json.message, true);
+        form.reset();
+
     } catch (error) {
         console.error("Error al enviar:", error);
+        showIndicator("Error en la conexión. Intenta nuevamente.", false);
     }
 });
