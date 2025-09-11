@@ -1,5 +1,5 @@
 const generateProjects = async () => {
-    const projectsContainer = document.querySelector(".proyectos__container");
+    const projectsContainer = document.querySelector(".obras__container");
 
     const res = await fetch("/assets/js/projects/resumed.json");
     const resumed = await res.json();
