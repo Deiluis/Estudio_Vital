@@ -1,4 +1,5 @@
 const form = document.querySelector("#contacto form");
+const indicator = document.querySelector("#contacto #indicador");
 
 const constraints = {
     name: { max: 100 },
@@ -87,6 +88,12 @@ const showErrors = (errors) => {
     }
 };
 
+// Limpiar errores previos
+const clearErrors = () => {
+    form.querySelectorAll(".error-message").forEach(el => el.remove());
+    form.querySelectorAll(".error").forEach(input => input.classList.remove("error"));
+};
+
 // Escuchar cambios en los inputs para limitar caracteres y quitar error obligatorio
 form.querySelectorAll("input, textarea").forEach(input => {
     input.addEventListener("input", handleChange);
@@ -94,21 +101,15 @@ form.querySelectorAll("input, textarea").forEach(input => {
 
 // Mostrar indicador general
 const showIndicator = (message, success = true) => {
-    let indicator = document.querySelector("#form-indicator");
-    if (!indicator) {
-        indicator = document.createElement("div");
-        indicator.id = "form-indicator";
-        indicator.className = "mt-2 text-sm font-semibold";
-        form.insertAdjacentElement("afterend", indicator);
-    }
     indicator.textContent = message;
-    indicator.style.color = success ? "green" : "red";
+    indicator.className = success ? "mt-2 text-green-800" : "mt-2 text-red-500";
 };
 
 // Enviar formulario
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
     showIndicator(""); // limpiar indicador
+    clearErrors();
 
     const formData = new FormData(form);
     const rawData = Object.fromEntries(formData.entries());
@@ -118,12 +119,12 @@ form.addEventListener("submit", async (e) => {
         data[key] = sanitizeInput(rawData[key]);
     }
 
-    const errors = validateForm(data);
+    // const errors = validateForm(data);
 
-    if (Object.keys(errors).length > 0) {
-        showErrors(errors);
-        return;
-    }
+    // if (Object.keys(errors).length > 0) {
+    //     showErrors(errors);
+    //     return;
+    // }
 
     try {
         const res = await fetch(".netlify/functions/contact", {
@@ -146,6 +147,7 @@ form.addEventListener("submit", async (e) => {
 
         // Éxito
         showIndicator(json.message, true);
+
         form.reset();
 
     } catch (error) {

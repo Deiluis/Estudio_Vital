@@ -13,6 +13,7 @@ const validateData = (data) => {
     // Campos obligatorios
     if (!data.name) errors.name = "El nombre es obligatorio.";
     if (!data.email) errors.email = "El email es obligatorio.";
+    if (!data.tel) errors.tel = "El teléfono es obligatorio.";
     if (!data.message) errors.message = "El mensaje es obligatorio.";
 
     // Formato y límites
