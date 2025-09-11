@@ -31,6 +31,8 @@ form.addEventListener("submit", async (e) => {
             body: JSON.stringify(data),
         });
 
+        console.log(res);
+
         res.json().then(res => console.log(res));
 
     } catch (error) {
