@@ -37,7 +37,7 @@ h2::after {
   background: var(--black);
 }
 
-p, a, span, label, input, textarea, select, li {
+p, a, span, label, #contacto input, #contacto textarea, li {
     font-family: var(--texts-f-family);
     font-size: var(--texts-f-size);
 }

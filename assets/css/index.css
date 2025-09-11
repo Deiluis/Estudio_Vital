@@ -11,3 +11,19 @@
     scroll-margin-top: 10vh;
 }
 
+/* Input con error */
+input.error, textarea.error {
+  border: 1px solid red;
+  outline: none;
+}
+
+/* Shake animation */
+.shake {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}

@@ -7,7 +7,7 @@ export const handler = async (event, context) => {
         console.log("Datos recibidos:", data);
 
         // Podés aplicar validaciones acá también
-        if (!data.nombre || !data.email) {
+        if (!data.name || !data.email) {
             return {
                 statusCode: 400,
                 body: JSON.stringify({
