@@ -32,6 +32,9 @@ const validateData = (data) => {
 
 export const handler = async (event, context) => {
     try {
+
+        console.log(process.env.SMTP_HOST);
+
         const rawData = JSON.parse(event.body);
 
         // Sanitizar inputs
@@ -54,7 +57,7 @@ export const handler = async (event, context) => {
         // Configuración de nodemailer
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
-            port: process.env.SMTP_PORT,
+            port: Number(process.env.SMTP_PORT),
             secure: process.env.SMTP_SECURE === "true",
             auth: {
                 user: process.env.SMTP_USER,
