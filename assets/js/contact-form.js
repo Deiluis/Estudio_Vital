@@ -115,9 +115,9 @@ form.addEventListener("submit", async (e) => {
     const rawData = Object.fromEntries(formData.entries());
 
     const data = {};
-    for (let key in rawData) {
+
+    for (let key in rawData)
         data[key] = sanitizeInput(rawData[key]);
-    }
 
     const errors = validateForm(data);
 
@@ -126,35 +126,35 @@ form.addEventListener("submit", async (e) => {
         return;
     }
 
-    const token = grecaptcha.getResponse(); // devuelve el token generado
+    grecaptcha.ready(async () => {
+        try {
+            const token = await grecaptcha.execute("6Ldo4cYrAAAAANPkbHA4vDETSXdFbIptbhD2trdX", { action: "submit" });
 
-    try {
-        const res = await fetch(".netlify/functions/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ ...data, recaptchaToken: token }),
-        });
+            const res = await fetch(".netlify/functions/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ...data, recaptchaToken: token }),
+            });
 
-        const json = await res.json();
+            const json = await res.json();
 
-        if (!res.ok) {
+            if (!res.ok) {
 
-            // Aplicar errores recibidos del backend
-            if (json.errors)
-                showErrors(json.errors);
+                // Aplicar errores recibidos del backend
+                if (json.errors)
+                    showErrors(json.errors);
 
-            if (json.error)
-                showIndicator(json.error, false);
+                if (json.error)
+                    showIndicator(json.error, false);
 
-            return;
+                return;
+            }
+
+            showIndicator(json.message, true);
+            form.reset();
+
+        } catch (error) {
+            showIndicator("Error en la conexión. Intenta nuevamente.", false);
         }
-
-        // Éxito
-        showIndicator(json.message, true);
-
-        form.reset();
-
-    } catch (error) {
-        showIndicator("Error en la conexión. Intenta nuevamente.", false);
-    }
+    });
 });
