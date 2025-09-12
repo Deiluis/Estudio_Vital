@@ -162,7 +162,11 @@
                                 placeholder="Máximo 3000 caracteres."
                             ></textarea>
                         </div>
-                        <div class="g-recaptcha" data-sitekey="6Lfk88YrAAAAAIiWoPue66D2Bn89fudBubxT_2Y-"></div>
+                        <div 
+                            class="g-recaptcha" 
+                            data-sitekey="6Lfk88YrAAAAAIiWoPue66D2Bn89fudBubxT_2Y-"
+                            data-callback="onRecaptchaSuccess"
+                        ></div>
                         <button class="bg-[--black] text-[1.7rem] text-white hover:bg-black duration-500 p-4 rounded">Enviar</button>
                         <span id="indicador" class="mt-2 text-green-500"></span>
                     </form>

@@ -48,7 +48,7 @@ const validateForm = (data) => {
         const value = data[key];
 
         // Campo vacío o solo espacios/tabulaciones
-        if (!value || value.trim().length === 0) {
+        if (!value || value.trim().length === 0 && key === "recaptcha") {
             errors[key] = "Este campo es obligatorio.";
             continue;
         }
@@ -101,16 +101,22 @@ const clearErrors = () => {
     form.querySelectorAll(".error").forEach(input => input.classList.remove("error"));
 };
 
-// Escuchar cambios en los inputs para limitar caracteres y quitar error obligatorio
-form.querySelectorAll("input, textarea").forEach(input => {
-    input.addEventListener("input", handleChange);
-});
-
 // Mostrar indicador general
 const showIndicator = (message, success = true) => {
     indicator.textContent = message;
     indicator.className = success ? "mt-2 text-green-800" : "mt-2 text-red-500";
 };
+
+const onRecaptchaSuccess = () => {
+    const errorEl = document.querySelector("#recaptcha-container + .error-message");
+    if (errorEl) 
+        errorEl.remove();
+};
+
+// Escuchar cambios en los inputs para limitar caracteres y quitar error obligatorio
+form.querySelectorAll("input, textarea").forEach(input => {
+    input.addEventListener("input", handleChange);
+});
 
 // Enviar formulario
 form.addEventListener("submit", async (e) => {
