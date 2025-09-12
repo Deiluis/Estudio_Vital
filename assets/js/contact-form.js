@@ -109,8 +109,6 @@ function onRecaptchaSuccess() {
     const errorEl = document.querySelector("#recaptcha-container + .error-message");
     if (errorEl) 
         errorEl.remove();
-
-    console.log("se ejecuta");
 };
 
 // Escuchar cambios en los inputs para limitar caracteres y quitar error obligatorio
@@ -126,17 +124,16 @@ form.addEventListener("submit", async (e) => {
 
     const formData = new FormData(form);
     const rawData = Object.fromEntries(formData.entries());
-    delete rawData["g-recaptcha-response"];
-    
-    console.log(rawData);
 
     const data = {};
 
     const token = grecaptcha.getResponse();
     data.recaptchaToken = token;
 
-    for (let key in rawData)
-        data[key] = sanitizeInput(rawData[key]);
+    for (let key in rawData) {
+        if (key === "g-recaptcha-response")
+            data[key] = sanitizeInput(rawData[key]);
+    }
 
     const errors = validateForm(data);
 
