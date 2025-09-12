@@ -1,9 +1,9 @@
-// import nodemailer from "nodemailer";
+import nodemailer from "nodemailer";
 
 // Función para sanitizar los inputs
 const sanitizeInput = (value) => {
     if (typeof value !== "string") return "";
-    return value.trim().replace(/\s+/g, " ").replace(/[<>]/g, "");
+    return value.trim().replace(/\s+/g, " ");
 };
 
 // Validación de los campos
@@ -14,7 +14,7 @@ const validateData = (data) => {
     if (!data.name) errors.name = "El nombre es obligatorio.";
     if (!data.email) errors.email = "El email es obligatorio.";
     if (!data.tel) errors.tel = "El teléfono es obligatorio.";
-    if (!data.message) errors.message = "El mensaje es obligatorio.";
+    if (!data.message) errors.message = "La consulta es obligatoria.";
 
     // Formato y límites
     if (data.name && data.name.length > 100) errors.name = "Máximo 100 caracteres.";
@@ -51,27 +51,27 @@ export const handler = async (event, context) => {
             };
         }
 
-        // // Configuración de nodemailer
-        // const transporter = nodemailer.createTransport({
-        //     host: process.env.SMTP_HOST,
-        //     port: process.env.SMTP_PORT,
-        //     secure: process.env.SMTP_SECURE === "true",
-        //     auth: {
-        //         user: process.env.SMTP_USER,
-        //         pass: process.env.SMTP_PASS,
-        //     },
-        // });
+        // Configuración de nodemailer
+        const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST,
+            port: process.env.SMTP_PORT,
+            secure: process.env.SMTP_SECURE === "true",
+            auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS,
+            },
+        });
 
-        // // Definir el correo
-        // const mailOptions = {
-        //     from: `"${data.name}" <${data.email}>`,
-        //     to: process.env.CONTACT_RECEIVER,
-        //     subject: `Nuevo mensaje de contacto de ${data.name}`,
-        //     text: `Nombre: ${data.name}\nEmail: ${data.email}\nTel: ${data.tel}\nConsulta: ${data.message}`
-        // };
+        // Definir el correo
+        const mailOptions = {
+            from: `"${data.name}" <${data.email}>`,
+            to: process.env.CONTACT_RECEIVER,
+            subject: `Nuevo mensaje de contacto de ${data.name}`,
+            text: `Nombre: ${data.name}\nEmail: ${data.email}\nTel: ${data.tel}\nConsulta: ${data.message}`
+        };
 
-        // // Enviar correo
-        // await transporter.sendMail(mailOptions);
+        // Enviar correo
+        await transporter.sendMail(mailOptions);
 
         return {
             statusCode: 200,
