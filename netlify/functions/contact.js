@@ -32,9 +32,6 @@ const validateData = (data) => {
 
 export const handler = async (event, context) => {
     try {
-
-        console.log(process.env.SMTP_HOST);
-
         const rawData = JSON.parse(event.body);
 
         // Sanitizar inputs
@@ -67,7 +64,7 @@ export const handler = async (event, context) => {
 
         // Definir el correo
         const mailOptions = {
-            from: `"${data.name}" <${data.email}>`,
+            from: `${data.name}`,
             to: process.env.CONTACT_RECEIVER,
             subject: `Nuevo mensaje de contacto de ${data.name}`,
             text: `Nombre: ${data.name}\nEmail: ${data.email}\nTel: ${data.tel}\nConsulta: ${data.message}`

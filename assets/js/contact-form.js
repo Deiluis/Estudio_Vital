@@ -119,12 +119,12 @@ form.addEventListener("submit", async (e) => {
         data[key] = sanitizeInput(rawData[key]);
     }
 
-    // const errors = validateForm(data);
+    const errors = validateForm(data);
 
-    // if (Object.keys(errors).length > 0) {
-    //     showErrors(errors);
-    //     return;
-    // }
+    if (Object.keys(errors).length > 0) {
+        showErrors(errors);
+        return;
+    }
 
     try {
         const res = await fetch(".netlify/functions/contact", {
@@ -134,7 +134,6 @@ form.addEventListener("submit", async (e) => {
         });
 
         const json = await res.json();
-        console.log("Respuesta backend:", json);
 
         if (!res.ok) {
 
@@ -151,7 +150,6 @@ form.addEventListener("submit", async (e) => {
         form.reset();
 
     } catch (error) {
-        console.error("Error al enviar:", error);
         showIndicator("Error en la conexión. Intenta nuevamente.", false);
     }
 });
