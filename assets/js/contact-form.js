@@ -131,7 +131,7 @@ form.addEventListener("submit", async (e) => {
     data.recaptchaToken = token;
 
     for (let key in rawData) {
-        if (key === "g-recaptcha-response")
+        if (key !== "g-recaptcha-response")
             data[key] = sanitizeInput(rawData[key]);
     }
 
