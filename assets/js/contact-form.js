@@ -105,10 +105,12 @@ const showIndicator = (message, success = true) => {
     indicator.className = success ? "mt-2 text-green-800" : "mt-2 text-red-500";
 };
 
-const onRecaptchaSuccess = () => {
+function onRecaptchaSuccess() {
     const errorEl = document.querySelector("#recaptcha-container + .error-message");
     if (errorEl) 
         errorEl.remove();
+
+    console.log("se ejecuta");
 };
 
 // Escuchar cambios en los inputs para limitar caracteres y quitar error obligatorio
