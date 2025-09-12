@@ -48,7 +48,7 @@ const validateForm = (data) => {
         const value = data[key];
 
         // Campo vacío o solo espacios/tabulaciones
-        if (!value || value.trim().length === 0 && key === "recaptcha") {
+        if ((!value || value.trim().length === 0) && key !== "recaptcha") {
             errors[key] = "Este campo es obligatorio.";
             continue;
         }
@@ -87,11 +87,9 @@ const showErrors = (errors) => {
         error.textContent = errors[key];
         input.insertAdjacentElement("afterend", error);
 
-        if (key !== "recaptcha") {
-            input.classList.add("error");
-            input.classList.add("shake");
-            setTimeout(() => input.classList.remove("shake"), 500);
-        }
+        input.classList.add("error");
+        input.classList.add("shake");
+        setTimeout(() => input.classList.remove("shake"), 500);
     }
 };
 
