@@ -32,6 +32,29 @@ const validateData = (data) => {
 
 export const handler = async (event, context) => {
     try {
+        // Obtener token enviado desde el frontend
+        const { recaptchaToken } = JSON.parse(event.body);
+
+        // Verificar con Google.
+        const verifyResponse = await fetch(
+            `https://www.google.com/recaptcha/api/siteverify`,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `secret=${process.env.RECAPTCHA_SECRET}&response=${recaptchaToken}`
+            }
+        );
+
+        const result = await verifyResponse.json();
+
+        // Si el token no es válido, se bloquea.
+        if (!result.success) {
+            return {
+                statusCode: 400,
+                body: JSON.stringify({ error: "Validación reCaptcha fallida." })
+            };
+        }
+
         const rawData = JSON.parse(event.body);
 
         // Sanitizar inputs

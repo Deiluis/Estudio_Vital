@@ -126,11 +126,13 @@ form.addEventListener("submit", async (e) => {
         return;
     }
 
+    const token = grecaptcha.getResponse(); // devuelve el token generado
+
     try {
         const res = await fetch(".netlify/functions/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
+            body: JSON.stringify({ ...data, recaptchaToken: token }),
         });
 
         const json = await res.json();
@@ -140,6 +142,9 @@ form.addEventListener("submit", async (e) => {
             // Aplicar errores recibidos del backend
             if (json.errors)
                 showErrors(json.errors);
+
+            if (json.error)
+                showIndicator(json.error, false);
 
             return;
         }
