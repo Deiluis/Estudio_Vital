@@ -73,7 +73,13 @@ const showErrors = (errors) => {
     document.querySelectorAll(".error-message").forEach(el => el.remove());
 
     for (let key in errors) {
-        const input = form.querySelector(`[name="${key}"]`);
+        let input;
+
+        if (key === "recaptcha")
+            input = document.querySelector(".g-recaptcha");
+        else
+            input = form.querySelector(`[name="${key}"]`);
+
         if (!input) continue;
 
         const error = document.createElement("span");
@@ -81,10 +87,11 @@ const showErrors = (errors) => {
         error.textContent = errors[key];
         input.insertAdjacentElement("afterend", error);
 
-        input.classList.add("error");
-
-        input.classList.add("shake");
-        setTimeout(() => input.classList.remove("shake"), 500);
+        if (key !== "recaptcha") {
+            input.classList.add("error");
+            input.classList.add("shake");
+            setTimeout(() => input.classList.remove("shake"), 500);
+        }
     }
 };
 
@@ -120,41 +127,42 @@ form.addEventListener("submit", async (e) => {
         data[key] = sanitizeInput(rawData[key]);
 
     const errors = validateForm(data);
+    const token = grecaptcha.getResponse();
+
+    if (!token) 
+        errors.recaptcha = "Confirmá que no sos un robot.";
 
     if (Object.keys(errors).length > 0) {
         showErrors(errors);
         return;
     }
 
-    grecaptcha.ready(async () => {
-        try {
-            const token = await grecaptcha.execute("6Ldo4cYrAAAAANPkbHA4vDETSXdFbIptbhD2trdX", { action: "submit" });
+    try {
+        const res = await fetch(".netlify/functions/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ...data, recaptchaToken: token }),
+        });
 
-            const res = await fetch(".netlify/functions/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ ...data, recaptchaToken: token }),
-            });
+        const json = await res.json();
 
-            const json = await res.json();
+        if (!res.ok) {
 
-            if (!res.ok) {
+            // Aplicar errores recibidos del backend
+            if (json.errors)
+                showErrors(json.errors);
 
-                // Aplicar errores recibidos del backend
-                if (json.errors)
-                    showErrors(json.errors);
+            if (json.error)
+                showIndicator(json.error, false);
 
-                if (json.error)
-                    showIndicator(json.error, false);
-
-                return;
-            }
-
-            showIndicator(json.message, true);
-            form.reset();
-
-        } catch (error) {
-            showIndicator("Error en la conexión. Intenta nuevamente.", false);
+            return;
         }
-    });
+
+        showIndicator(json.message, true);
+        form.reset();
+        grecaptcha.reset();
+
+    } catch (error) {
+        showIndicator("Error en la conexión. Intenta nuevamente.", false);
+    }
 });

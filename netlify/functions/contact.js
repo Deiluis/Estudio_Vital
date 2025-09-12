@@ -48,7 +48,7 @@ export const handler = async (event, context) => {
         const result = await verifyResponse.json();
 
         // Si el token no es válido, se bloquea.
-        if (!result.success || result.score < 0.5) {
+        if (!result.success) {
             return {
                 statusCode: 400,
                 body: JSON.stringify({ error: "Validación reCAPTCHA fallida." })
