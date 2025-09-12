@@ -48,7 +48,7 @@ const validateForm = (data) => {
         const value = data[key];
 
         // Campo vacío o solo espacios/tabulaciones
-        if ((!value || value.trim().length === 0) && key !== "recaptcha") {
+        if (!value || value.trim().length === 0) {
             errors[key] = "Este campo es obligatorio.";
             continue;
         }
@@ -75,7 +75,7 @@ const showErrors = (errors) => {
     for (let key in errors) {
         let input;
 
-        if (key === "recaptcha")
+        if (key === "recaptchaToken")
             input = document.querySelector(".g-recaptcha");
         else
             input = form.querySelector(`[name="${key}"]`);
@@ -112,7 +112,7 @@ const onRecaptchaSuccess = () => {
 };
 
 // Escuchar cambios en los inputs para limitar caracteres y quitar error obligatorio
-form.querySelectorAll("input, textarea").forEach(input => {
+form.querySelectorAll('input, textarea').forEach(input => {
     input.addEventListener("input", handleChange);
 });
 
@@ -124,17 +124,19 @@ form.addEventListener("submit", async (e) => {
 
     const formData = new FormData(form);
     const rawData = Object.fromEntries(formData.entries());
+    delete rawData["g-recaptcha-response"];
+    
+    console.log(rawData);
 
     const data = {};
+
+    const token = grecaptcha.getResponse();
+    data.recaptchaToken = token;
 
     for (let key in rawData)
         data[key] = sanitizeInput(rawData[key]);
 
     const errors = validateForm(data);
-    const token = grecaptcha.getResponse();
-
-    if (!token) 
-        errors.recaptcha = "Confirmá que no sos un robot.";
 
     if (Object.keys(errors).length > 0) {
         showErrors(errors);
@@ -145,7 +147,7 @@ form.addEventListener("submit", async (e) => {
         const res = await fetch(".netlify/functions/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ ...data, recaptchaToken: token }),
+            body: JSON.stringify(data),
         });
 
         const json = await res.json();
