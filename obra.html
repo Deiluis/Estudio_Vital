@@ -11,23 +11,23 @@
 </head>
 <body class="bg-white">
     <header id="header" class="w-full sticky top-0 z-[2000] bg-transparent backdrop-blur-lg shadow-xl transition-all duration-500">
-        <nav class="h-[7.5vh] flex justify-between items-center px-[5%]">
+        <nav class="h-24 md:h-[7.5vh] flex justify-between items-center px-[5%]">
             <h1 class="h-full md:min-w-80 flex items-center justify-center">
                 <a href="/" class="h-full">
                     <img class="h-full object-scale-down" src="/assets/img/logo.png" alt="Logo de Estudio Vital">
                 </a>
             </h1>
             <ul class="list-none hidden md:flex text-[--black]">
-                <li class="border-b-2 border-transparent ml-28">
+                <li class="border-b-2 border-transparent mx-8 lg:mx-14">
                     <a href="/" class="nav__link inline-block">Inicio</a>
                 </li>              
-                <li class="border-b-2 border-transparent ml-28">
+                <li class="border-b-2 border-transparent mx-8 lg:mx-14">
                     <a href="/#obras" class="nav__link inline-block">Obras</a>
                 </li>
-                <li class="border-b-2 border-transparent ml-28">
+                <li class="border-b-2 border-transparent mx-8 lg:mx-14">
                     <a href="/#estudio" class="nav__link inline-block">Estudio</a>
                 </li>
-                <li class="border-b-2 border-transparent ml-28">
+                <li class="border-b-2 border-transparent mx-8 lg:mx-14">
                     <a href="/#contacto" class="nav__link inline-block">Contacto</a>
                 </li>
             </ul>
@@ -35,24 +35,37 @@
         </nav>
     </header>
 
-    <ul class="nav__list w-full list-none flex flex-col md:hidden fixed z-[2000] top-[7.5vh] left-0 bg-transparent backdrop-blur-lg shadow-xl transition-all duration-500 -ml-[100%]">
-        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
-            <a href="/" class="text-[2rem] text-[--black] block p-7">Inicio</a>
+    <ul class="nav__list w-full h-[calc(100vh-6rem)]
+        list-none flex flex-col md:hidden fixed z-[2000] 
+        top-24 left-0 text-[2rem]
+        bg-transparent backdrop-blur-lg shadow-xl 
+        transition-all duration-500 -ml-[100%]"
+    >
+        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
+            <a href="/" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+                Inicio
+            </a>
         </li>
-        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
-            <a href="/#obras" class="text-[2rem] text-[--black] block p-7">Obras</a>
+        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
+            <a href="/#obras" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+                Obras
+            </a>
         </li>
-        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
-            <a href="/#estudio" class="text-[2rem] text-[--black] block p-7">Estudio</a>
+        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
+            <a href="/#estudio" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+                Estudio
+            </a>
         </li>
-        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
-            <a href="/#contacto" class="text-[2rem] text-[--black] block p-7">Contacto</a>
+        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
+            <a href="/#contacto" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+                Contacto
+            </a>
         </li>
     </ul>
 
     <main>
         <section id="hero" class="w-full h-[92.5vh] flex flex-col select-none">
-            <img src="" alt="Foto principal del proyecto" class="w-full h-full object-cover absolute top-0 left-0">
+            <img src="" alt="Foto principal de la obra" class="w-full h-full object-cover absolute top-0 left-0">
             <div class="flex w-full justify-center">
                 <div class="hero__arrow bg-[--black] hover:bg-black duration-500 flex items-center justify-center rounded-full text-5xl absolute bottom-[7rem] z-[500]">
                     <a href="#principal" class="px-6 py-5 text-white">

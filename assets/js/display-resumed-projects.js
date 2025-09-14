@@ -12,7 +12,7 @@ const generateProjects = async () => {
 
         // Crear el enlace dentro del artículo
         const a = document.createElement('a');
-        a.href = `proyecto/${project.name}`;
+        a.href = `obra/${project.name}`;
         a.className = `
             project__link w-full h-full flex flex-col-reverse items-center
             ${i % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}
@@ -32,7 +32,7 @@ const generateProjects = async () => {
 
         const span = document.createElement('span');
         span.className = "transition-color duration-300 text-[--light-gray] hidden lg:inline";
-        span.innerHTML = `Ver el proyecto <i class="fa-solid fa-chevron-right"></i>`;
+        span.innerHTML = `Ver la obra <i class="fa-solid fa-chevron-right"></i>`;
         
         sideText.appendChild(h3);
         sideText.appendChild(p);
@@ -86,7 +86,7 @@ const addCarousel = (projectName, projectTitle, imagesSrc, link) => {
         const img = document.createElement('img');
         img.className = "w-full h-full object-cover"; 
         img.src = `/assets/img/proyectos/${projectName}/${src}`;
-        img.alt = `Imagen del proyecto ${projectTitle}`;
+        img.alt = `Imagen de la obra ${projectTitle}`;
         img.loading = "lazy";
 
         images.appendChild(img);

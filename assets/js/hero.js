@@ -18,12 +18,12 @@ const init = async () => {
             hero__link w-full h-full absolute top-0 left-0
             transition-all duration-[${fadeDuration}ms] opacity-0
         `;
-        link.href = `proyecto/${project.name}`;
+        link.href = `obra/${project.name}`;
 
         const img = document.createElement("img");
         img.className = "hero__img absolute top-0 left-0 w-full h-full object-cover";
         img.src = `/assets/img/proyectos/${project.name}/${project.carousel[0]}`;
-        img.alt = `Imagen del proyecto ${project.title}`;
+        img.alt = `Imagen de la obra ${project.title}`;
         img.loading = "lazy";
 
         const titleContainer = document.createElement("div");
@@ -35,7 +35,7 @@ const init = async () => {
 
         const span = document.createElement("span");
         span.className = "ml-2";
-        span.innerHTML = `Ver el proyecto <i class="fa-solid fa-chevron-right"></i>`;
+        span.innerHTML = `Ver la obra <i class="fa-solid fa-chevron-right"></i>`;
 
         titleContainer.appendChild(title);
         titleContainer.appendChild(span);

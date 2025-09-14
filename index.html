@@ -12,23 +12,23 @@
 </head>
 <body class="bg-white">
     <header id="header" class="w-full sticky top-0 z-[2000] bg-transparent backdrop-blur-lg shadow-xl transition-all duration-500">
-        <nav class="h-[7.5vh] flex justify-between items-center px-[5%]">
+        <nav class="h-24 md:h-[7.5vh] flex justify-between items-center px-[5%]">
             <h1 class="h-full md:min-w-80 flex items-center justify-center">
                 <a href="/" class="h-full">
                     <img class="h-full object-scale-down" src="/assets/img/logo.png" alt="Logo de Estudio Vital">
                 </a>
             </h1>
             <ul class="list-none hidden md:flex text-[--black]">
-                <li class="border-b-2 border-transparent ml-28">
+                <li class="border-b-2 border-transparent mx-8 lg:mx-14">
                     <a href="/" class="nav__link inline-block">Inicio</a>
                 </li>              
-                <li class="border-b-2 border-transparent ml-28">
+                <li class="border-b-2 border-transparent mx-8 lg:mx-14">
                     <a href="#obras" class="nav__link inline-block">Obras</a>
                 </li>
-                <li class="border-b-2 border-transparent ml-28">
+                <li class="border-b-2 border-transparent mx-8 lg:mx-14">
                     <a href="#estudio" class="nav__link inline-block">Estudio</a>
                 </li>
-                <li class="border-b-2 border-transparent ml-28">
+                <li class="border-b-2 border-transparent mx-8 lg:mx-14">
                     <a href="#contacto" class="nav__link inline-block">Contacto</a>
                 </li>
             </ul>
@@ -36,18 +36,31 @@
         </nav>
     </header>
 
-    <ul class="nav__list w-full list-none flex flex-col md:hidden fixed z-[2000] top-[7.5vh] left-0 bg-transparent backdrop-blur-lg shadow-xl transition-all duration-500 -ml-[100%]">
-        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
-            <a href="/" class="text-[2rem] text-[--black] block p-7">Inicio</a>
+    <ul class="nav__list w-full h-[calc(100vh-6rem)]
+        list-none flex flex-col md:hidden fixed z-[2000] 
+        top-24 left-0 text-[2rem]
+        bg-transparent backdrop-blur-lg shadow-xl 
+        transition-all duration-500 -ml-[100%]"
+    >
+        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
+            <a href="/" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+                Inicio
+            </a>
         </li>
-        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
-            <a href="#obras" class="text-[2rem] text-[--black] block p-7">Obras</a>
+        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
+            <a href="#obras" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+                Obras
+            </a>
         </li>
-        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
-            <a href="#estudio" class="text-[2rem] text-[--black] block p-7">Estudio</a>
+        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
+            <a href="#estudio" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+                Estudio
+            </a>
         </li>
-        <li class="hover:bg-white transition-colors m-4 rounded-2xl">
-            <a href="#contacto" class="text-[2rem] text-[--black] block p-7">Contacto</a>
+        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
+            <a href="#contacto" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+                Contacto
+            </a>
         </li>
     </ul>
 
@@ -73,16 +86,21 @@
             <div class="obras__container flex flex-col lg:gap-20 gap-6"></div>
         </section>
 
-        <section id="estudio" class="max-w-full w-[150rem] xl:px-40 px-8 lg:py-40 py-32 mx-auto overflow-x-hidden">
-            <h2 class="text-6xl text-[--black] mb-20 text-center">Estudio</h2>
+        <section id="estudio" class="max-w-full w-[130rem] xl:px-40 px-8 lg:py-40 py-32 mx-auto overflow-x-hidden">
+            <h2 class="text-6xl text-[--black] mb-20 text-center">
+                <img src="/assets/img/icon-crop.svg" class="h-28 mx-auto" alt="Logo Estudio vital">
+            </h2>
 
-            <div class="flex flex-col lg:gap-12 gap-6">
+            <div class="flex flex-wrap justify-center lg:grid lg:grid-cols-[55%_20%_20%] lg:gap-x-[2.5%] gap-6">
                 <p>
                     Estudio Vital es un estudio de arquitectura fundado en el año 2006, ubicado en la ciudad de Buenos Aires, liderado por los arquitectos Agustin Vital y Sebastián Policastro. Se dedica al diseño y transformación de espacios, desarrollando soluciones técnicas y materiales para cada escala y tipo de proyecto; en todas sus etapas y con un trato personalizado. 
                 </p>
-                <p>
+                <img src="/assets/img/agustin.jpg" class="max-w-full w-96 lg:w-full h-[28rem] object-cover" alt="Foto de Agustín">
+                <img src="/assets/img/agustin.jpg" class="max-w-full w-96 lg:w-full h-[28rem] object-cover" alt="Foto de Sebastián">
+                <p class="lg:mt-0 mt-12">
                     El diseño a medida es un proceso artesanal donde se crea una arquitectura única para un lugar y cliente específico. Partiendo de ciertas condiciones iniciales, considerando las necesidades, gustos y visión del cliente, se seleccionan cuidadosamente los conceptos y las estrategias para la realización del Proyecto y la Obra. El resultado es una pieza exclusiva, que refleja un alto nivel de detalle y calidad. 
                 </p>
+                <img src="/assets/img/icon.jpg" class="h-full object-cover col-span-2" alt="Foto del estudio">
             </div>   
         </section>
 
@@ -96,7 +114,7 @@
                         <i class="fa-solid fa-envelope row-span-2 text-5xl"></i>
                         <div class="flex flex-col">
                             <h3 class="text-4xl">Correo electrónico</h3>
-                            <a href="mailto:contacto@asp-estudio.com.ar">contacto@estudiovital.com.ar</a>
+                            <a href="mailto:contacto@asp-estudio.com.ar" class="break-all">contacto@estudiovital.com.ar</a>
                         </div>
                     </div>
                     <div class="flex items-center gap-8">

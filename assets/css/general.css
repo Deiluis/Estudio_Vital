@@ -29,12 +29,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2::after {
-  content: '';
-  display: block;
-  width: 9rem;
-  height: 1px;
-  margin: 2rem auto 0; /* arriba 2rem, horizontal auto, abajo 0 */
-  background: var(--black);
+    content: '';
+    display: block;
+    width: 9rem;
+    height: 1px;
+    margin: 2rem auto 0; /* arriba 2rem, horizontal auto, abajo 0 */
+    background: var(--black);
 }
 
 p, a, span, label, #contacto input, #contacto textarea, li {
@@ -52,14 +52,14 @@ img {
 }
 
 .nav__link::before {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--black);
-  transition: all 0.5s ease;
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--black);
+    transition: all 0.5s ease;
 }
 
 .nav__link:hover::before {

@@ -9,58 +9,87 @@ const nextButton = document.querySelector(".slider__button--right");
 
 const carouselImages = document.querySelectorAll(".carrusel__images");
 
-let images;
+let images = [];
 let currentIndex = 0;
+const preloaded = new Set(); // guarda src de imágenes ya precargadas
 
 const toggleView = () => {
     modal.classList.toggle("opacity-0");
     modal.classList.toggle("pointer-events-none");
     modalContainer.classList.toggle("-translate-y-[100vh]");
     modalContainer.classList.toggle("opacity-0");
+};
+
+// Precarga una sola imagen si no está en cache
+function preloadImage(src) {
+    if (preloaded.has(src)) return;
+    const img = new Image();
+    img.src = src;
+    preloaded.add(src);
 }
 
+// Precarga la actual + vecinas
+function preloadNeighbors(index) {
+    const prevIndex = (index - 1 + images.length) % images.length;
+    const nextIndex = (index + 1) % images.length;
+
+    [index, prevIndex, nextIndex].forEach(i => {
+        preloadImage(images[i].src);
+    });
+}
+
+// Evento click sobre carruseles
 carouselImages.forEach(carousel => {
     carousel.addEventListener("click", e => {
         const button = e.target.closest(".slider__show-button");
-        if (!button) return; // no es botón, ignoro
+        if (!button) return;
 
-        // Asignar las imagenes correpondientes
-        images = carousel.querySelectorAll("img");
+        images = Array.from(carousel.querySelectorAll("img"));
 
-        // Determinar el índice del artículo donde está el botón
         const articles = Array.from(carousel.querySelectorAll("article"));
         const index = articles.findIndex(article => article.contains(button));
 
         currentIndex = index;
         modalImg.src = images[currentIndex].src;
+
+        preloadNeighbors(currentIndex); // 🔥 precargar vecinos
         toggleView();
     });
 });
 
+// Botones prev/next
 prevButton.addEventListener("click", () => {
-    currentIndex--;
-
-    // Si estamos en el inicio, vamos al final
-    if (currentIndex < 0)
-        currentIndex = images.length - 1;
-
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
     modalImg.src = images[currentIndex].src;
+    preloadNeighbors(currentIndex);
 });
 
 nextButton.addEventListener("click", () => {
-    currentIndex++;
-
-    // Si llegamos al final, volvemos al inicio
-    if (currentIndex >= images.length)
-        currentIndex = 0;
-    
+    currentIndex = (currentIndex + 1) % images.length;
     modalImg.src = images[currentIndex].src;
+    preloadNeighbors(currentIndex);
 });
 
+// Cerrar modal
 modalContainer.addEventListener("click", (e) => {
-    if (e.target == modalContainer) 
-        toggleView();
+    if (e.target == modalContainer) toggleView();
 });
-
 modalCloseButton.addEventListener("click", toggleView);
 modalBackground.addEventListener("click", toggleView);
+
+// Soporte teclado
+document.addEventListener("keydown", (e) => {
+    if (modal.classList.contains("opacity-0")) return;
+
+    if (e.key === "ArrowLeft") {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        modalImg.src = images[currentIndex].src;
+        preloadNeighbors(currentIndex);
+    } else if (e.key === "ArrowRight") {
+        currentIndex = (currentIndex + 1) % images.length;
+        modalImg.src = images[currentIndex].src;
+        preloadNeighbors(currentIndex);
+    } else if (e.key === "Escape") {
+        toggleView();
+    }
+});
