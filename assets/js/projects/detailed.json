@@ -18,13 +18,14 @@
             "El volumen apaisado logra integrarse en el paisaje y no resultar agresivo con el entorno. La estructura metálica de la cubierta con sus apoyos esbeltos, se separa de los muros y carpinterías, generando una ventana perimetral continua. Dentro de esta franja se genera continuidad de vistas y cielo, permitiendo a la luz natural entrar y acompañar a sus habitantes, durante el día y las noches de luna."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
             "5.webp",
             "6.webp",
-            "7.webp"
+            "7.webp",
+            "8.webp",
+            "9.webp"
         ],
         "carousel1": [
             "P1.webp",
@@ -32,24 +33,19 @@
             "cortes.webp"
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
             "10.webp",
             "11.webp",
             "12.webp",
             "13.webp",
             "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp"
+            "15.webp"
         ],
         "show": true
 	},
     {
         "name": "newbery",
         "banner": "1.webp",
-        "blueprint": "P1.webp",
+        "blueprint": "PB.webp",
         "title": "CASA NEWBERY Y FREIRE",
         "subtitle": "Colegiales, Buenos Aires. 2019-2021. Vivienda unifamiliar.",
         "surface": "280 m²",
@@ -65,37 +61,42 @@
             "La estructura, losa y tabiques fueron realizados en hormigón visto y junto a los pisos de madera, definen los planos de prácticamente toda la casa. Las persianas metálicas microperforadas permiten un filtro a la transparencia con el ancho máximo propuesto."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
             "5.webp",
             "6.webp",
-            "7.webp"
+            "7.webp",
+            "8.webp",
+            "9.webp"
         ],
         "carousel1": [
+            "P1.webp",
+            "P2.webp",
+            "Fachada.webp",
+            "Contrafachada.webp",
+            "C1.webp",
+            "C2.webp",
+            "C3.webp",
+            "C4.webp",
+            "C5.webp",
+            "C6.webp",
+            "C7.webp"
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
             "10.webp",
             "11.webp",
             "12.webp",
             "13.webp",
             "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp",
-            "20.webp"
+            "15.webp"
         ],
         "show": true
 	},
     {
         "name": "sarmiento",
         "banner": "1.webp",
-        "blueprint": "P1.webp",
+        "blueprint": "PB.webp",
         "title": "PH SARMIENTO Y YATAY",
         "subtitle": "Almagro, Buenos Aires. 2017-2020. Reforma integral.",
         "surface": "125 m²",
@@ -116,19 +117,22 @@
             "Todos los pisos y aberturas de madera, los cielorrasos y parte de los muebles, fueron hechos y adaptados a partir de carpinterías y tirantes de madera recuperados, así como parte de los vidrios y estructuras metálicas."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
             "5.webp",
             "6.webp",
-            "7.webp"
+            "7.webp",
+            "8.webp",
+            "9.webp"
         ],
         "carousel1": [
+            "PA.webp",
+            "C1.webp",
+            "C2.webp",
+            "C3.webp"
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
             "10.webp",
             "11.webp",
             "12.webp",
@@ -163,19 +167,18 @@
             "Se trata de una remodelación integral a fondo de todo un piso sobre la Avenida Libertador. Se lleva adelante la renovación total de todos los revestimientos, pisos, cielorrasos, instalaciones, iluminación, aberturas y mobiliarios. En la nueva distribución, la cocina gana espacio hacia el comedor y se integra completamente al living mediante una puerta corrediza de vidrio repartido. Para las habitaciones en contrafrente se logra mayor espacio incorporando los balcones y se ubica un nuevo baño completo, permitiendo hacer en suite la habitación principal. El sector lavadero y servicio se reconfigura permitiendo la doble circulación hacia la cocina."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
             "5.webp",
             "6.webp",
-            "7.webp"
+            "7.webp",
+            "8.webp",
+            "9.webp"
         ],
         "carousel1": [
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
             "10.webp",
             "11.webp",
             "12.webp",
@@ -239,7 +242,7 @@
     {
         "name": "exaltacion-cruz",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.webp",
         "title": "CASA EXALTACIÓN DE LA CRUZ",
         "subtitle": "Provincia de Buenos Aires. 2024. Vivienda unifamiliar.",
         "surface": "160 m²",
@@ -256,34 +259,18 @@
             "La envolvente se trata como un sistema pasivo, priorizando la eficiencia energética y confort ambiental. El techo y el piso son doble capa con cámara de aire en el medio y ventilación, los muros están aislados con celulosa proyectada y revestidos con listones de madera biosintética. Las aberturas de aluminio tienen ruptura de puente térmico y doble vidriado hermético. La energía eléctrica es proporcionada por paneles solares ubicados en la cubierta."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
-            "5.webp",
-            "6.webp",
-            "7.webp"
+            "5.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
+            "C1.webp",
+            "C2.webp"
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
-            "10.webp",
-            "11.webp",
-            "12.webp",
-            "13.webp",
-            "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp"
         ],
-        "show": false
+        "show": true
 	},
     {
         "name": "casa-jufre",
