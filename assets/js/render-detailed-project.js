@@ -1,23 +1,10 @@
 const desktopCreditsContainer = document.querySelector("#principal div");
 const mobileCreditsContainer = document.querySelector("#creditos");
 
-const getDetailedProject = async (projectName) => {
-
-    let detailedProject;
-
-    try {
-        const res = await fetch("/assets/js/projects/detailed.json");
-        const projects = await res.json();
-        detailedProject = projects.filter(project => project.show).find(p => p.name == projectName);
-    } catch (err) {
-        console.error("Error al cargar projects/resumed.json:", err);
-    }
+const renderProject = (projects, idx, creditsList) => {
     
-    return detailedProject;
-};
+    const project = projects[idx];
 
-const renderProject = (project, creditsList) => {
-    
     const banner = document.querySelector("#hero img");
     const blueprint = document.querySelector("#principal img");
     const title = document.querySelector("#principal h2");
@@ -31,8 +18,15 @@ const renderProject = (project, creditsList) => {
     const carousel2Container = document.querySelector("#carrusel-planos");
     const carousel1 = document.querySelector("#carrusel-imagenes .carrusel__images");
     const carousel2 = document.querySelector("#carrusel-planos .carrusel__images");
+    const selectorObra = document.querySelector("#selector-obra");
+
+    let prevProject;
+    let nextProject;
 
     let imgCounter = 0;
+    let links = 0;
+    let i;
+
     creditsList.className = "flex flex-col gap-4";
 
     banner.src = `/assets/img/proyectos/${project.name}/${project.banner}`;
@@ -109,6 +103,61 @@ const renderProject = (project, creditsList) => {
 
     if (carouselsSection.children.length == 0)
         mainContainer.removeChild(carouselsSection);
+
+    // Obtiene el proyecto anterior que pueda mostrarse.
+    i = idx -1; 
+
+    while (i >= 0 && !projects[i]?.show)
+        i--;
+
+    prevProject = projects[i];
+
+    // Obtiene el proyecto proximo que pueda mostrarse.
+    i = idx +1; 
+
+    while (i < projects.length && !projects[i]?.show)
+        i++;
+
+    nextProject = projects[i];
+
+    if (prevProject) {
+        const btn = document.createElement("a");
+        btn.className = "flex items-center text-3xl text-[--black] gap-6";
+        btn.href = `/obra/${prevProject.name}`;
+
+        btn.innerHTML = `
+            <i class="fa-solid fa-chevron-left gap-4"></i>
+            <div class="flex flex-col items-center">
+                <h4>${prevProject.title}</h4>
+                <span>Obra anterior</span>
+            </div>
+        `;
+
+        selectorObra.appendChild(btn);
+        links++;
+    }
+
+    if (nextProject) {
+        const btn = document.createElement("a");
+        btn.className = "flex items-center text-3xl text-[--black] gap-6";
+        btn.href = `/obra/${nextProject.name}`;
+
+        btn.innerHTML = `
+            <div class="flex flex-col items-center">
+                <h4>${nextProject.title}</h4>
+                <span>Obra siguiente</span>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        `;
+
+        selectorObra.appendChild(btn);
+        links++;
+    }
+
+    if (links === 1)
+        selectorObra.classList.add("justify-center");
+    else
+        selectorObra.classList.add("justify-between");
 };
 
 const addSlide = (name, src, container) => {
@@ -138,11 +187,21 @@ const init = async () => {
     const pathParts = window.location.pathname.split("/");
     const projectName = pathParts[2];
 
-    const project = await getDetailedProject(projectName);
+    let idx;
+    let projects = [];
 
-    if (project) {
+    try {
+        const res = await fetch("./assets/js/projects/detailed.json");
+        projects = await res.json();
+    } catch (err) {
+        console.error("Error al cargar projects/resumed.json:", err);
+    }
+
+    if (projects.length > 0) {
+
         const creditsList = document.createElement("ul");
-        renderProject(project, creditsList);
+        idx = projects.findIndex(p => p.name == projectName);
+        renderProject(projects, idx, creditsList);
 
         window.addEventListener("resize", () => {
             if (window.innerWidth < 640)
