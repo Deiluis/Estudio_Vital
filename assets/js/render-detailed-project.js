@@ -212,8 +212,8 @@ const init = async () => {
         })
     }
         
-    // else
-    //     window.location.href = "/"
+    else
+        window.location.href = "/"
 };
 
 init();
