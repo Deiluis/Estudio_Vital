@@ -191,7 +191,7 @@ const init = async () => {
     let projects = [];
 
     try {
-        const res = await fetch("./assets/js/projects/detailed.json");
+        const res = await fetch("/assets/js/projects/detailed.json");
         projects = await res.json();
     } catch (err) {
         console.error("Error al cargar projects/resumed.json:", err);
@@ -212,8 +212,8 @@ const init = async () => {
         })
     }
         
-    else
-        window.location.href = "/"
+    // else
+    //     window.location.href = "/"
 };
 
 init();
