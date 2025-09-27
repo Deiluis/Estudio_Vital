@@ -197,10 +197,11 @@ const init = async () => {
         console.error("Error al cargar projects/resumed.json:", err);
     }
 
-    if (projects.length > 0) {
+    idx = projects.findIndex(p => p.name == projectName);
+
+    if (projects[idx]) {
 
         const creditsList = document.createElement("ul");
-        idx = projects.findIndex(p => p.name == projectName);
         renderProject(projects, idx, creditsList);
 
         window.addEventListener("resize", () => {
