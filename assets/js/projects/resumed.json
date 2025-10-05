@@ -57,7 +57,7 @@
             "3.webp",
             "4.webp"
 		],
-        "show": false
+        "show": true
 	},
 	{
 		"name": "exaltacion-cruz",
@@ -114,10 +114,9 @@
 		"carousel": [
 			"1.webp",
             "2.webp",
-            "3.webp",
-            "4.webp"
+            "3.webp"
 		],
-        "show": false
+        "show": true
 	},
 	{
 		"name": "lambare",

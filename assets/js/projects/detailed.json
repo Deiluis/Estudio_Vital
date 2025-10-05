@@ -45,7 +45,7 @@
     {
         "name": "newbery",
         "banner": "1.webp",
-        "blueprint": "PB.webp",
+        "blueprint": "P1.webp",
         "title": "CASA NEWBERY Y FREIRE",
         "subtitle": "Colegiales, Buenos Aires. 2019-2021. Vivienda unifamiliar.",
         "surface": "280 m²",
@@ -71,17 +71,11 @@
             "9.webp"
         ],
         "carousel1": [
-            "P1.webp",
             "P2.webp",
-            "Fachada.webp",
-            "Contrafachada.webp",
+            "P3.webp",
             "C1.webp",
             "C2.webp",
-            "C3.webp",
-            "C4.webp",
-            "C5.webp",
-            "C6.webp",
-            "C7.webp"
+            "C3.webp"
         ],
         "carousel2": [
             "10.webp",
@@ -174,26 +168,35 @@
             "6.webp",
             "7.webp",
             "8.webp",
-            "9.webp"
+            "9.webp",
+            "10.webp"
         ],
         "carousel1": [
         ],
         "carousel2": [
-            "10.webp",
             "11.webp",
             "12.webp",
             "13.webp",
             "14.webp",
             "15.webp",
             "16.webp",
-            "17.webp"
+            "17.webp",
+            "18.webp",
+            "19.webp",
+            "20.webp",
+            "21.webp",
+            "22.webp",
+            "23.webp",
+            "24.webp",
+            "25.webp",
+            "26.webp"
         ],
         "show": true
 	},
     {
         "name": "kru-esports",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "PB.webp",
         "title": "KRÜ ESPORTS",
         "subtitle": "Palermo, Buenos Aires. 2021. Primer premio concurso privado. Gaming Center y Oficinas.",
         "surface": "680 m²",
@@ -210,34 +213,25 @@
             "En la planta baja se instaló el microcine para eventos, con capacidad para 10 jugadores y espectadores. Se encuentra también un bar y un estudio de grabación. Luego, en el entrepiso se ubican la recepción, la sala de streaming y las oficinas del staff."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
             "5.webp",
-            "6.webp",
-            "7.webp"
+            "6.webp"
         ],
         "carousel1": [
-            "cortes.webp",
             "P1.webp",
-            "P2.webp"
+            "PE.webp",
+            "CE.webp",
+            "CB.webp"
         ],
         "carousel2": [
+            "7.webp",
             "8.webp",
             "9.webp",
-            "10.webp",
-            "11.webp",
-            "12.webp",
-            "13.webp",
-            "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp"
+            "10.webp"
         ],
-        "show": false
+        "show": true
 	},
     {
         "name": "exaltacion-cruz",
@@ -278,7 +272,7 @@
     {
         "name": "casa-jufre",
         "banner": "1.webp",
-        "blueprint": "P1.webp",
+        "blueprint": "PB.webp",
         "title": "CASA JUFRÉ Y THAMES",
         "subtitle": "Villa Crespo, Buenos Aires. 2007-2008. Reforma integral.",
         "surface": "340 m²",
@@ -291,17 +285,19 @@
             "La “finca” Jufré fue el punto de partida para una gran amistad con sus habitantes. El propósito de la reforma consistía en reformular una antigua casa de una planta dentro de un terreno de 10 por 40 metros. Para la ampliación, por un lado, se refuerza la estructura existente, generando aberturas y un patio de mayor tamaño. Por otro lado, un gran techo liviano en doble altura apoyado solamente en las medianeras envuelve la cáscara original, conforma un nuevo piso de habitaciones y cubre el patio lateral dando lugar a la escalera y la circulación principal. Se produce un volumen más compacto, de carácter industrial y que da lugar a un jardín de fondo de grandes dimensiones."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
             "5.webp",
-            "6.webp",
-            "7.webp"
+            "6.webp"
         ],
         "carousel1": [
+            "C1.webp",
+            "C2.webp",
+            "C3.webp"
         ],
         "carousel2": [
+            "7.webp",
             "8.webp",
             "9.webp",
             "10.webp",
@@ -312,7 +308,7 @@
     {
         "name": "estudios-jufre",
         "banner": "1.webp",
-        "blueprint": "P1.webp",
+        "blueprint": "PPrincipal.webp",
         "title": "ESTUDIOS JUFRÉ Y URIARTE",
         "subtitle": "Villa Crespo, Buenos Aires. 2010-2011. Reforma integral.",
         "surface": "430 m²",
@@ -329,7 +325,6 @@
             "Se restauraron las fachadas, bovedillas, aberturas y postigos de cedro, así como los pisos de pinotea y mosaico. Para la ampliación se siguió la misma línea: se construyeron nuevas bovedillas y muros con ladrillos reciclados de demolición, aberturas de madera de cedro boliviano, pisos nuevos de pinotea recuperada y carpinterías de hierro."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
@@ -338,6 +333,8 @@
             "7.webp"
         ],
         "carousel1": [
+            "PB.webp",
+            "P1.webp"
         ],
         "carousel2": [
             "8.webp",
@@ -350,7 +347,7 @@
     {
         "name": "honduras",
         "banner": "1.webp",
-        "blueprint": "P1.webp",
+        "blueprint": "PB1.webp",
         "title": "PH HONDURAS y GASCÓN",
         "subtitle": "Palermo, Buenos Aires. 2022. Reforma integral.",
         "surface": "160 m²",
@@ -371,19 +368,24 @@
             "Las aberturas de madera para la ampliación se consiguieron de demolición, en combinación con las existentes, adaptándolas y restaurándolas."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
             "5.webp",
             "6.webp",
-            "7.webp"
+            "7.webp",
+            "8.webp",
+            "9.webp"
         ],
         "carousel1": [
+            "C2.webp",
+            "C3.webp",
+            "C4.webp",
+            "C5.webp",
+            "P3.webp",
+            "PA1.webp"
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
             "10.webp",
             "11.webp",
             "12.webp",
@@ -394,17 +396,14 @@
             "17.webp",
             "18.webp",
             "19.webp",
-            "20.webp",
-            "21.webp",
-            "22.webp",
-            "23.webp"
+            "20.webp"
         ],
         "show": true
 	},
     {
         "name": "san-lorenzo",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.webp",
         "title": "SEDE CLUB SAN LORENZO",
         "subtitle": "Boedo, Buenos Aires. 2015. Reforma integral.",
         "surface": "800 m²",
@@ -417,39 +416,25 @@
             "El programa incluye una planta baja comercial, y en primer piso las oficinas y sala de reuniones para la comisión directiva. Se deja previsto un futuro crecimiento en altura para más oficinas y un auditorio."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
-            "3.webp",
-            "4.webp",
-            "5.webp",
-            "6.webp",
-            "7.webp"
+            "3.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
+            "P2.webp",
+            "P3.webp",
+            "C1.webp",
+            "C2.webp",
+            "C3.webp",
+            "C4.webp"
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
-            "10.webp",
-            "11.webp",
-            "12.webp",
-            "13.webp",
-            "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp"
         ],
-        "show": false
+        "show": true
 	},
     {
         "name": "lambare",
         "banner": "1.webp",
-        "blueprint": "P1.webp",
+        "blueprint": "PB.webp",
         "title": "PH LAMBARÉ Y CORRIENTES",
         "subtitle": "Almagro, Buenos Aires. 2021. Reforma integral.",
         "surface": "90 m²",
@@ -467,19 +452,22 @@
             "Para el cerramiento del patio se diseña un sistema de paños vidriados corredizos para el techo, y de vidrios pivotantes o proyectantes para los verticales. Se mantienen y acondicionan las aberturas, postigos de madera y pisos de pinotea, así como los pisos de mosaico calcáreo y herrerías."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
             "5.webp",
             "6.webp",
-            "7.webp"
+            "7.webp",
+            "8.webp",
+            "9.webp"
         ],
         "carousel1": [
+            "P1.webp",
+            "C1.webp",
+            "C2.webp",
+            "C3.webp"
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
             "10.webp",
             "11.webp",
             "12.webp"
@@ -536,7 +524,7 @@
     {
         "name": "montaneses",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "blueprint": "P1.jpg",
         "title": "PISO MONTAÑESES Y SUCRE",
         "subtitle": "Belgrano, Buenos Aires. 2023. Reforma integral.",
         "surface": "150 m²",
@@ -551,19 +539,18 @@
             "En este caso, se trataba de dos departamentos contiguos que habían sido unidos, por lo que ya se había convertido en un espacio de doble frente pasante hacia la calle y hacia el pulmón interno. Se mantuvo la distribución original de los ambientes, restaurando los pisos de madera de lapacho y las aberturas de madera de cedro tipo guillotina con contrapeso. Los baños se renovaron por completo, al igual que la cocina que se convirtió en uno de los ambientes más acogedores, con la incorporación de una isla de madera de petiribí y el reemplazo de las ventanas de aluminio por una de madera de cedro, acorde con el resto de las aberturas de la casa."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
             "5.webp",
             "6.webp",
-            "7.webp"
+            "7.webp",
+            "8.webp",
+            "9.webp"
         ],
         "carousel1": [
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
             "10.webp",
             "11.webp",
             "12.webp",
@@ -590,16 +577,23 @@
             "Y por el otro lado, aprovechar las posibilidades dadas para desplegar un quincho/ sala de juegos en relación directa a la terraza. La operación principal en este sentido, consistió en la ampliación con un nuevo volumen y el reemplazo de la antigua claraboya del living central por un piso de vidrio incorporado a la galería de este segundo nivel."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
             "5.webp",
-            "6.webp"
+            "6.webp",
+            "7.webp",
+            "8.webp",
+            "9.webp"
         ],
         "carousel1": [
+            "P2.webp"
         ],
         "carousel2": [
+            "10.webp",
+            "11.webp",
+            "12.webp",
+            "13.webp"
         ],
         "show": true
 	},
@@ -620,7 +614,6 @@
             "En construcción"
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
