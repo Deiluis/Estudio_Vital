@@ -478,7 +478,7 @@
         "name": "cocomarola",
         "banner": "1.webp",
         "banner-obj-position": "top",
-        "blueprint": "L2.webp",
+        "blueprint": "P0.webp",
         "title": "ANTIFEATRO COCOMAROLA",
         "subtitle": "Corrientes. Tercer Premio Concurso Nacional.",
         "credits": [
@@ -501,9 +501,10 @@
             "7.webp"
         ],
         "carousel1": [
-            "L1.webp",
-            "L3.webp",
-            "L4.webp"
+            "P1.webp",
+            "P2.webp",
+            "P3.webp",
+            "P4.webp"
         ],
         "carousel2": [
         ],
