@@ -477,7 +477,8 @@
     {
         "name": "cocomarola",
         "banner": "1.webp",
-        "blueprint": "PB.jpg",
+        "banner-obj-position": "top",
+        "blueprint": "L2.webp",
         "title": "ANTIFEATRO COCOMAROLA",
         "subtitle": "Corrientes. Tercer Premio Concurso Nacional.",
         "credits": [
@@ -492,7 +493,6 @@
             "Socialmente, se prioriza la creación de un espacio público de alta calidad que, además de mitigar el impacto del edificio, ofrezca nuevas áreas recreativas y culturales para el entorno, transformándolo en un verdadero polo de atracción y participación comunitaria. En conjunto, la propuesta busca combinar funcionalidad, integración urbana y protagonismo cultural, en un diseño que respeta la escala y el carácter del entorno."
         ],
         "gallery": [
-            "1.webp",
             "2.webp",
             "3.webp",
             "4.webp",
@@ -501,25 +501,13 @@
             "7.webp"
         ],
         "carousel1": [
-            "cortes.webp",
-            "P1.webp",
-            "P2.webp"
+            "L1.webp",
+            "L3.webp",
+            "L4.webp"
         ],
         "carousel2": [
-            "8.webp",
-            "9.webp",
-            "10.webp",
-            "11.webp",
-            "12.webp",
-            "13.webp",
-            "14.webp",
-            "15.webp",
-            "16.webp",
-            "17.webp",
-            "18.webp",
-            "19.webp"
         ],
-        "show": false
+        "show": true
 	},
     {
         "name": "montaneses",

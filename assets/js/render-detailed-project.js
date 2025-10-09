@@ -30,6 +30,10 @@ const renderProject = (projects, idx, creditsList) => {
     creditsList.className = "flex flex-col gap-4";
 
     banner.src = `/assets/img/proyectos/${project.name}/${project.banner}`;
+
+    if (project["banner-obj-position"])
+        banner.classList.add(`object-${project["banner-obj-position"]}`);
+
     blueprint.src = `/assets/img/proyectos/${project.name}/${project.blueprint}`;
     title.innerHTML = project.title;
     subtitle.innerHTML = project.subtitle;

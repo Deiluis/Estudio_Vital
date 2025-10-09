@@ -134,13 +134,14 @@
 		"name": "cocomarola",
 		"title": "ANTIFEATRO COCOMAROLA",
 		"description": "Corrientes. Tercer Premio Concurso Nacional",
+		"banner-obj-position": "top",
 		"carousel": [
 			"1.webp",
             "2.webp",
             "3.webp",
             "4.webp"
 		],
-        "show": false
+        "show": true
 	},
 	{
 		"name": "montaneses",

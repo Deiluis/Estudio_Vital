@@ -26,6 +26,9 @@ const init = async () => {
         img.alt = `Imagen de la obra ${project.title}`;
         img.loading = "lazy";
 
+        if (project["banner-obj-position"])
+            img.classList.add(`object-${project["banner-obj-position"]}`);
+
         const titleContainer = document.createElement("div");
         titleContainer.className = "flex flex-col w-full h-full justify-end bg-[#0004] gap-8 absolute bottom-0 p-7 pb-48 lg:p-24 z-[100] text-white";
 
