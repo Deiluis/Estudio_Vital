@@ -163,6 +163,9 @@ form.addEventListener("submit", async (e) => {
             return;
         }
 
+        // Registra la conversión en Google Ads.
+        gtag('event', 'conversion', {'send_to': 'AW-17720038927/4e-bCJKh8L8bEI-syYFC'});
+
         showIndicator(json.message, true);
         form.reset();
         grecaptcha.reset();
