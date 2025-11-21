@@ -163,8 +163,20 @@ form.addEventListener("submit", async (e) => {
             return;
         }
 
-        // Registra la conversión en Google Ads.
-        gtag('event', 'conversion', {'send_to': 'AW-17720038927/4e-bCJKh8L8bEI-syYFC'});
+        console.log("✅ 1. El Backend respondió OK. Entrando al bloque...");
+
+        if (typeof gtag === 'function') {
+            console.log("✅ 2. La función gtag existe. Intentando disparar evento...");
+            
+            // Registra la conversión en Google Ads.
+            gtag('event', 'conversion', {'send_to': 'AW-17720038927/4e-bCJKh8L8bEI-syYFC'});
+
+            console.log("✅ 3. Evento disparado. Revisando dataLayer:");
+            console.log(window.dataLayer); 
+
+        } else {
+            console.error("❌ ERROR CRÍTICO: 'gtag' no está definido. La etiqueta del HEAD no cargó o no existe.");
+        }
 
         showIndicator(json.message, true);
         form.reset();
