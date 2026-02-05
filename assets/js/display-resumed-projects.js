@@ -14,7 +14,6 @@ const restoreScroll = () => {
     }
 };
 
-
 const generateProjects = async () => {
     const projectsContainer = document.querySelector(".obras__container");
 
@@ -64,6 +63,7 @@ const generateProjects = async () => {
         });
 
     restoreScroll();
+    window.prerenderReady = true;
 };
 
 const addCarousel = (projectName, projectTitle, imagesSrc, link) => {

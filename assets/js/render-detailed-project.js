@@ -198,7 +198,7 @@ const init = async () => {
         const res = await fetch("/assets/js/projects/detailed.json");
         projects = await res.json();
     } catch (err) {
-        console.error("Error al cargar projects/resumed.json:", err);
+        console.error("Error al cargar:", err);
     }
 
     idx = projects.findIndex(p => p.name == projectName);
@@ -213,7 +213,9 @@ const init = async () => {
                 mobileCreditsContainer.appendChild(creditsList);
             else
                 desktopCreditsContainer.appendChild(creditsList);
-        })
+        });
+
+        window.prerenderReady = true;
     }
         
     else
