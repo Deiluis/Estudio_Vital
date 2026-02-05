@@ -164,6 +164,26 @@ const renderProject = (projects, idx, creditsList) => {
         selectorObra.classList.add("justify-between");
 };
 
+const addProjectMetadata = (project) => {
+
+    const title = `${project.title} | Estudio Vital`;
+    const url = `https://estudiovital.com/obra/${project.name}`;
+    const image = `https://estudiovital.com/assets/img/proyectos/${project.name}/${project.banner}`;
+
+    document.title = title;
+    document.querySelector('meta[name="description"]').setAttribute("content", project.description);
+
+    document.querySelector('meta[property="og:url"]').setAttribute("content", url);
+    document.querySelector('meta[property="og:title"]').setAttribute("content", title);
+    document.querySelector('meta[property="og:description"]').setAttribute("content", project.description);
+    document.querySelector('meta[property="og:image"]').setAttribute("content", image);
+
+    document.querySelector('meta[property="twitter:url"]').setAttribute("content", url);
+    document.querySelector('meta[name="twitter:title"]').setAttribute("content", title);
+    document.querySelector('meta[name="twitter:description"]').setAttribute("content", project.description);
+    document.querySelector('meta[name="twitter:image"]').setAttribute("content", image);
+};
+
 const addSlide = (name, src, container) => {
     const article = document.createElement("article");
     article.classList = "relative rounded-xl";
@@ -207,7 +227,8 @@ const init = async () => {
 
         const creditsList = document.createElement("ul");
         renderProject(projects, idx, creditsList);
-
+        addProjectMetadata(projects[idx]);
+        
         window.addEventListener("resize", () => {
             if (window.innerWidth < 640)
                 mobileCreditsContainer.appendChild(creditsList);
