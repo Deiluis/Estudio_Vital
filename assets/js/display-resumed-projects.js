@@ -62,8 +62,8 @@ const generateProjects = async () => {
             projectsContainer.appendChild(article);
         });
 
-    restoreScroll();
     window.prerenderReady = true;
+    restoreScroll();
 };
 
 const addCarousel = (projectName, projectTitle, imagesSrc, link) => {

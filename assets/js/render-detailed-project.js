@@ -224,19 +224,19 @@ const init = async () => {
     idx = projects.findIndex(p => p.name == projectName);
 
     if (projects[idx]) {
+        addProjectMetadata(projects[idx]);
 
         const creditsList = document.createElement("ul");
         renderProject(projects, idx, creditsList);
-        addProjectMetadata(projects[idx]);
         
+        window.prerenderReady = true;
+
         window.addEventListener("resize", () => {
             if (window.innerWidth < 640)
                 mobileCreditsContainer.appendChild(creditsList);
             else
                 desktopCreditsContainer.appendChild(creditsList);
         });
-
-        window.prerenderReady = true;
     }
         
     else
