@@ -13,7 +13,7 @@ export default async (request, context) => {
 
 	try {
 		// 1. Obtenemos los datos de tus proyectos (usamos tu JSON actual)
-		const responseData = await fetch("https://estudiovital.com/assets/js/projects/resumed.json");
+		const responseData = await fetch("https://estudiovital.com/assets/js/projects/detailed.json");
 		const projects = await responseData.json();
 		const project = projects.find(p => p.name === projectName);
 
