@@ -13,7 +13,12 @@ export default async (request, context) => {
 
 	try {
 		// 1. Obtenemos los datos de tus proyectos (usamos tu JSON actual)
-		const responseData = await fetch("https://estudiovital.com/assets/js/projects/detailed.json");
+		const jsonURL = new URL("/assets/js/projects/detailed.json", request.url);
+		const responseData = await fetch(jsonURL.href);
+
+		if (!responseData.ok) 
+			throw new Error("No se pudo cargar el JSON");
+
 		const projects = await responseData.json();
 		const project = projects.find(p => p.name === projectName);
 
@@ -49,7 +54,7 @@ export default async (request, context) => {
 
 	} catch (error) {
 		console.error("Error en Edge Function:", error);
-		return; // Si falla, que siga el flujo normal (JS del cliente)
+		return await context.next(); // Si falla, que siga el flujo normal (JS del cliente)
 	}
 };
 
