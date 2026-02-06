@@ -21,7 +21,10 @@ export default async (request, context) => {
 
 		// 2. Definimos las variables (igual que en tu función original)
 		const title = `${project.title} | Estudio Vital`;
-		const description = project.description;
+
+		const description = Array.isArray(project.description) 
+        ? project.description[0]
+        : project.description;
 		const image = `https://estudiovital.com/assets/img/proyectos/${project.name}/${project.banner}`;
 		const absoluteUrl = url.href;
 
