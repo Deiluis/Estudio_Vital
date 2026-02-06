@@ -1,69 +1,86 @@
 // Guardar scroll al salir o navegar
 window.addEventListener("beforeunload", () => {
-    sessionStorage.setItem("scrollY", window.scrollY);
+    try {
+        if (window.sessionStorage) {
+            sessionStorage.setItem("scrollY", window.scrollY);
+        }
+    } catch (e) {
+        console.log("SessionStorage no accesible para el bot");
+    }
 });
 
 // Función para restaurar scroll guardado
 const restoreScroll = () => {
-    const scrollY = sessionStorage.getItem("scrollY");
-    if (scrollY !== null) {
-        // esperamos un poco para que imágenes/carruseles estén montados
-        setTimeout(() => {
-            window.scrollTo(0, parseInt(scrollY, 10));
-        }, 300);
+    try {
+        // Verificamos si existe sessionStorage y si tiene el dato
+        const scrollY = (window.sessionStorage) ? sessionStorage.getItem("scrollY") : null;
+        
+        if (scrollY !== null) {
+            setTimeout(() => {
+                window.scrollTo(0, parseInt(scrollY, 10));
+            }, 300);
+        }
+    } catch (e) {
+        console.log("SessionStorage no accesible para el bot");
     }
 };
 
 const generateProjects = async () => {
     const projectsContainer = document.querySelector(".obras__container");
 
-    const res = await fetch("/assets/js/projects/resumed.json");
-    const resumed = await res.json();
+    try {
+        const res = await fetch("/assets/js/projects/resumed.json");
+        const resumed = await res.json();
 
-    resumed
-        .filter(project => project.show)
-        .forEach((project, i) => {
-            const article = document.createElement("article");
-            article.className =
-                "project w-full lg:h-[85vh] bg-white transition-shadow duration-300 shadow-2xl shadow-[--black] select-none";
+        resumed
+            .filter(project => project.show)
+            .forEach((project, i) => {
+                const article = document.createElement("article");
+                article.className =
+                    "project w-full lg:h-[85vh] bg-white transition-shadow duration-300 shadow-2xl shadow-[--black] select-none";
 
-            const a = document.createElement("a");
-            a.href = `obra/${project.name}`;
-            a.className = `
-                project__link w-full h-full flex flex-col-reverse items-center
-                ${i % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse"}
-            `;
+                const a = document.createElement("a");
+                a.href = `obra/${project.name}`;
+                a.className = `
+                    project__link w-full h-full flex flex-col-reverse items-center
+                    ${i % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse"}
+                `;
 
-            const sideText = document.createElement("div");
-            sideText.className =
-                "lg:w-1/4 lg:h-full lg:p-16 p-4 flex flex-col lg:gap-8 gap-3 items-center justify-center";
+                const sideText = document.createElement("div");
+                sideText.className =
+                    "lg:w-1/4 lg:h-full lg:p-16 p-4 flex flex-col lg:gap-8 gap-3 items-center justify-center";
 
-            const h3 = document.createElement("h3");
-            h3.className = "lg:text-4xl text-xl";
-            h3.textContent = project.title;
+                const h3 = document.createElement("h3");
+                h3.className = "lg:text-4xl text-xl";
+                h3.textContent = project.title;
 
-            const p = document.createElement("p");
-            p.className = "lg:text-[1.7rem] text-xl leading-[1.5]";
-            p.textContent = project.description;
+                const p = document.createElement("p");
+                p.className = "lg:text-[1.7rem] text-xl leading-[1.5]";
+                p.textContent = project.description;
 
-            const span = document.createElement("span");
-            span.className =
-                "transition-color duration-300 text-[--light-gray] hidden lg:inline";
-            span.innerHTML = `Ver la obra <i class="fa-solid fa-chevron-right"></i>`;
+                const span = document.createElement("span");
+                span.className =
+                    "transition-color duration-300 text-[--light-gray] hidden lg:inline";
+                span.innerHTML = `Ver la obra <i class="fa-solid fa-chevron-right"></i>`;
 
-            sideText.appendChild(h3);
-            sideText.appendChild(p);
-            sideText.appendChild(span);
+                sideText.appendChild(h3);
+                sideText.appendChild(p);
+                sideText.appendChild(span);
 
-            a.appendChild(sideText);
-            addCarousel(project.name, project.title, project.carousel, a);
+                a.appendChild(sideText);
+                addCarousel(project.name, project.title, project.carousel, a);
 
-            article.appendChild(a);
-            projectsContainer.appendChild(article);
-        });
+                article.appendChild(a);
+                projectsContainer.appendChild(article);
+            });
 
-    window.prerenderReady = true;
-    restoreScroll();
+        window.prerenderReady = true;
+        restoreScroll();
+        
+    } catch (error) {
+        window.prerenderReady = true;
+        console.error("Error cargando proyectos");
+    }
 };
 
 const addCarousel = (projectName, projectTitle, imagesSrc, link) => {
@@ -131,5 +148,4 @@ const addCarousel = (projectName, projectTitle, imagesSrc, link) => {
     link.appendChild(carousel);
 };
 
-// Generar y restaurar scroll
 generateProjects();
