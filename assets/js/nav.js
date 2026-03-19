@@ -1,24 +1,23 @@
 const header = document.querySelector('#header');
-const navBars = document.querySelector('.nav__bars');
+const navOpenBtn = document.querySelector('.nav__btn--open');
+const navCloseBtn = document.querySelector('.nav__btn--close');
 const navList = document.querySelector('.nav__list');
 const navLinks = document.querySelectorAll('.nav__list a');
 
 let inHero = true;
 
 const toggleNavBar = () => {
-    navBars.classList.toggle('fa-xmark');
-    navBars.style.transition = "transform 0.4s";
-
-    if (navList.classList.contains('-ml-[100%]')) {
-        navBars.style.transform = "rotate(90deg)";
-    } else {
-        navBars.style.transform = "rotate(0)";
-    }
-
+    navOpenBtn.classList.toggle('rotate-90');
+    navOpenBtn.classList.toggle('opacity-0');
+    navOpenBtn.classList.toggle('z-[-1]');
+    navCloseBtn.classList.toggle('rotate-90');
+    navCloseBtn.classList.toggle('opacity-0');
+    navCloseBtn.classList.toggle('z-[-1]')
     navList.classList.toggle('-ml-[100%]');
 };
 
-navBars.addEventListener("click", toggleNavBar);
+navOpenBtn.addEventListener("click", toggleNavBar);
+navCloseBtn.addEventListener("click", toggleNavBar);
 
 navLinks.forEach((navLink) => {
     navLink.addEventListener("click", toggleNavBar);

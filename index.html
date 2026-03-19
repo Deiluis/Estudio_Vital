@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Estudio Vital">
     <meta property="og:description" content="Estudio Vital es un estudio de arquitectura fundado en el año 2006, ubicado en la ciudad de Buenos Aires, liderado por los arquitectos Agustín Vital y Sebastián Policastro.">
-    <meta property="og:image" content="https://estudiovital.com/assets/img/icon-og.jpg">
+    <meta property="og:image" content="https://estudiovital.com/assets/img/opengraph.jpeg">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -26,14 +26,14 @@
     <meta property="twitter:url" content="https://estudiovital.com">
     <meta name="twitter:title" content="Estudio Vital">
     <meta name="twitter:description" content="Estudio Vital es un estudio de arquitectura fundado en el año 2006, ubicado en la ciudad de Buenos Aires, liderado por los arquitectos Agustín Vital y Sebastián Policastro.">
-    <meta name="twitter:image" content="https://estudiovital.com/assets/img/icon-og.jpg">
+    <meta name="twitter:image" content="https://estudiovital.com/assets/img/opengraph.jpeg">
 
     <script src="https://kit.fontawesome.com/41b6154676.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/general.css">
-    <link rel="icon" href="/assets/img/icon.jpg" type="image/x-icon">
+    <link rel="icon" href="/assets/img/icon.jpeg" type="image/x-icon">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17720038927"></script>
@@ -50,7 +50,7 @@
         <nav class="h-24 md:h-[7.5vh] flex justify-between items-center px-[5%]">
             <h1 class="h-full md:min-w-80 flex items-center justify-center">
                 <a href="/" class="h-full">
-                    <img class="h-full object-scale-down" src="/assets/img/logo.png" alt="Logo de Estudio Vital">
+                    <img class="h-full object-scale-down py-6" src="/assets/img/logo.png" alt="Logo de Estudio Vital">
                 </a>
             </h1>
             <ul class="list-none hidden md:flex text-[--black]">
@@ -72,7 +72,16 @@
                     <a href="#contacto" class="nav__link inline-block">Contacto</a>
                 </li>
             </ul>
-            <i class="nav__bars fa-solid fa-bars-staggered text-[--black] text-[3.5rem] p-8 cursor-pointer md:hidden"></i>
+            <img 
+                class="nav__btn nav__btn--open text-[--black] h-[70%] cursor-pointer md:hidden absolute right-[5%] transition duration-700" 
+                src="/assets/img/dots-vertical.svg" 
+                alt="Apertura de opciones mobile"
+            >
+            <img 
+                class="nav__btn nav__btn--close text-[--black] h-[70%] cursor-pointer md:hidden absolute right-[5%] z-[-1] opacity-0 transition duration-700" 
+                src="/assets/img/xmark.svg" 
+                alt="Cierre de opciones mobile"
+            >
         </nav>
     </header>
 
@@ -128,7 +137,7 @@
 
         <section id="estudio" class="max-w-full w-[140rem] xl:px-40 px-8 lg:py-40 py-32 mx-auto overflow-x-hidden">
             <h2 class="text-6xl text-[--black] mb-20 text-center">
-                <img src="/assets/img/icon-crop.svg" class="h-28 mx-auto" alt="Logo Estudio vital">
+                <img src="/assets/img/full-logo.png" class="h-36 mx-auto" alt="Logo Estudio vital">
             </h2>
 
             <div class="flex flex-wrap justify-center lg:grid lg:grid-cols-[55%_20%_20%] lg:gap-x-[2.5%] gap-12">
@@ -171,7 +180,7 @@
                         <i class="fa-brands fa-instagram row-span-2 text-5xl"></i>
                         <div class="flex flex-col">
                             <h3 class="text-4xl">Instagram</h3>
-                            <a target="_blank" href="#">En construcción</a>
+                            <a target="_blank" href="https://www.instagram.com/vital.estudio/">@vital.estudio</a>
                         </div>  
                     </div>
                     <iframe 
@@ -244,7 +253,7 @@
     </main>
 
     <footer class="w-full h-[10vh] bg-[--black] flex items-center justify-center">
-        <span class="text-[1.8rem] text-white">© 2025 Estudio Vital</span>
+        <span class="text-[1.8rem] text-white">© 2026 Estudio Vital</span>
     </footer>
 
     <script src="/assets/js/nav.js"></script>

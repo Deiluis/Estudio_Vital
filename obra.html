@@ -28,14 +28,14 @@
     <script src="https://kit.fontawesome.com/41b6154676.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/assets/css/general.css">
-    <link rel="shortcut icon" href="/assets/img/icon.jpg" type="image/x-icon">
+    <link rel="icon" href="/assets/img/icon.jpeg" type="image/x-icon">
 </head>
 <body class="bg-white">
     <header id="header" class="w-full sticky top-0 z-[2000] bg-transparent backdrop-blur-lg shadow-xl transition-all duration-500">
         <nav class="h-24 md:h-[7.5vh] flex justify-between items-center px-[5%]">
             <h1 class="h-full md:min-w-80 flex items-center justify-center">
                 <a href="/" class="h-full">
-                    <img class="h-full object-scale-down" src="/assets/img/logo.png" alt="Logo de Estudio Vital">
+                    <img class="h-full object-scale-down py-6" src="/assets/img/logo.png" alt="Logo de Estudio Vital">
                 </a>
             </h1>
             <ul class="list-none hidden md:flex text-[--black]">
@@ -52,7 +52,16 @@
                     <a href="/#contacto" class="nav__link inline-block">Contacto</a>
                 </li>
             </ul>
-            <i class="nav__bars fa-solid fa-bars-staggered text-[--black] text-[3.5rem] p-8 cursor-pointer md:hidden"></i>
+            <img 
+                class="nav__btn nav__btn--open text-[--black] h-[70%] cursor-pointer md:hidden absolute right-[5%] transition duration-700" 
+                src="/assets/img/dots-vertical.svg" 
+                alt="Apertura de opciones mobile"
+            >
+            <img 
+                class="nav__btn nav__btn--close text-[--black] h-[70%] cursor-pointer md:hidden absolute right-[5%] z-[-1] opacity-0 transition duration-700" 
+                src="/assets/img/xmark.svg" 
+                alt="Cierre de opciones mobile"
+            >
         </nav>
     </header>
 
@@ -177,7 +186,7 @@
     </main>
 
     <footer class="w-full h-[10vh] bg-[--black] flex items-center justify-center">
-        <span class="text-[1.8rem] text-white">© 2025 Estudio Vital</span>
+        <span class="text-[1.8rem] text-white">© 2026 Estudio Vital</span>
     </footer>
 
     <script src="/assets/js/render-detailed-project.js"></script>
