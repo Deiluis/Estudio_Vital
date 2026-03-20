@@ -31,8 +31,8 @@
     <link rel="icon" href="/assets/img/icon.jpeg" type="image/x-icon">
 </head>
 <body class="bg-white">
-    <header id="header" class="w-full sticky top-0 z-[2000] bg-transparent backdrop-blur-lg shadow-xl transition-all duration-500">
-        <nav class="h-24 md:h-[7.5vh] flex justify-between items-center px-[5%]">
+    <header id="header" class="w-full sticky top-0 z-[2000] bg-[#fff3] backdrop-blur-lg shadow-xl transition-all duration-500">
+        <nav class="h-24 2xl:h-[7.5vh] flex justify-between items-center px-[5%]">
             <h1 class="h-full md:min-w-80 flex items-center justify-center">
                 <a href="/" class="h-full">
                     <img class="h-full object-scale-down py-6" src="/assets/img/logo.png" alt="Logo de Estudio Vital">
@@ -52,42 +52,51 @@
                     <a href="/#contacto" class="nav__link inline-block">Contacto</a>
                 </li>
             </ul>
-            <img 
-                class="nav__btn nav__btn--open text-[--black] h-[70%] cursor-pointer md:hidden absolute right-[5%] transition duration-700" 
-                src="/assets/img/dots-vertical.svg" 
-                alt="Apertura de opciones mobile"
+            
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="nav__btn nav__btn--open h-[60%] cursor-pointer md:hidden absolute right-[5%] transition duration-700 stroke-current text-black" 
+                fill="none" 
+                viewBox="0 0 24 24"
             >
-            <img 
-                class="nav__btn nav__btn--close text-[--black] h-[70%] cursor-pointer md:hidden absolute right-[5%] z-[-1] opacity-0 transition duration-700" 
-                src="/assets/img/xmark.svg" 
-                alt="Cierre de opciones mobile"
+                <g stroke-linecap="round" stroke-linejoin="round" stroke-width="1.44">
+                    <path d="M14 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0M14 19a2 2 0 1 1-4 0 2 2 0 0 1 4 0M14 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/>
+                </g>
+            </svg>
+
+            <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                class="nav__btn nav__btn--close h-[60%] cursor-pointer md:hidden absolute right-[5%] z-[-1] opacity-0 transition duration-700 fill-current text-black" 
+                viewBox="0 0 640 640"
             >
+                <path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/>
+            </svg>
         </nav>
     </header>
 
-    <ul class="nav__list w-full h-[calc(100vh-6rem)]
+    <ul class="nav__list w-full h-[calc(100vh-6rem)] text-[--black]
         list-none flex flex-col md:hidden fixed z-[2000] 
-        top-24 left-0 text-[2rem]
-        bg-transparent backdrop-blur-lg shadow-xl 
+        top-24 left-0 
+        bg-[#fff3] backdrop-blur-lg shadow-xl 
         transition-all duration-500 -ml-[100%]"
     >
-        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
-            <a href="/" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+        <li class="flex-1">
+            <a href="/" class="flex items-center justify-center h-full w-full px-8 text-4xl">
                 Inicio
             </a>
         </li>
-        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
-            <a href="/#obras" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+        <li class="flex-1">
+            <a href="/#obras" class="flex items-center justify-center h-full w-full px-8 text-4xl">
                 Obras
             </a>
         </li>
-        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
-            <a href="/#estudio" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+        <li class="flex-1">
+            <a href="/#estudio" class="flex items-center justify-center h-full w-full px-8 text-4xl">
                 Estudio
             </a>
         </li>
-        <li class="hover:bg-white transition-colors rounded-2xl flex-1">
-            <a href="/#contacto" class="flex items-center justify-center h-full w-full px-8 text-[--black]">
+        <li class="flex-1">
+            <a href="/#contacto" class="flex items-center justify-center h-full w-full px-8 text-4xl">
                 Contacto
             </a>
         </li>
